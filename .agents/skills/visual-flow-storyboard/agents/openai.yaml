@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visual Flow Storyboard"
+  short_description: "Reconstruct user journeys from code as storyboards"
+  default_prompt: "Use $visual-flow-storyboard to map the real user journey, branches, states, and friction in the codebase."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "UX & Logic Loop"
+  short_description: "Inventory features, derive user stories, and run a persistent test loop"
+  default_prompt: "Use $ux-logic-loop to inventory the codebase, build the story matrix, test the highest-priority behaviors, fix root causes, and retest."

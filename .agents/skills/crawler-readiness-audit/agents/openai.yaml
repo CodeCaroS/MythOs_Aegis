@@ -1,0 +1,4 @@
+interface:
+  display_name: "Crawler Readiness Audit"
+  short_description: "Audit whether a site is readable by crawlers without JavaScript"
+  default_prompt: "Use $crawler-readiness-audit to audit the site's crawler readiness, SSR, metadata, links, and indexability."
