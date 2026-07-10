@@ -1,0 +1,57 @@
+[
+  {
+    "Skill": "Academix",
+    "Path": "academix/SKILL.md",
+    "Best for": "Academic research, literature reviews, citations, source evaluation"
+  },
+  {
+    "Skill": "Apocalypse",
+    "Path": "apocalypse/SKILL.md",
+    "Best for": "Pre-mortems, risk analysis, failure chains, recovery planning"
+  },
+  {
+    "Skill": "Fact Checker",
+    "Path": "fact-checker/SKILL.md",
+    "Best for": "Independent claim verification and correction"
+  },
+  {
+    "Skill": "Skill Optimizer",
+    "Path": ".agents/skills/skill-optimizer/SKILL.md",
+    "Best for": "Optimizing Markdown-based Codex skills with baseline and validation runs"
+  },
+  {
+    "Skill": "Crawler Readiness Audit",
+    "Path": ".agents/skills/crawler-readiness-audit/SKILL.md",
+    "Best for": "Auditing crawler readability, SSR, metadata, and indexability"
+  },
+  {
+    "Skill": "Quick Recap",
+    "Path": "quick-recap/SKILL.md",
+    "Best for": "Required one-line status footer for substantive responses"
+  },
+  {
+    "Skill": "Rigorous Response",
+    "Path": "rigorous-response/SKILL.md",
+    "Best for": "Clear assumptions, premise checks, concise critical reasoning"
+  },
+  {
+    "Skill": "Shepherd",
+    "Path": "shepherd/SKILL.md",
+    "Best for": "Reversible execution, checkpoints, recovery, and supervisor guardrails"
+  },
+  {
+    "Skill": "UX & Logic Loop",
+    "Path": ".agents/skills/ux-logic-loop/SKILL.md",
+    "Best for": "Persistent feature inventory, story matrix, and test loop"
+  },
+  {
+    "Skill": "Visual Flow Storyboard",
+    "Path": ".agents/skills/visual-flow-storyboard/SKILL.md",
+    "Best for": "Reconstructing full user journeys as storyboards"
+  },
+  {
+    "Skill": "Visual PR Review",
+    "Path": "visual-pr-review/SKILL.md",
+    "Best for": "Diff review, architecture reconstruction, implementation planning"
+  }
+]

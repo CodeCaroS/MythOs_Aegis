@@ -1,1 +1,57 @@
-[{"Skill":"Academix","Path":"[`academix/SKILL.md`](./academix/SKILL.md)","Best for":"Academic research, literature reviews, citations, source evaluation"},{"Skill":"Apocalypse","Path":"[`apocalypse/SKILL.md`](./apocalypse/SKILL.md)","Best for":"Pre-mortems, risk analysis, failure chains, recovery planning"},{"Skill":"Fact Checker","Path":"[`fact-checker/SKILL.md`](./fact-checker/SKILL.md)","Best for":"Independent claim verification and correction"},{"Skill":"Crawler Readiness Audit","Path":"[`crawler-readiness-audit/SKILL.md`](./.agents/skills/crawler-readiness-audit/SKILL.md)","Best for":"Auditing crawler readability, SSR, metadata, and indexability"},{"Skill":"Quick Recap","Path":"[`quick-recap/SKILL.md`](./quick-recap/SKILL.md)","Best for":"Required one-line status footer for substantive responses"},{"Skill":"Rigorous Response","Path":"[`rigorous-response/SKILL.md`](./rigorous-response/SKILL.md)","Best for":"Clear assumptions, premise checks, concise critical reasoning"},{"Skill":"Shepherd","Path":"[`shepherd/SKILL.md`](./shepherd/SKILL.md)","Best for":"Reversible execution, checkpoints, recovery, and supervisor guardrails"},{"Skill":"UX & Logic Loop","Path":"[`ux-logic-loop/SKILL.md`](./.agents/skills/ux-logic-loop/SKILL.md)","Best for":"Persistent feature inventory, story matrix, and test loop"},{"Skill":"Visual Flow Storyboard","Path":"[`visual-flow-storyboard/SKILL.md`](./.agents/skills/visual-flow-storyboard/SKILL.md)","Best for":"Reconstructing full user journeys as storyboards"},{"Skill":"Visual PR Review","Path":"[`visual-pr-review/SKILL.md`](./visual-pr-review/SKILL.md)","Best for":"Diff review, architecture reconstruction, implementation planning"}]
+# MythOs Aegis
+
+MythOs Aegis is a repository of Codex skills for agentic coding work.
+
+The repo is split into small Markdown-based skills, each focused on one job:
+
+- `academix/` for academic research and source evaluation
+- `apocalypse/` for pre-mortems and failure analysis
+- `fact-checker/` for claim verification
+- `quick-recap/` for mandatory end-of-response status footers
+- `rigorous-response/` for concise reasoning and premise checks
+- `shepherd/` for reversible execution, checkpoints, and recovery
+- `visual-pr-review/` for pull request review and implementation planning
+- `.agents/skills/` for repository-local support skills such as the skill optimizer and internal workflow helpers
+
+## What this repo is for
+
+This repo is not an application. It is a skill library and workflow toolkit for Codex.
+
+Each skill is a `SKILL.md` file with frontmatter metadata and behavior guidance. The skills are meant to be read by the agent at task time so it can pick the right workflow without inventing one from scratch.
+
+## Machine-readable index
+
+The canonical skill index lives in [`agents.json`](./agents.json).
+
+Use it when a tool or workflow needs the repo inventory in a structured format.
+
+## Repository layout
+
+```text
+.
+|-- README.md
+|-- agents.json
+|-- AGENTS.md
+|-- academix/
+|-- apocalypse/
+|-- fact-checker/
+|-- quick-recap/
+|-- rigorous-response/
+|-- shepherd/
+|-- visual-pr-review/
+`-- .agents/
+    `-- skills/
+```
+
+## Working with the skills
+
+- Read the relevant `SKILL.md` before changing behavior.
+- Keep skill edits bounded and evidence-based.
+- Use `.agents/skills/skill-optimizer/` when you need to improve a Markdown skill through a measured loop.
+
+## Repo conventions
+
+- `AGENTS.md` contains workspace-level instructions.
+- `agents.json` is the machine-readable inventory.
+- Each skill stays in its own directory.
+- Local helper skills remain under `.agents/skills/`.
