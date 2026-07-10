@@ -30,6 +30,11 @@
     "Best for": "Required one-line status footer for substantive responses"
   },
   {
+    "Skill": "Prompt Preflight",
+    "Path": "prompt-preflight/SKILL.md",
+    "Best for": "Silently refine ambiguous user requests before execution"
+  },
+  {
     "Skill": "Rigorous Response",
     "Path": "rigorous-response/SKILL.md",
     "Best for": "Clear assumptions, premise checks, concise critical reasoning"
