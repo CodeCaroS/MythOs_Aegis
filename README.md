@@ -1,6 +1,6 @@
 # MythOs Aegis
 
-MythOs Aegis is a repository of Codex skills for agentic coding work.
+MythOs Aegis is a repository of skills for agentic coding work.
 
 The repo is split into small Markdown-based skills, each focused on one job:
 
@@ -15,7 +15,7 @@ The repo is split into small Markdown-based skills, each focused on one job:
 
 ## What this repo is for
 
-This repo is not an application. It is a skill library and workflow toolkit for Codex.
+This repo is not an application. It is a skill library and workflow toolkit for coding agents.
 
 Each skill is a `SKILL.md` file with frontmatter metadata and behavior guidance. The skills are meant to be read by the agent at task time so it can pick the right workflow without inventing one from scratch.
 

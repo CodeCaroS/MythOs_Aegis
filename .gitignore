@@ -1,5 +1,4 @@
 .idea/
-.codex/
 .agents/
 !.agents/
 !.agents/skills/

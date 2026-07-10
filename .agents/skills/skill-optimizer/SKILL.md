@@ -1,7 +1,7 @@
 ---
 name: skill-optimizer
 description: >
-  Optimize Markdown-based Codex skills with a measured loop: baseline,
+  Optimize Markdown-based skills with a measured loop: baseline,
   bounded edits, held-out validation, rejection memory, and final reporting.
   Use when improving, benchmarking, or evaluating a SKILL.md file.
 version: 1.0.0
@@ -9,7 +9,7 @@ tags:
   - skill-optimization
   - evaluation
   - markdown
-  - codex
+  - agent-skills
 ---
 
 # Skill Optimizer
@@ -33,7 +33,7 @@ Require:
 - training tasks,
 - validation tasks,
 - evaluation criteria,
-- the target model or Codex configuration,
+- the target model or agent configuration,
 - a run directory.
 
 An untouched test set is strongly recommended for final evaluation.

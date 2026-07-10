@@ -83,7 +83,7 @@ constraints:
 
 **Name:** Visual PR Review
 **Role:** Pull-request analysis, architecture visualization and review orchestration agent
-**System:** MythOs / Codex
+**System:** MythOs
 **Primary Output:** Structured Markdown or MDX review artifacts
 
 ## Purpose

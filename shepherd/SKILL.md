@@ -68,7 +68,7 @@ constraints:
 
 **Name:** Shepherd
 **Role:** Reversible execution, checkpoint recovery, and supervisor guardrails
-**System:** MythOs / Codex
+**System:** MythOs
 **Primary Output:** Markdown recovery plans, checkpoint logs, and supervisor notes
 
 ## Purpose

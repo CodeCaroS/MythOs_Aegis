@@ -17,7 +17,7 @@
   {
     "Skill": "Skill Optimizer",
     "Path": ".agents/skills/skill-optimizer/SKILL.md",
-    "Best for": "Optimizing Markdown-based Codex skills with baseline and validation runs"
+    "Best for": "Optimizing Markdown-based skills with baseline and validation runs"
   },
   {
     "Skill": "Crawler Readiness Audit",
