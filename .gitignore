@@ -1,1 +1,7 @@
-.idea
+.idea/
+.codex/
+.agents/
+.DS_Store
+Thumbs.db
+*.orig
+*.tmp
