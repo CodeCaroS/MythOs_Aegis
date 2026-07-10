@@ -87,6 +87,7 @@ pick the right workflow without inventing one from scratch.
 - Keep skill edits bounded and evidence-based.
 - Use `.agents/skills/skill-optimizer/` when you need to improve a Markdown
 - Run `node scripts/skill-guard.mjs` before committing to catch missing frontmatter and naming drift.
+- GitHub Actions CI lives in `.github/workflows/ci.yml`; make the `skill-guard` check required on `main` and disable direct pushes in repository settings.
   skill through a measured loop.
 
 ## Repo conventions
