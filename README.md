@@ -1,4 +1,4 @@
-# MythOs Skills
+# My AI Workspace
 
 A curated collection of reusable AI agent skills for research, critical reasoning, risk analysis, and structured decision-making.
 
