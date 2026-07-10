@@ -4,6 +4,11 @@ description: Audit whether a website is understandable to search engines, AI cra
 version: 1.0.0
 author: Caro
 license: Apache-2.0
+tags:
+  - crawler-readiness
+  - seo
+  - indexing
+  - ssr
 
 ---
 

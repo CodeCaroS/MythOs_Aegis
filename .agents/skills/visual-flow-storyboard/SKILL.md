@@ -4,6 +4,11 @@ description: Reconstruct complete user journeys from actual code and turn them i
 version: 1.0.0
 author: Caro
 license: Apache-2.0
+tags:
+  - flow-analysis
+  - journey-mapping
+  - ux
+  - state-matrix
 
 ---
 

@@ -4,6 +4,11 @@ description: Systematically inventory features from code, derive testable user s
 version: 1.0.0
 author: Caro
 license: Apache-2.0
+tags:
+  - ux
+  - testing
+  - user-stories
+  - regression
 
 ---
 

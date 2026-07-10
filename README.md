@@ -86,6 +86,7 @@ pick the right workflow without inventing one from scratch.
 - Read the relevant `SKILL.md` before changing behavior.
 - Keep skill edits bounded and evidence-based.
 - Use `.agents/skills/skill-optimizer/` when you need to improve a Markdown
+- Run `node scripts/skill-guard.mjs` before committing to catch missing frontmatter and naming drift.
   skill through a measured loop.
 
 ## Repo conventions

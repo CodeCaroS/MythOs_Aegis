@@ -4,6 +4,11 @@ description: End every substantive response with a one-line status recap that ma
 version: 0.0.1
 author: Caro
 license: Apache-2.0
+tags:
+  - response-format
+  - status
+  - reporting
+  - honesty
 ---
 
 # Quick Recap
