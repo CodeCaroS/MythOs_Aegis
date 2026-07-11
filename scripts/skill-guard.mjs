@@ -3,7 +3,6 @@ import path from 'node:path';
 
 const roots = process.argv.slice(2);
 const scanRoots = roots.length > 0 ? roots : ['.agents/skills'];
-const requiredKeys = ['name', 'description', 'version', 'author', 'license', 'tags'];
 const failures = [];
 
 function walk(dir) {
@@ -40,6 +39,62 @@ function findNameValue(frontMatter) {
   return match ? match[1].trim() : null;
 }
 
+function skillNameFromPath(skillPath) {
+  return path.basename(path.dirname(skillPath));
+}
+
+function displayName(name) {
+  return name
+    .split('-')
+    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ');
+}
+
+function readSkillInventory() {
+  if (!fs.existsSync('agents.json')) {
+    failures.push('agents.json: missing inventory');
+    return [];
+  }
+
+  const inventory = JSON.parse(fs.readFileSync('agents.json', 'utf8'));
+  if (!Array.isArray(inventory)) {
+    failures.push('agents.json: expected an array inventory');
+    return [];
+  }
+
+  return inventory;
+}
+
+function readReadmeSkills() {
+  if (!fs.existsSync('README.md')) {
+    failures.push('README.md: missing inventory');
+    return [];
+  }
+
+  const lines = fs.readFileSync('README.md', 'utf8').split(/\r?\n/);
+  const skills = [];
+  let inSkills = false;
+
+  for (const line of lines) {
+    if (/^##\s+Skills\s*$/.test(line)) {
+      inSkills = true;
+      continue;
+    }
+    if (inSkills && /^##\s+/.test(line)) {
+      break;
+    }
+    if (!inSkills) {
+      continue;
+    }
+    const match = line.match(/^\s*-\s+`\.agents\/skills\/([^/]+)\/`\s+for\s+/);
+    if (match) {
+      skills.push(match[1]);
+    }
+  }
+
+  return skills;
+}
+
 const skillFiles = [];
 for (const root of scanRoots) {
   if (fs.existsSync(root)) {
@@ -52,6 +107,11 @@ for (const root of scanRoots) {
   }
 }
 
+const dirNames = skillFiles.map(skillNameFromPath).sort();
+const inventory = readSkillInventory();
+const inventoryNames = inventory.map(item => path.basename(path.dirname(item.Path))).sort();
+const readmeNames = readReadmeSkills().sort();
+
 for (const file of skillFiles) {
   const content = fs.readFileSync(file, 'utf8');
   const frontMatter = readFrontMatter(content);
@@ -61,6 +121,7 @@ for (const file of skillFiles) {
     continue;
   }
 
+  const requiredKeys = ['name', 'description', 'version', 'author', 'license', 'tags'];
   const keys = keysFromFrontMatter(frontMatter);
   for (const requiredKey of requiredKeys) {
     if (!keys.includes(requiredKey)) {
@@ -68,10 +129,38 @@ for (const file of skillFiles) {
     }
   }
 
-  const expectedName = path.basename(path.dirname(file));
+  const expectedName = skillNameFromPath(file);
   const nameValue = findNameValue(frontMatter);
   if (nameValue && nameValue !== expectedName) {
     failures.push(`${file}: name should match folder name '${expectedName}'`);
+  }
+}
+
+const dirSet = new Set(dirNames);
+const inventorySet = new Set(inventoryNames);
+const readmeSet = new Set(readmeNames);
+
+for (const name of dirNames) {
+  if (!inventorySet.has(name)) {
+    failures.push(`agents.json: missing skill '${displayName(name)}'`);
+  }
+  if (!readmeSet.has(name)) {
+    failures.push(`README.md: missing skill '${displayName(name)}'`);
+  }
+}
+
+for (const name of inventoryNames) {
+  if (!dirSet.has(name)) {
+    failures.push(`agents.json: references missing skill directory '${name}'`);
+  }
+  if (!readmeSet.has(name)) {
+    failures.push(`README.md: missing skill '${displayName(name)}'`);
+  }
+}
+
+for (const name of readmeNames) {
+  if (!dirSet.has(name)) {
+    failures.push(`README.md: references missing skill directory '${name}'`);
   }
 }
 
@@ -82,4 +171,4 @@ if (failures.length > 0) {
   process.exit(1);
 }
 
-console.log(`skill-guard: checked ${skillFiles.length} SKILL.md files, no issues found.`);
+console.log(`skill-guard: checked ${skillFiles.length} SKILL.md files, inventory is consistent.`);

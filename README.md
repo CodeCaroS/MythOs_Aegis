@@ -7,19 +7,21 @@ the human-readable map of the same set.
 
 ## Skills
 
-- `.agents/skills/academix/` for academic research and source evaluation
-- `.agents/skills/apocalypse/` for pre-mortems and failure analysis
-- `.agents/skills/fact-checker/` for claim verification
+- `.agents/skills/academix/` for academic research, literature reviews, and source evaluation
+- `.agents/skills/apocalypse/` for pre-mortems, risk analysis, and failure chains
+- `.agents/skills/crawler-readiness-audit/` for crawler readability, SSR, metadata, and indexability
+- `.agents/skills/decision-criticality-gate/` for classifying decisions by reversibility, blast radius, trust impact, and urgency
+- `.agents/skills/fact-checker/` for claim verification and correction
+- `.agents/skills/output-templates/` for shared response templates for recurring agent tasks
 - `.agents/skills/pre-launch-security-gate/` for security review before release
-- `.agents/skills/skill-optimizer/` for optimizing Markdown-based skills
-- `.agents/skills/crawler-readiness-audit/` for indexability and crawler-readiness checks
-- `.agents/skills/quick-recap/` for mandatory end-of-response status footers
 - `.agents/skills/prompt-preflight/` for silent prompt refinement before execution
+- `.agents/skills/quick-recap/` for mandatory end-of-response status footers
 - `.agents/skills/rigorous-response/` for concise reasoning and premise checks
 - `.agents/skills/shepherd/` for reversible execution, checkpoints, and recovery
+- `.agents/skills/skill-optimizer/` for optimizing Markdown-based skills
 - `.agents/skills/ux-logic-loop/` for user-story inventory and test loops
 - `.agents/skills/visual-flow-storyboard/` for user-journey reconstruction
-- `.agents/skills/visual-pr-review/` for pull request review and implementation planning
+- `.agents/skills/visual-pr-review/` for pull-request review and implementation planning
 
 ## Canonical Skill Frontmatter
 
@@ -69,7 +71,9 @@ pick the right workflow without inventing one from scratch.
         |-- academix/
         |-- apocalypse/
         |-- crawler-readiness-audit/
+        |-- decision-criticality-gate/
         |-- fact-checker/
+        |-- output-templates/
         |-- pre-launch-security-gate/
         |-- prompt-preflight/
         |-- quick-recap/
@@ -86,9 +90,11 @@ pick the right workflow without inventing one from scratch.
 - Read the relevant `SKILL.md` before changing behavior.
 - Keep skill edits bounded and evidence-based.
 - Use `.agents/skills/skill-optimizer/` when you need to improve a Markdown
-- Run `node scripts/skill-guard.mjs` before committing to catch missing frontmatter and naming drift.
-- GitHub Actions CI lives in `.github/workflows/ci.yml`; make the `skill-guard` check required on `main` and disable direct pushes in repository settings.
   skill through a measured loop.
+- Run `node scripts/skill-guard.mjs` before committing to catch inventory drift,
+  missing frontmatter, and naming mismatches.
+- GitHub Actions CI lives in `.github/workflows/ci.yml`; make the `skill-guard`
+  check required on `main` and disable direct pushes in repository settings.
 
 ## Repo conventions
 

@@ -10,9 +10,24 @@
     "Best for": "Pre-mortems, risk analysis, failure chains, recovery planning"
   },
   {
+    "Skill": "Crawler Readiness Audit",
+    "Path": ".agents/skills/crawler-readiness-audit/SKILL.md",
+    "Best for": "Auditing crawler readability, SSR, metadata, and indexability"
+  },
+  {
+    "Skill": "Decision Criticality Gate",
+    "Path": ".agents/skills/decision-criticality-gate/SKILL.md",
+    "Best for": "Classifying decisions by reversibility, blast radius, trust impact, and urgency"
+  },
+  {
     "Skill": "Fact Checker",
     "Path": ".agents/skills/fact-checker/SKILL.md",
     "Best for": "Independent claim verification and correction"
+  },
+  {
+    "Skill": "Output Templates",
+    "Path": ".agents/skills/output-templates/SKILL.md",
+    "Best for": "Shared response templates for recurring agent tasks"
   },
   {
     "Skill": "Pre-Launch Security Gate",
@@ -20,24 +35,14 @@
     "Best for": "Security review of auth, authz, isolation, rate limiting, validation, and injection risks before release"
   },
   {
-    "Skill": "Skill Optimizer",
-    "Path": ".agents/skills/skill-optimizer/SKILL.md",
-    "Best for": "Optimizing Markdown-based skills with baseline and validation runs"
-  },
-  {
-    "Skill": "Crawler Readiness Audit",
-    "Path": ".agents/skills/crawler-readiness-audit/SKILL.md",
-    "Best for": "Auditing crawler readability, SSR, metadata, and indexability"
+    "Skill": "Prompt Preflight",
+    "Path": ".agents/skills/prompt-preflight/SKILL.md",
+    "Best for": "Silently refine ambiguous user requests before execution"
   },
   {
     "Skill": "Quick Recap",
     "Path": ".agents/skills/quick-recap/SKILL.md",
     "Best for": "Required one-line status footer for substantive responses"
-  },
-  {
-    "Skill": "Prompt Preflight",
-    "Path": ".agents/skills/prompt-preflight/SKILL.md",
-    "Best for": "Silently refine ambiguous user requests before execution"
   },
   {
     "Skill": "Rigorous Response",
@@ -48,6 +53,11 @@
     "Skill": "Shepherd",
     "Path": ".agents/skills/shepherd/SKILL.md",
     "Best for": "Reversible execution, checkpoints, recovery, and supervisor guardrails"
+  },
+  {
+    "Skill": "Skill Optimizer",
+    "Path": ".agents/skills/skill-optimizer/SKILL.md",
+    "Best for": "Optimizing Markdown-based skills with baseline and validation runs"
   },
   {
     "Skill": "UX & Logic Loop",
