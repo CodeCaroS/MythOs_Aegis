@@ -1,0 +1,204 @@
+{
+  "batch": "test-a",
+  "rubric": "evals/rubrics/shared.md",
+  "skills_frozen": true,
+  "composite_weights": {
+    "correctness": 0.35,
+    "constraint_compliance": 0.3,
+    "personal_fit": 0.2,
+    "efficiency": 0.15
+  },
+  "pass_threshold": 0.8,
+  "evaluations": [
+    {
+      "skill": "find-skills",
+      "task_id": "test-find-skills",
+      "version": "baseline",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.55,
+        "constraint_compliance": 0.5,
+        "personal_fit": 0.35,
+        "efficiency": 0.35
+      },
+      "composite": 0.465,
+      "verdict": "fail",
+      "evidence": [
+        "It identifies a relevant browser capability but searches outside the harness first.",
+        "It misses the existing repository-local agent-browser skill.",
+        "The recommendation would duplicate capability and does not repair the stale inventory."
+      ]
+    },
+    {
+      "skill": "find-skills",
+      "task_id": "test-find-skills",
+      "version": "best",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.98,
+        "constraint_compliance": 0.99,
+        "personal_fit": 0.95,
+        "efficiency": 0.99
+      },
+      "composite": 0.9785,
+      "verdict": "pass",
+      "evidence": [
+        "It finds and reuses the existing local agent-browser skill.",
+        "It explains why no additional browser capability or CLI is necessary.",
+        "It identifies the agents.json inventory gap and the repository guard needed after repair."
+      ]
+    },
+    {
+      "skill": "frontend-design",
+      "task_id": "test-frontend-design",
+      "version": "baseline",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.78,
+        "constraint_compliance": 0.6,
+        "personal_fit": 0.6,
+        "efficiency": 0.65
+      },
+      "composite": 0.6705,
+      "verdict": "fail",
+      "evidence": [
+        "The archival-index direction is readable, distinctive, and accessibility-aware.",
+        "Per-file activity markers blur the boundary with the central notification surface.",
+        "The output does not explicitly preserve existing tokens or cover practical tree interactions and states."
+      ]
+    },
+    {
+      "skill": "frontend-design",
+      "task_id": "test-frontend-design",
+      "version": "best",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.96,
+        "constraint_compliance": 0.99,
+        "personal_fit": 0.98,
+        "efficiency": 0.95
+      },
+      "composite": 0.9715,
+      "verdict": "pass",
+      "evidence": [
+        "It makes the file tree usable through explicit hierarchy, targets, truncation, selection, and keyboard behavior.",
+        "It preserves semantic tokens and validates light/dark accessibility and states.",
+        "It keeps notifications solely in Notification Center while allowing durable file state in the tree."
+      ]
+    },
+    {
+      "skill": "grill-me",
+      "task_id": "test-grill-me",
+      "version": "baseline",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.15,
+        "constraint_compliance": 0.45,
+        "personal_fit": 0.05,
+        "efficiency": 0.25
+      },
+      "composite": 0.235,
+      "verdict": "fail",
+      "evidence": [
+        "The undefined /grilling delegation does not challenge the migration.",
+        "It produces no decision ledger or evidence requirements.",
+        "It has no condition for stopping or proceeding."
+      ]
+    },
+    {
+      "skill": "grill-me",
+      "task_id": "test-grill-me",
+      "version": "best",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.91,
+        "constraint_compliance": 0.98,
+        "personal_fit": 0.93,
+        "efficiency": 0.92
+      },
+      "composite": 0.9365,
+      "verdict": "pass",
+      "evidence": [
+        "It correctly classifies the migration as high-impact and starts with the invariant that determines safety.",
+        "The ledger covers ownership, rollback, partial progress, and verifiable evidence.",
+        "It does not fabricate missing answers and defines when to stop grilling and hand off a dry run."
+      ]
+    },
+    {
+      "skill": "agent-browser",
+      "task_id": "test-agent-browser",
+      "version": "baseline",
+      "hard_pass": false,
+      "dimensions": {
+        "correctness": 0.45,
+        "constraint_compliance": 0.5,
+        "personal_fit": 0.35,
+        "efficiency": 0.15
+      },
+      "composite": 0.4,
+      "verdict": "fail",
+      "evidence": [
+        "The external CLI can automate the flow but is not the correct durable regression route.",
+        "It proposes an unrequested global installation.",
+        "Screenshots and final text do not provide a runnable regression assertion."
+      ]
+    },
+    {
+      "skill": "agent-browser",
+      "task_id": "test-agent-browser",
+      "version": "best",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.99,
+        "constraint_compliance": 0.99,
+        "personal_fit": 0.96,
+        "efficiency": 0.98
+      },
+      "composite": 0.9825,
+      "verdict": "pass",
+      "evidence": [
+        "It selects Playwright for a repeatable unauthenticated regression.",
+        "It defines functional assertions including validation, duplicate submission, and reload persistence.",
+        "It names runnable test output and trace as proof, using screenshots only when visual state matters."
+      ]
+    }
+  ],
+  "test_summary": [
+    {
+      "skill": "find-skills",
+      "baseline": 0.465,
+      "final": 0.9785,
+      "delta": 0.5135,
+      "baseline_hard_pass": true,
+      "final_hard_pass": true,
+      "evidence": "The final reuses the existing local browser skill and repairs inventory instead of adding a duplicate."
+    },
+    {
+      "skill": "frontend-design",
+      "baseline": 0.6705,
+      "final": 0.9715,
+      "delta": 0.301,
+      "baseline_hard_pass": true,
+      "final_hard_pass": true,
+      "evidence": "The final improves real tree usability while preserving tokens, accessibility, and the central notification boundary."
+    },
+    {
+      "skill": "grill-me",
+      "baseline": 0.235,
+      "final": 0.9365,
+      "delta": 0.7015,
+      "baseline_hard_pass": true,
+      "final_hard_pass": true,
+      "evidence": "The final supplies a high-criticality interview, decision ledger, evidence gate, and explicit stop condition."
+    },
+    {
+      "skill": "agent-browser",
+      "baseline": 0.4,
+      "final": 0.9825,
+      "delta": 0.5825,
+      "baseline_hard_pass": false,
+      "final_hard_pass": true,
+      "evidence": "The final chooses Playwright and defines durable proof without adding an unauthorized browser CLI."
+    }
+  ]
+}

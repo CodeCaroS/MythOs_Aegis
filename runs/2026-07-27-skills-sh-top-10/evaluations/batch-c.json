@@ -1,0 +1,289 @@
+{
+  "batch": "c",
+  "run_id": "2026-07-27-skills-sh-top-10",
+  "rubric": "evals/rubrics/shared.md",
+  "test_split_accessed": false,
+  "weights": {
+    "correctness": 0.35,
+    "constraint_compliance": 0.3,
+    "personal_fit": 0.2,
+    "efficiency": 0.15
+  },
+  "pass_threshold": 0.8,
+  "minimum_validation_delta": 0.01,
+  "evaluations": [
+    {
+      "skill": "tdd",
+      "task_id": "train-tdd",
+      "split": "train",
+      "version": "baseline",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.55,
+        "constraint_compliance": 0.95,
+        "personal_fit": 0.45,
+        "efficiency": 0.35
+      },
+      "composite": 0.62,
+      "verdict": "fail",
+      "evidence": [
+        "The output identifies a plausible public seam and avoids internal mocks.",
+        "The skill's unconditional confirmation rule makes the output stop for approval instead of completing the requested red-green slice.",
+        "It does not require tracing all callers or placing the fix at the shared root cause."
+      ]
+    },
+    {
+      "skill": "tdd",
+      "task_id": "train-tdd",
+      "split": "train",
+      "version": "candidate-v1",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.95,
+        "constraint_compliance": 0.98,
+        "personal_fit": 0.98,
+        "efficiency": 0.95
+      },
+      "composite": 0.965,
+      "verdict": "pass",
+      "evidence": [
+        "The output traces callers, chooses the existing shared public seam, and specifies a failing regression test before the root fix.",
+        "It keeps one vertical slice, avoids internal collaborator mocks, and runs focused plus broader verification.",
+        "The plan is concise and leaves the regression test as a durable guard."
+      ]
+    },
+    {
+      "skill": "tdd",
+      "task_id": "validation-tdd",
+      "split": "validation",
+      "version": "baseline",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.62,
+        "constraint_compliance": 0.98,
+        "personal_fit": 0.55,
+        "efficiency": 0.42
+      },
+      "composite": 0.684,
+      "verdict": "fail",
+      "evidence": [
+        "The output correctly prefers a behavior-level seam and a single red-green cycle.",
+        "It still asks the user to confirm an already-obvious seam, leaving the requested choice and fix incomplete.",
+        "It does not explicitly inspect every command-handler caller before changing shared behavior."
+      ]
+    },
+    {
+      "skill": "tdd",
+      "task_id": "validation-tdd",
+      "split": "validation",
+      "version": "candidate-v1",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.98,
+        "constraint_compliance": 0.98,
+        "personal_fit": 1.0,
+        "efficiency": 0.97
+      },
+      "composite": 0.9825,
+      "verdict": "pass",
+      "evidence": [
+        "The shared command handler is selected as the narrowest seam because every UI routes through it.",
+        "The regression reproduces two rapid submissions through the public command API and asserts one side effect.",
+        "The smallest fix is placed once in the handler and verified through the focused test and nearest integration gate."
+      ]
+    },
+    {
+      "skill": "web-design-guidelines",
+      "task_id": "train-web-guidelines",
+      "split": "train",
+      "version": "baseline",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.55,
+        "constraint_compliance": 0.95,
+        "personal_fit": 0.45,
+        "efficiency": 0.55
+      },
+      "composite": 0.65,
+      "verdict": "fail",
+      "evidence": [
+        "The output correctly refuses to invent file-and-line findings without files.",
+        "It only asks for a target path and does not use the prompt to identify the required runtime coverage.",
+        "It does not distinguish route smoke coverage from icon-action, keyboard, focus, contrast, and state coverage."
+      ]
+    },
+    {
+      "skill": "web-design-guidelines",
+      "task_id": "train-web-guidelines",
+      "split": "train",
+      "version": "candidate-v1",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.94,
+        "constraint_compliance": 0.98,
+        "personal_fit": 1.0,
+        "efficiency": 0.92
+      },
+      "composite": 0.961,
+      "verdict": "pass",
+      "evidence": [
+        "The output reports no fabricated confirmed defects and explicitly labels missing runtime evidence as risks.",
+        "It covers accessible names, keyboard and focus behavior, both-theme contrast, and loading/error/duplicate-action states.",
+        "It states that route tests are not functional UI coverage and asks only for the smallest evidence needed to confirm file-line findings."
+      ]
+    },
+    {
+      "skill": "web-design-guidelines",
+      "task_id": "validation-web-guidelines",
+      "split": "validation",
+      "version": "baseline",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.48,
+        "constraint_compliance": 0.95,
+        "personal_fit": 0.4,
+        "efficiency": 0.52
+      },
+      "composite": 0.611,
+      "verdict": "fail",
+      "evidence": [
+        "The output follows the baseline instruction to request files rather than invent findings.",
+        "It does not convert the known toolbar, focus, error, busy, and two-theme conditions into an actionable audit boundary.",
+        "It provides no severity ordering or confirmed-defect versus runtime-risk separation."
+      ]
+    },
+    {
+      "skill": "web-design-guidelines",
+      "task_id": "validation-web-guidelines",
+      "split": "validation",
+      "version": "candidate-v1",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.95,
+        "constraint_compliance": 0.98,
+        "personal_fit": 0.98,
+        "efficiency": 0.94
+      },
+      "composite": 0.9635,
+      "verdict": "pass",
+      "evidence": [
+        "The output treats passing route smoke tests as insufficient evidence for toolbar behavior.",
+        "It prioritizes icon accessible names, visible keyboard focus, explicit error state, and disabled or busy action behavior in both themes.",
+        "Because no implementation is supplied, all issues remain correctly labeled as runtime risks pending reproduction."
+      ]
+    },
+    {
+      "skill": "microsoft-foundry",
+      "task_id": "train-foundry",
+      "split": "train",
+      "version": "baseline",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.95,
+        "constraint_compliance": 1.0,
+        "personal_fit": 0.8,
+        "efficiency": 0.62
+      },
+      "composite": 0.8855,
+      "verdict": "pass",
+      "evidence": [
+        "The output selects the hosted-agent service, metadata overlay, and environment before troubleshooting.",
+        "It distinguishes a confirmed account network restriction from caller-side DNS and keeps all checks read-only.",
+        "The mandatory sub-skill chain and broad context ceremony add work beyond the diagnosis requested."
+      ]
+    },
+    {
+      "skill": "microsoft-foundry",
+      "task_id": "train-foundry",
+      "split": "train",
+      "version": "candidate-v1",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.96,
+        "constraint_compliance": 1.0,
+        "personal_fit": 0.96,
+        "efficiency": 0.93
+      },
+      "composite": 0.9675,
+      "verdict": "pass",
+      "evidence": [
+        "The output resolves the service, overlay, environment, and endpoint from existing configuration before diagnosis.",
+        "It proposes read-only management-plane and DNS evidence, redacts credentials, and explicitly performs no deploy or cloud mutation.",
+        "It reaches the same safe diagnostic fork as the baseline with less unrelated workflow machinery."
+      ]
+    },
+    {
+      "skill": "microsoft-foundry",
+      "task_id": "validation-foundry",
+      "split": "validation",
+      "version": "baseline",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.98,
+        "constraint_compliance": 1.0,
+        "personal_fit": 0.84,
+        "efficiency": 0.72
+      },
+      "composite": 0.919,
+      "verdict": "pass",
+      "evidence": [
+        "The output correctly stops before deployment and asks the user to select one of two hosted-agent services.",
+        "It identifies the endpoint conflict and asks which source is authoritative rather than merging or overwriting metadata.",
+        "It includes more metadata-normalization and workflow detail than this context-resolution task needs."
+      ]
+    },
+    {
+      "skill": "microsoft-foundry",
+      "task_id": "validation-foundry",
+      "split": "validation",
+      "version": "candidate-v1",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.98,
+        "constraint_compliance": 1.0,
+        "personal_fit": 0.96,
+        "efficiency": 0.96
+      },
+      "composite": 0.979,
+      "verdict": "pass",
+      "evidence": [
+        "The output asks for the target service because two hosted services make the agent root ambiguous.",
+        "It surfaces the azd-versus-metadata endpoint conflict and requires an authority decision before any deployment.",
+        "It preserves overlay separation and avoids credentials, remote writes, and speculative scaffolding."
+      ]
+    }
+  ],
+  "skill_results": [
+    {
+      "skill": "tdd",
+      "baseline_validation": 0.684,
+      "candidate_validation": 0.9825,
+      "delta": 0.2985,
+      "critical_regression": false,
+      "decision": "accept_candidate"
+    },
+    {
+      "skill": "web-design-guidelines",
+      "baseline_validation": 0.611,
+      "candidate_validation": 0.9635,
+      "delta": 0.3525,
+      "critical_regression": false,
+      "decision": "accept_candidate"
+    },
+    {
+      "skill": "microsoft-foundry",
+      "baseline_validation": 0.919,
+      "candidate_validation": 0.979,
+      "delta": 0.06,
+      "critical_regression": false,
+      "decision": "accept_candidate"
+    }
+  ],
+  "aggregate": {
+    "baseline_train": 0.7185,
+    "candidate_train": 0.9645,
+    "baseline_validation": 0.738,
+    "candidate_validation": 0.975,
+    "validation_delta": 0.237
+  }
+}

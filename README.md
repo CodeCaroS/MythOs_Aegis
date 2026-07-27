@@ -8,10 +8,17 @@ the human-readable map of the same set.
 ## Skills
 
 - `.agents/skills/academix/` for academic research, literature reviews, and source evaluation
+- `.agents/skills/agent-browser/` for routing browser automation and functional UI verification
 - `.agents/skills/apocalypse/` for pre-mortems, risk analysis, and failure chains
 - `.agents/skills/crawler-readiness-audit/` for crawler readability, SSR, metadata, and indexability
 - `.agents/skills/decision-criticality-gate/` for classifying decisions by reversibility, blast radius, trust impact, and urgency
 - `.agents/skills/fact-checker/` for claim verification and correction
+- `.agents/skills/find-skills/` for discovering reusable skills without duplicating harness capability
+- `.agents/skills/frontend-design/` for distinctive accessible interfaces that preserve product architecture
+- `.agents/skills/grill-me/` for focused decision interviews without unnecessary planning ceremony
+- `.agents/skills/grill-with-docs/` for decision interviews with proportional ADR and glossary updates
+- `.agents/skills/improve-codebase-architecture/` for evidence-backed architecture reviews and refactor candidates
+- `.agents/skills/microsoft-foundry/` for safe Microsoft Foundry agent and project workflows
 - `.agents/skills/output-templates/` for shared response templates for recurring agent tasks
 - `.agents/skills/pre-launch-security-gate/` for security review before release
 - `.agents/skills/prompt-preflight/` for silent prompt refinement before execution
@@ -19,9 +26,12 @@ the human-readable map of the same set.
 - `.agents/skills/rigorous-response/` for concise reasoning and premise checks
 - `.agents/skills/shepherd/` for reversible execution, checkpoints, and recovery
 - `.agents/skills/skill-optimizer/` for optimizing Markdown-based skills
+- `.agents/skills/tdd/` for small behavior-first red-green implementation slices
 - `.agents/skills/ux-logic-loop/` for user-story inventory and test loops
+- `.agents/skills/vercel-react-best-practices/` for measured React and Next.js performance work
 - `.agents/skills/visual-flow-storyboard/` for user-journey reconstruction
 - `.agents/skills/visual-pr-review/` for pull-request review and implementation planning
+- `.agents/skills/web-design-guidelines/` for accessibility and functional web UI audits
 
 ## Canonical Skill Frontmatter
 

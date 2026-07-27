@@ -1,0 +1,154 @@
+{
+  "batch": "test-batch-b",
+  "run_id": "2026-07-27-skills-sh-top-10",
+  "phase": "frozen-test",
+  "rubric": "evals/rubrics/shared.md",
+  "rubric_weights": {
+    "correctness": 0.35,
+    "constraint_compliance": 0.30,
+    "personal_fit": 0.20,
+    "efficiency": 0.15
+  },
+  "pass_threshold": 0.80,
+  "skills_frozen": true,
+  "rollout_type": "representative-synthetic",
+  "results": [
+    {
+      "skill": "vercel-react-best-practices",
+      "task_id": "test-react",
+      "baseline": {
+        "dimensions": {
+          "correctness": 0.76,
+          "constraint_compliance": 0.88,
+          "personal_fit": 0.65,
+          "efficiency": 0.68
+        },
+        "composite": 0.762,
+        "hard_pass": true,
+        "verdict": "fail",
+        "evidence": [
+          "Names plausible list optimizations and eventually requests a Profiler check.",
+          "Prescribes content-visibility, memo, useMemo, useCallback, Map, and module caching before locating the measured bottleneck.",
+          "Module caching lacks ownership and invalidation evidence; accessibility and functional list states are not verified."
+        ]
+      },
+      "final": {
+        "dimensions": {
+          "correctness": 0.95,
+          "constraint_compliance": 0.98,
+          "personal_fit": 0.95,
+          "efficiency": 0.95
+        },
+        "composite": 0.959,
+        "hard_pass": true,
+        "verdict": "pass",
+        "evidence": [
+          "Starts with a profiler trace and branches the fix according to the observed cost.",
+          "Makes memoization and caching conditional on measured repeated work and defined cache semantics.",
+          "Prefers existing or native list behavior and preserves keys, accessibility, UI states, and a before/after check."
+        ]
+      },
+      "delta": 0.197
+    },
+    {
+      "skill": "grill-with-docs",
+      "task_id": "test-grill-docs",
+      "baseline": {
+        "dimensions": {
+          "correctness": 0.40,
+          "constraint_compliance": 0.60,
+          "personal_fit": 0.35,
+          "efficiency": 0.48
+        },
+        "composite": 0.462,
+        "hard_pass": true,
+        "verdict": "fail",
+        "evidence": [
+          "Asks whether the name represents a domain concept and where it is used.",
+          "Updates documentation while discussion is still in progress rather than after agreement.",
+          "Creates an ADR for any rename and does not distinguish a glossary correction from a durable architectural decision."
+        ]
+      },
+      "final": {
+        "dimensions": {
+          "correctness": 0.95,
+          "constraint_compliance": 0.98,
+          "personal_fit": 0.96,
+          "efficiency": 0.96
+        },
+        "composite": 0.9625,
+        "hard_pass": true,
+        "verdict": "pass",
+        "evidence": [
+          "Interrogates semantic change, agreement, dependencies, durability, and reversibility before deciding.",
+          "Updates the existing glossary term for the same concept and avoids duplicate terms.",
+          "Reserves an ADR for load-bearing decisions, allows neither for cosmetic changes, and asks before writing."
+        ]
+      },
+      "delta": 0.5005
+    },
+    {
+      "skill": "improve-codebase-architecture",
+      "task_id": "test-architecture",
+      "baseline": {
+        "dimensions": {
+          "correctness": 0.78,
+          "constraint_compliance": 0.85,
+          "personal_fit": 0.63,
+          "efficiency": 0.42
+        },
+        "composite": 0.717,
+        "hard_pass": true,
+        "verdict": "fail",
+        "evidence": [
+          "Reads the prior ADR, uses the deletion test, and preserves analysis-only scope.",
+          "Treats helper count as evidence of shallow architecture and recommends a new interface before tracing actual behavior.",
+          "Mandatory HTML and before/after diagrams add ceremony without improving the evidence threshold."
+        ]
+      },
+      "final": {
+        "dimensions": {
+          "correctness": 0.96,
+          "constraint_compliance": 0.99,
+          "personal_fit": 0.95,
+          "efficiency": 0.95
+        },
+        "composite": 0.9655,
+        "hard_pass": true,
+        "verdict": "pass",
+        "evidence": [
+          "Treats tiny helpers as a signal and requires end-to-end trace evidence before ranking a finding.",
+          "Preserves the prior ADR unless repeated current friction invalidates its assumptions, and labels reopening as exploratory.",
+          "Prefers deletion or existing-seam consolidation, rejects speculative abstractions, names verification, and remains analysis-only."
+        ]
+      },
+      "delta": 0.2485
+    }
+  ],
+  "summary": [
+    {
+      "skill": "vercel-react-best-practices",
+      "baseline": 0.762,
+      "final": 0.959,
+      "delta": 0.197,
+      "baseline_hard_pass": true,
+      "final_hard_pass": true
+    },
+    {
+      "skill": "grill-with-docs",
+      "baseline": 0.462,
+      "final": 0.9625,
+      "delta": 0.5005,
+      "baseline_hard_pass": true,
+      "final_hard_pass": true
+    },
+    {
+      "skill": "improve-codebase-architecture",
+      "baseline": 0.717,
+      "final": 0.9655,
+      "delta": 0.2485,
+      "baseline_hard_pass": true,
+      "final_hard_pass": true
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "batch": "c",
+  "phase": "final-test",
+  "run_id": "2026-07-27-skills-sh-top-10",
+  "rubric": "evals/rubrics/shared.md",
+  "validation_frozen": true,
+  "skills_edited": false,
+  "weights": {
+    "correctness": 0.35,
+    "constraint_compliance": 0.3,
+    "personal_fit": 0.2,
+    "efficiency": 0.15
+  },
+  "pass_threshold": 0.8,
+  "evaluations": [
+    {
+      "skill": "tdd",
+      "task_id": "test-tdd",
+      "version": "baseline",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.65,
+        "constraint_compliance": 0.98,
+        "personal_fit": 0.6,
+        "efficiency": 0.45
+      },
+      "composite": 0.709,
+      "verdict": "fail",
+      "evidence": [
+        "Selects a public UI or API seam and explicitly avoids database assertions.",
+        "Stops for mandatory seam confirmation even though the prompt already identifies an observable reload boundary.",
+        "Does not require tracing the write and reload/read callers to place the fix at the shared persistence root."
+      ]
+    },
+    {
+      "skill": "tdd",
+      "task_id": "test-tdd",
+      "version": "best",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.97,
+        "constraint_compliance": 0.98,
+        "personal_fit": 0.99,
+        "efficiency": 0.96
+      },
+      "composite": 0.9755,
+      "verdict": "pass",
+      "evidence": [
+        "Tests persistence through public save and reload behavior, never through database tables or internal calls.",
+        "Requires a failing test for the right reason, a smallest shared persistence fix, and focused plus broader verification.",
+        "Explicit reload-persistence coverage matches the user's functional UI expectations."
+      ]
+    },
+    {
+      "skill": "web-design-guidelines",
+      "task_id": "test-web-guidelines",
+      "version": "baseline",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.5,
+        "constraint_compliance": 0.96,
+        "personal_fit": 0.42,
+        "efficiency": 0.55
+      },
+      "composite": 0.6295,
+      "verdict": "fail",
+      "evidence": [
+        "Avoids inventing source locations when no files are supplied.",
+        "Only requests files and does not address the prompt's unverified runtime overflow and focus-order risks.",
+        "Treats source review as the audit boundary even though code appearance cannot prove rendered behavior."
+      ]
+    },
+    {
+      "skill": "web-design-guidelines",
+      "task_id": "test-web-guidelines",
+      "version": "best",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.95,
+        "constraint_compliance": 0.98,
+        "personal_fit": 0.99,
+        "efficiency": 0.94
+      },
+      "composite": 0.9655,
+      "verdict": "pass",
+      "evidence": [
+        "Separates code-supported accessibility from runtime risks rather than claiming confirmed defects.",
+        "Specifies responsive overflow and keyboard focus-order reproduction across representative widths.",
+        "Keeps the existing design system and asks only for runtime and source evidence needed for actionable file-line findings."
+      ]
+    },
+    {
+      "skill": "microsoft-foundry",
+      "task_id": "test-foundry",
+      "version": "baseline",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.96,
+        "constraint_compliance": 1.0,
+        "personal_fit": 0.85,
+        "efficiency": 0.68
+      },
+      "composite": 0.908,
+      "verdict": "pass",
+      "evidence": [
+        "Resolves the existing azd service and environment, then routes to the observe workflow.",
+        "Keeps train, validation, and test data isolated and requests authorization before remote suite or dataset changes.",
+        "Mandatory discovery and sub-skill ceremony adds overhead to a planning-only request."
+      ]
+    },
+    {
+      "skill": "microsoft-foundry",
+      "task_id": "test-foundry",
+      "version": "best",
+      "hard_pass": true,
+      "dimensions": {
+        "correctness": 0.98,
+        "constraint_compliance": 1.0,
+        "personal_fit": 0.97,
+        "efficiency": 0.94
+      },
+      "composite": 0.978,
+      "verdict": "pass",
+      "evidence": [
+        "Uses existing azure.yaml, azd environment values, eval.yaml intent, and selected metadata rather than scaffolding parallel configuration.",
+        "Freezes baseline and dataset splits, keeps test untouched until final evaluation, and distinguishes local planning from remote mutation.",
+        "Requires explicit authorization before registering datasets, creating or updating suites, running billable evaluations, or writing remote state."
+      ]
+    }
+  ],
+  "results": [
+    {
+      "skill": "tdd",
+      "baseline": 0.709,
+      "final": 0.9755,
+      "delta": 0.2665,
+      "baseline_hard_pass": true,
+      "final_hard_pass": true
+    },
+    {
+      "skill": "web-design-guidelines",
+      "baseline": 0.6295,
+      "final": 0.9655,
+      "delta": 0.336,
+      "baseline_hard_pass": true,
+      "final_hard_pass": true
+    },
+    {
+      "skill": "microsoft-foundry",
+      "baseline": 0.908,
+      "final": 0.978,
+      "delta": 0.07,
+      "baseline_hard_pass": true,
+      "final_hard_pass": true
+    }
+  ],
+  "aggregate": {
+    "baseline": 0.7488,
+    "final": 0.973,
+    "delta": 0.2242
+  }
+}

@@ -1,0 +1,283 @@
+{
+  "batch": "batch-b",
+  "run_id": "2026-07-27-skills-sh-top-10",
+  "rubric": "evals/rubrics/shared.md",
+  "rubric_weights": {
+    "correctness": 0.35,
+    "constraint_compliance": 0.30,
+    "personal_fit": 0.20,
+    "efficiency": 0.15
+  },
+  "pass_threshold": 0.80,
+  "acceptance_delta": 0.01,
+  "test_split_accessed": false,
+  "rollout_type": "representative-synthetic",
+  "evaluations": [
+    {
+      "skill": "vercel-react-best-practices",
+      "task_id": "train-react",
+      "split": "train",
+      "version": "baseline",
+      "dimensions": {
+        "correctness": 0.82,
+        "constraint_compliance": 0.88,
+        "personal_fit": 0.64,
+        "efficiency": 0.72
+      },
+      "composite": 0.787,
+      "hard_pass": true,
+      "verdict": "fail",
+      "evidence": [
+        "Correctly prioritizes the sequential requests and limits Promise.all to independent work.",
+        "Recommends better-all and SWR without repository evidence, contrary to the prompt's repository-compatible constraint.",
+        "Treats memo removal largely as a rule and leaves verification at render correctness instead of a measurable performance check."
+      ]
+    },
+    {
+      "skill": "vercel-react-best-practices",
+      "task_id": "train-react",
+      "split": "train",
+      "version": "candidate-v1",
+      "dimensions": {
+        "correctness": 0.94,
+        "constraint_compliance": 0.96,
+        "personal_fit": 0.95,
+        "efficiency": 0.93
+      },
+      "composite": 0.9465,
+      "hard_pass": true,
+      "verdict": "pass",
+      "evidence": [
+        "Conditions parallelization on independence and preserves authorization, rate-limit, and error semantics.",
+        "Uses profiling to decide memoization changes rather than applying a blanket rule.",
+        "Explicitly rejects a new cache dependency and names minimal functional and performance verification."
+      ]
+    },
+    {
+      "skill": "vercel-react-best-practices",
+      "task_id": "validation-react",
+      "split": "validation",
+      "version": "baseline",
+      "dimensions": {
+        "correctness": 0.88,
+        "constraint_compliance": 0.90,
+        "personal_fit": 0.74,
+        "efficiency": 0.78
+      },
+      "composite": 0.843,
+      "hard_pass": true,
+      "verdict": "pass",
+      "evidence": [
+        "Finds both request-state leakage and oversized server-to-client serialization.",
+        "React.cache is native, but cross-request LRU advice is speculative because no reuse or invalidation need is shown.",
+        "Does not name a concurrency regression check, client UI states, or payload measurement."
+      ]
+    },
+    {
+      "skill": "vercel-react-best-practices",
+      "task_id": "validation-react",
+      "split": "validation",
+      "version": "candidate-v1",
+      "dimensions": {
+        "correctness": 0.95,
+        "constraint_compliance": 0.98,
+        "personal_fit": 0.96,
+        "efficiency": 0.96
+      },
+      "composite": 0.9625,
+      "hard_pass": true,
+      "verdict": "pass",
+      "evidence": [
+        "Explains the cross-request failure mode and fixes ownership at request scope.",
+        "Minimizes and sanitizes the serialized boundary without introducing a package.",
+        "Adds targeted concurrency, payload-size, and functional-state verification."
+      ]
+    },
+    {
+      "skill": "grill-with-docs",
+      "task_id": "train-grill-docs",
+      "split": "train",
+      "version": "baseline",
+      "dimensions": {
+        "correctness": 0.38,
+        "constraint_compliance": 0.62,
+        "personal_fit": 0.35,
+        "efficiency": 0.50
+      },
+      "composite": 0.464,
+      "hard_pass": true,
+      "verdict": "fail",
+      "evidence": [
+        "Asks relevant boundary and ownership questions.",
+        "The one-line skill delegates to unavailable grilling and domain-modeling workflows without defining a fallback.",
+        "Promises glossary and ADR updates before establishing that the decision is durable and load-bearing."
+      ]
+    },
+    {
+      "skill": "grill-with-docs",
+      "task_id": "train-grill-docs",
+      "split": "train",
+      "version": "candidate-v1",
+      "dimensions": {
+        "correctness": 0.91,
+        "constraint_compliance": 0.97,
+        "personal_fit": 0.95,
+        "efficiency": 0.94
+      },
+      "composite": 0.9405,
+      "hard_pass": true,
+      "verdict": "pass",
+      "evidence": [
+        "Questions coupling, invariants, ownership, reversibility, and test locality before accepting the split.",
+        "Withholds both ADR and glossary edits while the proposal remains unapproved.",
+        "Scopes the eventual ADR and glossary change to the minimum durable record."
+      ]
+    },
+    {
+      "skill": "grill-with-docs",
+      "task_id": "validation-grill-docs",
+      "split": "validation",
+      "version": "baseline",
+      "dimensions": {
+        "correctness": 0.30,
+        "constraint_compliance": 0.45,
+        "personal_fit": 0.20,
+        "efficiency": 0.35
+      },
+      "composite": 0.3325,
+      "hard_pass": true,
+      "verdict": "fail",
+      "evidence": [
+        "Correctly sees some value in recording the rejected architecture option.",
+        "Incorrectly treats the reversible color preference as an ADR-worthy durable decision.",
+        "Creates glossary work without any new or sharpened domain term and does not ask before writing."
+      ]
+    },
+    {
+      "skill": "grill-with-docs",
+      "task_id": "validation-grill-docs",
+      "split": "validation",
+      "version": "candidate-v1",
+      "dimensions": {
+        "correctness": 0.98,
+        "constraint_compliance": 0.99,
+        "personal_fit": 0.98,
+        "efficiency": 0.98
+      },
+      "composite": 0.983,
+      "hard_pass": true,
+      "verdict": "pass",
+      "evidence": [
+        "Records the rejected option because its enduring constraint prevents repeated future debate.",
+        "Excludes the reversible color preference from both ADR and glossary.",
+        "Makes glossary updates conditional on domain-language need and preserves user approval before writing."
+      ]
+    },
+    {
+      "skill": "improve-codebase-architecture",
+      "task_id": "train-architecture",
+      "split": "train",
+      "version": "baseline",
+      "dimensions": {
+        "correctness": 0.82,
+        "constraint_compliance": 0.80,
+        "personal_fit": 0.55,
+        "efficiency": 0.45
+      },
+      "composite": 0.7045,
+      "hard_pass": true,
+      "verdict": "fail",
+      "evidence": [
+        "Scopes from history and recognizes locality, leverage, and the deletion test.",
+        "Ranks new module and adapter abstractions without cited repository evidence.",
+        "Mandates delegation, CDN HTML, diagrams, temp-file creation, and browser opening for a review that concise prose can satisfy."
+      ]
+    },
+    {
+      "skill": "improve-codebase-architecture",
+      "task_id": "train-architecture",
+      "split": "train",
+      "version": "candidate-v1",
+      "dimensions": {
+        "correctness": 0.94,
+        "constraint_compliance": 0.98,
+        "personal_fit": 0.96,
+        "efficiency": 0.96
+      },
+      "composite": 0.959,
+      "hard_pass": true,
+      "verdict": "pass",
+      "evidence": [
+        "Refuses to manufacture findings before tracing history, callers, boundaries, UI state, and tests.",
+        "Keeps the review analysis-only and applies a strict evidence threshold to new seams.",
+        "Defines the exact evidence and runnable verification required for later ranked findings."
+      ]
+    },
+    {
+      "skill": "improve-codebase-architecture",
+      "task_id": "validation-architecture",
+      "split": "validation",
+      "version": "baseline",
+      "dimensions": {
+        "correctness": 0.70,
+        "constraint_compliance": 0.82,
+        "personal_fit": 0.55,
+        "efficiency": 0.40
+      },
+      "composite": 0.661,
+      "hard_pass": true,
+      "verdict": "fail",
+      "evidence": [
+        "Recognizes that repeated adapter changes may indicate a seam.",
+        "Conflates adapter count and commit frequency with proof of shared behavior, then rates consolidation Strong.",
+        "Adds an interface, mandatory HTML, and five diagrams before checking duplicated policy, callers, or contract tests."
+      ]
+    },
+    {
+      "skill": "improve-codebase-architecture",
+      "task_id": "validation-architecture",
+      "split": "validation",
+      "version": "candidate-v1",
+      "dimensions": {
+        "correctness": 0.96,
+        "constraint_compliance": 0.99,
+        "personal_fit": 0.94,
+        "efficiency": 0.95
+      },
+      "composite": 0.9635,
+      "hard_pass": true,
+      "verdict": "pass",
+      "evidence": [
+        "Correctly treats recent changes as a sampling signal rather than consolidation proof.",
+        "Separates confirmed frequency, evidence-dependent consolidation, and speculative interface/factory work.",
+        "Preserves protocol-specific behavior, requires the deletion test, and names minimal contract/regression checks."
+      ]
+    }
+  ],
+  "validation_decisions": [
+    {
+      "skill": "vercel-react-best-practices",
+      "baseline": 0.843,
+      "candidate": 0.9625,
+      "delta": 0.1195,
+      "critical_dimension_regression": false,
+      "decision": "accept_candidate"
+    },
+    {
+      "skill": "grill-with-docs",
+      "baseline": 0.3325,
+      "candidate": 0.983,
+      "delta": 0.6505,
+      "critical_dimension_regression": false,
+      "decision": "accept_candidate"
+    },
+    {
+      "skill": "improve-codebase-architecture",
+      "baseline": 0.661,
+      "candidate": 0.9635,
+      "delta": 0.3025,
+      "critical_dimension_regression": false,
+      "decision": "accept_candidate"
+    }
+  ]
+}
