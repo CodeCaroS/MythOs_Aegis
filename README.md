@@ -10,6 +10,7 @@ the human-readable map of the same set.
 - `.agents/skills/academix/` for academic research, literature reviews, and source evaluation
 - `.agents/skills/agent-browser/` for routing browser automation and functional UI verification
 - `.agents/skills/apocalypse/` for pre-mortems, risk analysis, and failure chains
+- `.agents/skills/aria-apg-review/` for reviewing UI widgets against every applicable WAI-ARIA APG pattern
 - `.agents/skills/crawler-readiness-audit/` for crawler readability, SSR, metadata, and indexability
 - `.agents/skills/decision-criticality-gate/` for classifying decisions by reversibility, blast radius, trust impact, and urgency
 - `.agents/skills/fact-checker/` for claim verification and correction
@@ -28,6 +29,7 @@ the human-readable map of the same set.
 - `.agents/skills/skill-optimizer/` for optimizing Markdown-based skills
 - `.agents/skills/tdd/` for small behavior-first red-green implementation slices
 - `.agents/skills/ux-logic-loop/` for user-story inventory and test loops
+- `.agents/skills/ux-pattern-review/` for reviewing product flows and UI pattern choices against uxpatterns.dev
 - `.agents/skills/vercel-react-best-practices/` for measured React and Next.js performance work
 - `.agents/skills/visual-flow-storyboard/` for user-journey reconstruction
 - `.agents/skills/visual-pr-review/` for pull-request review and implementation planning
@@ -80,6 +82,7 @@ pick the right workflow without inventing one from scratch.
     `-- skills/
         |-- academix/
         |-- apocalypse/
+        |-- aria-apg-review/
         |-- crawler-readiness-audit/
         |-- decision-criticality-gate/
         |-- fact-checker/
@@ -91,6 +94,7 @@ pick the right workflow without inventing one from scratch.
         |-- shepherd/
         |-- skill-optimizer/
         |-- ux-logic-loop/
+        |-- ux-pattern-review/
         |-- visual-flow-storyboard/
         `-- visual-pr-review/
 ```

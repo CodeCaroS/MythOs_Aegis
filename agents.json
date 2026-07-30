@@ -10,6 +10,11 @@
     "Best for": "Pre-mortems, risk analysis, failure chains, recovery planning"
   },
   {
+    "Skill": "ARIA APG Review",
+    "Path": ".agents/skills/aria-apg-review/SKILL.md",
+    "Best for": "Reviewing UI widgets against every applicable WAI-ARIA APG pattern"
+  },
+  {
     "Skill": "Crawler Readiness Audit",
     "Path": ".agents/skills/crawler-readiness-audit/SKILL.md",
     "Best for": "Auditing crawler readability, SSR, metadata, and indexability"
@@ -63,6 +68,11 @@
     "Skill": "UX & Logic Loop",
     "Path": ".agents/skills/ux-logic-loop/SKILL.md",
     "Best for": "Persistent feature inventory, story matrix, and test loop"
+  },
+  {
+    "Skill": "UX Pattern Review",
+    "Path": ".agents/skills/ux-pattern-review/SKILL.md",
+    "Best for": "Reviewing product flows and UI pattern choices against uxpatterns.dev"
   },
   {
     "Skill": "Visual Flow Storyboard",
