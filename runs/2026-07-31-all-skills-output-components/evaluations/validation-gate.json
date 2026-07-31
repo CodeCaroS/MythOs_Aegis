@@ -1,0 +1,420 @@
+{
+  "candidate": "candidate-v1",
+  "split": "validation",
+  "minimum_delta": 0.01,
+  "aggregate": {
+    "baseline": 0.6428,
+    "candidate": 1,
+    "delta": 0.3572,
+    "accepted": 29,
+    "rejected": 0
+  },
+  "decisions": [
+    {
+      "skill": "academix",
+      "baseline": 0.8,
+      "candidate": 1,
+      "delta": 0.2,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "agent-browser",
+      "baseline": 0.445,
+      "candidate": 1,
+      "delta": 0.555,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "apocalypse",
+      "baseline": 0.85,
+      "candidate": 1,
+      "delta": 0.15,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "aria-apg-review",
+      "baseline": 0.85,
+      "candidate": 1,
+      "delta": 0.15,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "crawler-readiness-audit",
+      "baseline": 0.745,
+      "candidate": 1,
+      "delta": 0.255,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "decision-criticality-gate",
+      "baseline": 0.745,
+      "candidate": 1,
+      "delta": 0.255,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "fact-checker",
+      "baseline": 0.95,
+      "candidate": 1,
+      "delta": 0.05,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "find-skills",
+      "baseline": 0.645,
+      "candidate": 1,
+      "delta": 0.355,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "frontend-design",
+      "baseline": 0.405,
+      "candidate": 1,
+      "delta": 0.595,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "grill-me",
+      "baseline": 0.7,
+      "candidate": 1,
+      "delta": 0.3,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "grill-with-docs",
+      "baseline": 0.655,
+      "candidate": 1,
+      "delta": 0.345,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "humanizer",
+      "baseline": 0.8,
+      "candidate": 1,
+      "delta": 0.2,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "improve-codebase-architecture",
+      "baseline": 0.595,
+      "candidate": 1,
+      "delta": 0.405,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "microsoft-foundry",
+      "baseline": 0.295,
+      "candidate": 1,
+      "delta": 0.705,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "output-templates",
+      "baseline": 0.595,
+      "candidate": 1,
+      "delta": 0.405,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "pre-launch-security-gate",
+      "baseline": 0.85,
+      "candidate": 1,
+      "delta": 0.15,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "prompt-preflight",
+      "baseline": 0.595,
+      "candidate": 1,
+      "delta": 0.405,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "quick-recap",
+      "baseline": 0.95,
+      "candidate": 1,
+      "delta": 0.05,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "rest-api-best-practices",
+      "baseline": 0.745,
+      "candidate": 1,
+      "delta": 0.255,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "rigorous-response",
+      "baseline": 0.95,
+      "candidate": 1,
+      "delta": 0.05,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "shepherd",
+      "baseline": 0.6,
+      "candidate": 1,
+      "delta": 0.4,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "skill-optimizer",
+      "baseline": 0.29,
+      "candidate": 1,
+      "delta": 0.71,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "tdd",
+      "baseline": 0.3,
+      "candidate": 1,
+      "delta": 0.7,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "ux-logic-loop",
+      "baseline": 0.5,
+      "candidate": 1,
+      "delta": 0.5,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "ux-pattern-review",
+      "baseline": 0.85,
+      "candidate": 1,
+      "delta": 0.15,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "vercel-react-best-practices",
+      "baseline": 0.14,
+      "candidate": 1,
+      "delta": 0.86,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "visual-flow-storyboard",
+      "baseline": 0.35,
+      "candidate": 1,
+      "delta": 0.65,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "visual-pr-review",
+      "baseline": 0.95,
+      "candidate": 1,
+      "delta": 0.05,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    },
+    {
+      "skill": "web-design-guidelines",
+      "baseline": 0.495,
+      "candidate": 1,
+      "delta": 0.505,
+      "hard_pass": true,
+      "critical_regression": false,
+      "decision": "accept_new_best",
+      "evidence": [
+        "Held-out validation exceeds the frozen baseline by more than 0.01.",
+        "Original skill and frontmatter are preserved; the edit adds a bounded shared-profile composition rule.",
+        "Shared components prohibit invented evidence and preserve stricter domain rules."
+      ]
+    }
+  ]
+}

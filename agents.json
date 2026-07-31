@@ -133,5 +133,15 @@
     "Skill": "Web Design Guidelines",
     "Path": ".agents/skills/web-design-guidelines/SKILL.md",
     "Best for": "Accessibility, interaction, responsive, and functional web UI audits"
+  },
+  {
+    "Skill": "Humanizer",
+    "Path": ".agents/skills/humanizer/SKILL.md",
+    "Best for": "Natural German and English prose that preserves facts, protected structure, and author voice"
+  },
+  {
+    "Skill": "REST API Best Practices",
+    "Path": ".agents/skills/rest-api-best-practices/SKILL.md",
+    "Best for": "Designing and reviewing predictable, secure REST/HTTP API contracts"
   }
 ]

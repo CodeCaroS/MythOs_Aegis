@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/pre-launch-security-gate/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/pre-launch-security-gate/candidate-v1.md
+index e9161da..8a3fd2a 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/pre-launch-security-gate/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/pre-launch-security-gate/candidate-v1.md	
+@@ -604,3 +604,9 @@ At end task, report:
+ ```
+ 
+ A `PASS` requires evidence. Absence of discovered vulnerabilities is not proof the system is secure.
++
++## Shared output profile
++
++Compose the `review` profile from [output-templates](../output-templates/references/components.md).
++Lead with the release decision, then findings, attack evidence, required fix, tests, and residual risk.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

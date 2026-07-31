@@ -1,0 +1,23 @@
+{
+  "runId": "2026-07-31-all-skills-output-components",
+  "objective": "Optimize all repository skills, with emphasis on concise output contracts and reusable response components.",
+  "repositoryCommit": "8f4f5704e3e523d64f846495f6d50b2982f555a0",
+  "workingTreeNote": "README.md, agents.json, humanizer, and rest-api-best-practices contained pre-run user-requested work and are included in the frozen baseline.",
+  "taskSetVersion": "1.0.0",
+  "rubricVersion": "1.0.0",
+  "targetAgent": "Current Codex agent configuration; exact model identifier unavailable to the harness",
+  "optimizerAgent": "Current Codex agent configuration; exact model identifier unavailable to the harness",
+  "startedAt": "2026-07-31",
+  "seed": 20260731,
+  "fullRewriteMode": false,
+  "maxEditsPerSkillPerIteration": 4,
+  "maxAddedWordsPerSkillPerIteration": 120,
+  "maxDeletedWordsPerSkillPerIteration": 120,
+  "minimumValidationDelta": 0.01,
+  "acceptance": "candidate > baseline + 0.01, required output fields pass, and no safety, evidence, or domain-specific regression",
+  "splits": {
+    "train": "evals/train/tasks.jsonl",
+    "validation": "evals/validation/tasks.jsonl",
+    "test": "evals/test/tasks.jsonl"
+  }
+}

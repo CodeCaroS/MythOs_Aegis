@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/crawler-readiness-audit/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/crawler-readiness-audit/candidate-v1.md
+index 387692b..b6922a6 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/crawler-readiness-audit/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/crawler-readiness-audit/candidate-v1.md	
+@@ -96,3 +96,9 @@ Explain whether the site should use SSR, SSG, ISR, prerendering, or hybrid rende
+ - Meta tags alone do not fix an empty HTML shell.
+ - If public content is hidden behind hydration, recommend moving it to SSR, SSG, ISR, or prerendering.
+ - If a route must stay client-rendered, clearly mark the indexing risk and the content that remains invisible in raw HTML.
++
++## Shared output profile
++
++Compose the `review` profile from [output-templates](../output-templates/references/components.md).
++Keep tested URLs, raw-versus-rendered crawler evidence, and the smallest rendering recommendation explicit.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

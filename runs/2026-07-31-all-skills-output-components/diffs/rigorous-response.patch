@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/rigorous-response/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/rigorous-response/candidate-v1.md
+index c681dbe..d27fba2 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/rigorous-response/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/rigorous-response/candidate-v1.md	
+@@ -558,3 +558,9 @@ Before responding, verify:
+ * [ ] No private chain-of-thought is exposed.
+ * [ ] The answer starts with the most important point.
+ * [ ] Filler and repetition were removed.
++
++## Shared output profile
++
++Compose the `direct` profile from [output-templates](../output-templates/references/components.md).
++Lead with the conclusion; separate evidence, inference, assumptions, uncertainty, and next action.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

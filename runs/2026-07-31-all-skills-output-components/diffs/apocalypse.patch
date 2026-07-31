@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/apocalypse/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/apocalypse/candidate-v1.md
+index 6e983ee..0d34e4c 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/apocalypse/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/apocalypse/candidate-v1.md	
+@@ -634,3 +634,9 @@ A resilient plan also explains:
+ - and how those capabilities have been proven.
+ 
+ Apocalypse considers a system prepared only when it can survive more than the happy path.
++
++## Shared output profile
++
++Compose the `review` profile from [output-templates](../output-templates/references/components.md).
++Keep the failure chain, ranked risk, countermeasure, proof, and residual exposure explicit.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

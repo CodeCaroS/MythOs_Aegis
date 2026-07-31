@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/grill-with-docs/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/grill-with-docs/candidate-v1.md
+index 1ff527d..0bee9c5 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/grill-with-docs/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/grill-with-docs/candidate-v1.md	
+@@ -24,3 +24,9 @@ Run the `grill-me` workflow and keep documentation proportional to the decision.
+ Do not create a glossary, ADR directory, or architecture document for a reversible choice or an unapproved proposal. Do not rewrite existing decisions merely to normalize style.
+ 
+ Adapted for MythOs Aegis from `mattpocock/skills` `grill-with-docs`.
++
++## Shared output profile
++
++Compose the `decision` profile from [output-templates](../output-templates/references/components.md).
++Separate the decision from documentation changes and the next implementation action.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

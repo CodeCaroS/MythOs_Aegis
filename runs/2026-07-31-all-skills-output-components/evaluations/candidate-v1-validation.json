@@ -1,0 +1,711 @@
+{
+  "label": "candidate-v1",
+  "split": "validation",
+  "rubric": "evals/rubrics/output-quality.md",
+  "evaluator": "deterministic-output-contract-v1",
+  "task_count": 29,
+  "summary": {
+    "average": 1,
+    "passed": 29,
+    "failed": 0,
+    "harness_failures": 0
+  },
+  "evaluations": [
+    {
+      "skill": "academix",
+      "task_id": "validation-academix",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "research",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: citation, source, limitation of citation, source, limitation."
+      ]
+    },
+    {
+      "skill": "agent-browser",
+      "task_id": "validation-agent-browser",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "execution",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: url, interaction, verified of url, interaction, verified."
+      ]
+    },
+    {
+      "skill": "apocalypse",
+      "task_id": "validation-apocalypse",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "review",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: failure, risk, countermeasure of failure, risk, countermeasure."
+      ]
+    },
+    {
+      "skill": "aria-apg-review",
+      "task_id": "validation-aria-apg-review",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "review",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: pattern, finding, unverified of pattern, finding, unverified."
+      ]
+    },
+    {
+      "skill": "crawler-readiness-audit",
+      "task_id": "validation-crawler-readiness-audit",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "review",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: crawler, render, url of crawler, render, url."
+      ]
+    },
+    {
+      "skill": "decision-criticality-gate",
+      "task_id": "validation-decision-criticality-gate",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "decision",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: level, score, escalation of level, score, escalation."
+      ]
+    },
+    {
+      "skill": "fact-checker",
+      "task_id": "validation-fact-checker",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "research",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: claim, source, uncertainty of claim, source, uncertainty."
+      ]
+    },
+    {
+      "skill": "find-skills",
+      "task_id": "validation-find-skills",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "decision",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: installed, overlap, recommend of installed, overlap, recommend."
+      ]
+    },
+    {
+      "skill": "frontend-design",
+      "task_id": "validation-frontend-design",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "plan",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: direction, state, verify of direction, state, verify."
+      ]
+    },
+    {
+      "skill": "grill-me",
+      "task_id": "validation-grill-me",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "decision",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: question, default, next of question, default, next."
+      ]
+    },
+    {
+      "skill": "grill-with-docs",
+      "task_id": "validation-grill-with-docs",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "decision",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: decision, document, next of decision, document, next."
+      ]
+    },
+    {
+      "skill": "humanizer",
+      "task_id": "validation-humanizer",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "artifact",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: rewrite, facts, voice of rewrite, facts, voice."
+      ]
+    },
+    {
+      "skill": "improve-codebase-architecture",
+      "task_id": "validation-improve-codebase-architecture",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "review",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: finding, evidence, risk of finding, evidence, risk."
+      ]
+    },
+    {
+      "skill": "microsoft-foundry",
+      "task_id": "validation-microsoft-foundry",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "execution",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: context, mutation, verified of context, mutation, verified."
+      ]
+    },
+    {
+      "skill": "output-templates",
+      "task_id": "validation-output-templates",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "direct",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: component, profile, omit of component, profile, omit."
+      ]
+    },
+    {
+      "skill": "pre-launch-security-gate",
+      "task_id": "validation-pre-launch-security-gate",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "review",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: finding, test, release of finding, test, release."
+      ]
+    },
+    {
+      "skill": "prompt-preflight",
+      "task_id": "validation-prompt-preflight",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "artifact",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: silent, request, preserve of silent, request, preserve."
+      ]
+    },
+    {
+      "skill": "quick-recap",
+      "task_id": "validation-quick-recap",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "status",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: completed, remaining, required of completed, remaining, required."
+      ]
+    },
+    {
+      "skill": "rest-api-best-practices",
+      "task_id": "validation-rest-api-best-practices",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "review",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: contract, compatibility, verify of contract, compatibility, verify."
+      ]
+    },
+    {
+      "skill": "rigorous-response",
+      "task_id": "validation-rigorous-response",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "direct",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: conclusion, evidence, uncertainty of conclusion, evidence, uncertainty."
+      ]
+    },
+    {
+      "skill": "shepherd",
+      "task_id": "validation-shepherd",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "execution",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: state, checkpoint, recovery of state, checkpoint, recovery."
+      ]
+    },
+    {
+      "skill": "skill-optimizer",
+      "task_id": "validation-skill-optimizer",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "optimization",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: baseline, validation, test of baseline, validation, test."
+      ]
+    },
+    {
+      "skill": "tdd",
+      "task_id": "validation-tdd",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "execution",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: red, green, test of red, green, test."
+      ]
+    },
+    {
+      "skill": "ux-logic-loop",
+      "task_id": "validation-ux-logic-loop",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "execution",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: story, status, test of story, status, test."
+      ]
+    },
+    {
+      "skill": "ux-pattern-review",
+      "task_id": "validation-ux-pattern-review",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "review",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: pattern, finding, source of pattern, finding, source."
+      ]
+    },
+    {
+      "skill": "vercel-react-best-practices",
+      "task_id": "validation-vercel-react-best-practices",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "review",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: finding, measurement, verification of finding, measurement, verification."
+      ]
+    },
+    {
+      "skill": "visual-flow-storyboard",
+      "task_id": "validation-visual-flow-storyboard",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "plan",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: journey, state, evidence of journey, state, evidence."
+      ]
+    },
+    {
+      "skill": "visual-pr-review",
+      "task_id": "validation-visual-pr-review",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "review",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: finding, evidence, recommendation of finding, evidence, recommendation."
+      ]
+    },
+    {
+      "skill": "web-design-guidelines",
+      "task_id": "validation-web-design-guidelines",
+      "split": "validation",
+      "version": "candidate-v1",
+      "profile": "review",
+      "hard_pass": true,
+      "dimensions": {
+        "outcome_usability": 1,
+        "evidence_fidelity": 1,
+        "actionability": 1,
+        "verification_honesty": 1,
+        "domain_fit": 1,
+        "proportionality": 1,
+        "reuse": 1
+      },
+      "composite": 1,
+      "verdict": "pass",
+      "evidence": [
+        "Shared profile reference: present.",
+        "Output signals: outcome, evidence, action, verification, limits, proportional, reuse.",
+        "Domain terms matched: finding, runtime, verify of finding, runtime, verify."
+      ]
+    }
+  ]
+}

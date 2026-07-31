@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/improve-codebase-architecture/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/improve-codebase-architecture/candidate-v1.md
+index 24d37ad..c8fc7d2 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/improve-codebase-architecture/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/improve-codebase-architecture/candidate-v1.md	
+@@ -31,3 +31,9 @@ Keep the review analysis-only until implementation is explicitly requested.
+ Reject one-implementation interfaces, speculative factories, framework rewrites, test-only extraction, and patterns imported against the repository's architecture. Distinguish implementation evidence from formal acceptance or release status.
+ 
+ Adapted for MythOs Aegis from `mattpocock/skills` `improve-codebase-architecture`.
++
++## Shared output profile
++
++Compose the `review` profile from [output-templates](../output-templates/references/components.md).
++Rank findings by impact with location, evidence, consequence, smallest refactor, risk, and verification seam.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

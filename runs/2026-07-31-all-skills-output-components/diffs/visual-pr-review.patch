@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/visual-pr-review/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/visual-pr-review/candidate-v1.md
+index 2d23bd9..a1e0e1a 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/visual-pr-review/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/visual-pr-review/candidate-v1.md	
+@@ -1436,3 +1436,9 @@ Before completing the review, verify:
+ * [ ] Every agent task has acceptance criteria.
+ * [ ] The final recommendation follows the defined values.
+ * [ ] No implementation begins without approval in planning mode.
++
++## Shared output profile
++
++Compose the `review` profile from [output-templates](../output-templates/references/components.md).
++Lead with the recommendation; keep every finding tied to evidence, impact, fix, and verification.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

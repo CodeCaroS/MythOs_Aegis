@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/agent-browser/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/agent-browser/candidate-v1.md
+index 506f2f0..f55a31f 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/agent-browser/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/agent-browser/candidate-v1.md	
+@@ -32,3 +32,9 @@ Use the browser route that already fits the task:
+ Do not install another browser CLI merely because the upstream skill prefers one.
+ 
+ Adapted for MythOs Aegis from `vercel-labs/agent-browser`.
++
++## Shared output profile
++
++Compose the `execution` profile from [output-templates](../output-templates/references/components.md).
++Report the URL boundary, interaction evidence, and exactly what was verified.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

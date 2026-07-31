@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/ux-logic-loop/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/ux-logic-loop/candidate-v1.md
+index 59a2a82..a809a2c 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/ux-logic-loop/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/ux-logic-loop/candidate-v1.md	
+@@ -135,3 +135,9 @@ When the loop is done, summarize:
+ - remaining risks
+ - not tested areas
+ - next steps
++
++## Shared output profile
++
++Compose the `execution` profile from [output-templates](../output-templates/references/components.md).
++Report story status, discovered findings, fixes, test evidence, remaining coverage, and blockers.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

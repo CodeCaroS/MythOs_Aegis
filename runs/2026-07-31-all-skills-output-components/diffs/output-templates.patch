@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/output-templates/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/output-templates/candidate-v1.md
+index 9af8417..19c9bb8 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/output-templates/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/output-templates/candidate-v1.md	
+@@ -113,3 +113,9 @@ Notes:
+ 
+ - Exact file, command, or module
+ ```
++
++## Shared output profile
++
++Compose the `direct` profile from [output-templates](references/components.md).
++Use reusable components and named profiles; omit empty sections and preserve owning-skill fields.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.
