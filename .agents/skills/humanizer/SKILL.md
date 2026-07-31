@@ -95,6 +95,13 @@ Confirm that:
 - the voice fits the author and audience;
 - the rewrite removed actual patterns rather than merely swapping synonyms.
 
+## Provenance
+
+Adapted and substantially rewritten for MythOs Aegis from
+[blader/humanizer](https://github.com/blader/humanizer/tree/523374dee72d67c7b2b5f858ea0094ffda49c3ac).
+The retained MIT notice is in
+[THIRD_PARTY_NOTICES.md](../../../THIRD_PARTY_NOTICES.md).
+
 ## Shared output profile
 
 Compose the `artifact` profile from [output-templates](../output-templates/references/components.md).

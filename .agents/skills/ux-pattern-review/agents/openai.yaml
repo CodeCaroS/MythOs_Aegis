@@ -1,4 +1,4 @@
 interface:
   display_name: "UX Pattern Review"
-  short_description: "Review product UX against uxpatterns.dev"
-  default_prompt: "Use $ux-pattern-review to audit this product flow and its pattern choices against uxpatterns.dev."
+  short_description: "Review evidence-backed UX pattern fit"
+  default_prompt: "Use $ux-pattern-review to audit this product flow, its pattern choices, states, and recovery paths."
