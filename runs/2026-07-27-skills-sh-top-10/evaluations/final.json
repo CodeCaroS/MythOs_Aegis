@@ -1,0 +1,28 @@
+{
+  "runId": "2026-07-27-skills-sh-top-10",
+  "validation": {
+    "baselineAverage": 0.5562,
+    "finalAverage": 0.9724,
+    "delta": 0.4162,
+    "criticalRegressions": 0
+  },
+  "test": {
+    "baselineAverage": 0.5958,
+    "finalAverage": 0.9675,
+    "delta": 0.3717,
+    "relativeImprovementPercent": 62.4,
+    "criticalRegressions": 0
+  },
+  "skills": [
+    {"skill":"find-skills","baseline":0.4650,"final":0.9785,"delta":0.5135},
+    {"skill":"frontend-design","baseline":0.6705,"final":0.9715,"delta":0.3010},
+    {"skill":"grill-me","baseline":0.2350,"final":0.9365,"delta":0.7015},
+    {"skill":"agent-browser","baseline":0.4000,"final":0.9825,"delta":0.5825},
+    {"skill":"vercel-react-best-practices","baseline":0.7620,"final":0.9590,"delta":0.1970},
+    {"skill":"grill-with-docs","baseline":0.4620,"final":0.9625,"delta":0.5005},
+    {"skill":"improve-codebase-architecture","baseline":0.7170,"final":0.9655,"delta":0.2485},
+    {"skill":"tdd","baseline":0.7090,"final":0.9755,"delta":0.2665},
+    {"skill":"web-design-guidelines","baseline":0.6295,"final":0.9655,"delta":0.3360},
+    {"skill":"microsoft-foundry","baseline":0.9080,"final":0.9780,"delta":0.0700}
+  ]
+}

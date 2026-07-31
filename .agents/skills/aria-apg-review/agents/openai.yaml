@@ -1,0 +1,4 @@
+interface:
+  display_name: "ARIA APG Review"
+  short_description: "Review UI widgets against WAI-ARIA APG"
+  default_prompt: "Use $aria-apg-review to audit this interface against every applicable WAI-ARIA APG pattern."

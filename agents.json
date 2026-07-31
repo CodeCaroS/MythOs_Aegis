@@ -10,6 +10,11 @@
     "Best for": "Pre-mortems, risk analysis, failure chains, recovery planning"
   },
   {
+    "Skill": "ARIA APG Review",
+    "Path": ".agents/skills/aria-apg-review/SKILL.md",
+    "Best for": "Reviewing UI widgets against every applicable WAI-ARIA APG pattern"
+  },
+  {
     "Skill": "Crawler Readiness Audit",
     "Path": ".agents/skills/crawler-readiness-audit/SKILL.md",
     "Best for": "Auditing crawler readability, SSR, metadata, and indexability"
@@ -65,6 +70,11 @@
     "Best for": "Persistent feature inventory, story matrix, and test loop"
   },
   {
+    "Skill": "UX Pattern Review",
+    "Path": ".agents/skills/ux-pattern-review/SKILL.md",
+    "Best for": "Reviewing product flows and UI pattern choices against uxpatterns.dev"
+  },
+  {
     "Skill": "Visual Flow Storyboard",
     "Path": ".agents/skills/visual-flow-storyboard/SKILL.md",
     "Best for": "Reconstructing full user journeys as storyboards"
@@ -73,5 +83,55 @@
     "Skill": "Visual PR Review",
     "Path": ".agents/skills/visual-pr-review/SKILL.md",
     "Best for": "Pull-request analysis, architecture reconstruction, implementation planning"
+  },
+  {
+    "Skill": "Agent Browser",
+    "Path": ".agents/skills/agent-browser/SKILL.md",
+    "Best for": "Routing browser automation and functional UI verification through available tools"
+  },
+  {
+    "Skill": "Find Skills",
+    "Path": ".agents/skills/find-skills/SKILL.md",
+    "Best for": "Discovering reusable skills without duplicating harness capability"
+  },
+  {
+    "Skill": "Frontend Design",
+    "Path": ".agents/skills/frontend-design/SKILL.md",
+    "Best for": "Distinctive accessible interfaces that preserve product architecture and tokens"
+  },
+  {
+    "Skill": "Grill Me",
+    "Path": ".agents/skills/grill-me/SKILL.md",
+    "Best for": "Focused decision interviews without unnecessary planning ceremony"
+  },
+  {
+    "Skill": "Grill With Docs",
+    "Path": ".agents/skills/grill-with-docs/SKILL.md",
+    "Best for": "Decision interviews with proportional ADR and glossary updates"
+  },
+  {
+    "Skill": "Improve Codebase Architecture",
+    "Path": ".agents/skills/improve-codebase-architecture/SKILL.md",
+    "Best for": "Evidence-backed architecture reviews and refactor candidates"
+  },
+  {
+    "Skill": "Microsoft Foundry",
+    "Path": ".agents/skills/microsoft-foundry/SKILL.md",
+    "Best for": "Safe Microsoft Foundry agent, project, deployment, and evaluation workflows"
+  },
+  {
+    "Skill": "TDD",
+    "Path": ".agents/skills/tdd/SKILL.md",
+    "Best for": "Small behavior-first red-green implementation slices and regression guards"
+  },
+  {
+    "Skill": "Vercel React Best Practices",
+    "Path": ".agents/skills/vercel-react-best-practices/SKILL.md",
+    "Best for": "Measured React and Next.js performance work without speculative dependencies"
+  },
+  {
+    "Skill": "Web Design Guidelines",
+    "Path": ".agents/skills/web-design-guidelines/SKILL.md",
+    "Best for": "Accessibility, interaction, responsive, and functional web UI audits"
   }
 ]
