@@ -1,0 +1,2 @@
+# Optimization runs preserve byte-exact snapshots and generated patch metadata.
+runs/** -whitespace

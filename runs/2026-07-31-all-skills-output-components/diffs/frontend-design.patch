@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/frontend-design/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/frontend-design/candidate-v1.md
+index 137500d..a60aae5 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/frontend-design/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/frontend-design/candidate-v1.md	
+@@ -35,3 +35,9 @@ Start from the product, not a fashionable template.
+ - Avoid generic gradients, arbitrary glass effects, excessive cards, decorative numbering, and animation without a user-facing purpose.
+ 
+ Adapted and materially modified for MythOs Aegis from Anthropic's `frontend-design`.
++
++## Shared output profile
++
++Compose the `plan` profile from [output-templates](../output-templates/references/components.md).
++Lead with the design direction, then constraints, state coverage, implementation slices, and verification.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

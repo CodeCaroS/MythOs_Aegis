@@ -18,12 +18,14 @@ the human-readable map of the same set.
 - `.agents/skills/frontend-design/` for distinctive accessible interfaces that preserve product architecture
 - `.agents/skills/grill-me/` for focused decision interviews without unnecessary planning ceremony
 - `.agents/skills/grill-with-docs/` for decision interviews with proportional ADR and glossary updates
+- `.agents/skills/humanizer/` for natural German and English prose that preserves facts and author voice
 - `.agents/skills/improve-codebase-architecture/` for evidence-backed architecture reviews and refactor candidates
 - `.agents/skills/microsoft-foundry/` for safe Microsoft Foundry agent and project workflows
 - `.agents/skills/output-templates/` for shared response templates for recurring agent tasks
 - `.agents/skills/pre-launch-security-gate/` for security review before release
 - `.agents/skills/prompt-preflight/` for silent prompt refinement before execution
 - `.agents/skills/quick-recap/` for mandatory end-of-response status footers
+- `.agents/skills/rest-api-best-practices/` for predictable and secure REST/HTTP API contracts
 - `.agents/skills/rigorous-response/` for concise reasoning and premise checks
 - `.agents/skills/shepherd/` for reversible execution, checkpoints, and recovery
 - `.agents/skills/skill-optimizer/` for optimizing Markdown-based skills
@@ -81,22 +83,34 @@ pick the right workflow without inventing one from scratch.
 `-- .agents/
     `-- skills/
         |-- academix/
+        |-- agent-browser/
         |-- apocalypse/
         |-- aria-apg-review/
         |-- crawler-readiness-audit/
         |-- decision-criticality-gate/
         |-- fact-checker/
+        |-- find-skills/
+        |-- frontend-design/
+        |-- grill-me/
+        |-- grill-with-docs/
+        |-- humanizer/
+        |-- improve-codebase-architecture/
+        |-- microsoft-foundry/
         |-- output-templates/
         |-- pre-launch-security-gate/
         |-- prompt-preflight/
         |-- quick-recap/
+        |-- rest-api-best-practices/
         |-- rigorous-response/
         |-- shepherd/
         |-- skill-optimizer/
+        |-- tdd/
         |-- ux-logic-loop/
         |-- ux-pattern-review/
+        |-- vercel-react-best-practices/
         |-- visual-flow-storyboard/
-        `-- visual-pr-review/
+        |-- visual-pr-review/
+        `-- web-design-guidelines/
 ```
 
 ## Working with the skills

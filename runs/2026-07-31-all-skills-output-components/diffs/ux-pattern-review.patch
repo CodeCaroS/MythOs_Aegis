@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/ux-pattern-review/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/ux-pattern-review/candidate-v1.md
+index 8c5f87e..2a3f305 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/ux-pattern-review/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/ux-pattern-review/candidate-v1.md	
+@@ -117,3 +117,9 @@ Lead with confirmed findings:
+ ```
+ 
+ If there are no confirmed findings, say so and still show decision, state, and unverified coverage. Do not report absent optional guidance as a defect.
++
++## Shared output profile
++
++Compose the `review` profile from [output-templates](../output-templates/references/components.md).
++Keep pattern decisions, evidence-backed findings, source support, state coverage, and unverified risks explicit.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

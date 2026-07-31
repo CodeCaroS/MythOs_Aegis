@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/academix/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/academix/candidate-v1.md
+index f9d748a..d93295d 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/academix/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/academix/candidate-v1.md	
+@@ -719,3 +719,9 @@ Before producing the final response, verify:
+ - [ ] References are complete and consistently formatted.
+ - [ ] The response language matches the user's request.
+ - [ ] Academic integrity requirements are satisfied.
++
++## Shared output profile
++
++Compose the `research` profile from [output-templates](../output-templates/references/components.md).
++Keep citation-supported claims, source quality, and limitation status visible.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

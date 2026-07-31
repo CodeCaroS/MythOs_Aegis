@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/skill-optimizer/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/skill-optimizer/candidate-v1.md
+index 6415640..d54702e 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/skill-optimizer/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/skill-optimizer/candidate-v1.md	
+@@ -124,3 +124,9 @@ Do not declare the optimization complete until:
+ - category-level regressions are documented,
+ - the test set remained isolated,
+ - the final report exists.
++
++## Shared output profile
++
++Compose the `optimization` profile from [output-templates](../output-templates/references/components.md).
++Report baseline, candidate, validation gate, isolated test, accepted and rejected edits, limits, and artifacts.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

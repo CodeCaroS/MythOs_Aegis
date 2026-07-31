@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/microsoft-foundry/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/microsoft-foundry/candidate-v1.md
+index 3ca8e89..c995448 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/microsoft-foundry/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/microsoft-foundry/candidate-v1.md	
+@@ -39,3 +39,9 @@ Fetch current official Microsoft Foundry documentation before giving version-sen
+ - Leave the smallest repeatable verification and report the exact project, environment, and evidence used.
+ 
+ Adapted and substantially condensed for MythOs Aegis from Microsoft's `microsoft-foundry`.
++
++## Shared output profile
++
++Compose the `execution` profile from [output-templates](../output-templates/references/components.md).
++Report resolved context, planned or completed mutation, verification evidence, and unverified cloud state.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

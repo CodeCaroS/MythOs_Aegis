@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/fact-checker/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/fact-checker/candidate-v1.md
+index be9bf6d..808f622 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/fact-checker/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/fact-checker/candidate-v1.md	
+@@ -628,3 +628,9 @@ Before completing the fact-check, verify:
+ * Did I avoid inventing corrections?
+ * Did I provide an actionable verification step for unresolved claims?
+ * Does the final verdict match the findings?
++
++## Shared output profile
++
++Compose the `research` profile from [output-templates](../output-templates/references/components.md).
++Keep each claim, source, status, correction, confidence, and remaining uncertainty traceable.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

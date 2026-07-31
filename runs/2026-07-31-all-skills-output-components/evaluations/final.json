@@ -1,0 +1,322 @@
+{
+  "run_id": "2026-07-31-all-skills-output-components",
+  "evaluation_type": "deterministic synthetic output-contract projection",
+  "test_opened_after_validation_gate": true,
+  "aggregate": {
+    "baseline_validation": 0.6428,
+    "final_validation": 1,
+    "validation_delta": 0.3572,
+    "baseline_test": 0.6614,
+    "final_test": 1,
+    "test_delta": 0.3386,
+    "final_test_passed": 29,
+    "final_test_failed": 0,
+    "harness_failures": 0
+  },
+  "activity": {
+    "iterations": 1,
+    "accepted_candidates": 29,
+    "rejected_directions": 3,
+    "accepted_skill_edits": 29,
+    "reusable_components_added": 1,
+    "maximum_added_words_per_skill": 41,
+    "deleted_words": 0
+  },
+  "skills": [
+    {
+      "skill": "academix",
+      "profile": "research",
+      "baseline_validation": 0.8,
+      "final_validation": 1,
+      "baseline_test": 0.8,
+      "final_test": 1,
+      "test_delta": 0.2,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "agent-browser",
+      "profile": "execution",
+      "baseline_validation": 0.445,
+      "final_validation": 1,
+      "baseline_test": 0.49,
+      "final_test": 1,
+      "test_delta": 0.51,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "apocalypse",
+      "profile": "review",
+      "baseline_validation": 0.85,
+      "final_validation": 1,
+      "baseline_test": 0.85,
+      "final_test": 1,
+      "test_delta": 0.15,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "aria-apg-review",
+      "profile": "review",
+      "baseline_validation": 0.85,
+      "final_validation": 1,
+      "baseline_test": 0.85,
+      "final_test": 1,
+      "test_delta": 0.15,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "crawler-readiness-audit",
+      "profile": "review",
+      "baseline_validation": 0.745,
+      "final_validation": 1,
+      "baseline_test": 0.79,
+      "final_test": 1,
+      "test_delta": 0.21,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "decision-criticality-gate",
+      "profile": "decision",
+      "baseline_validation": 0.745,
+      "final_validation": 1,
+      "baseline_test": 0.79,
+      "final_test": 1,
+      "test_delta": 0.21,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "fact-checker",
+      "profile": "research",
+      "baseline_validation": 0.95,
+      "final_validation": 1,
+      "baseline_test": 0.95,
+      "final_test": 1,
+      "test_delta": 0.05,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "find-skills",
+      "profile": "decision",
+      "baseline_validation": 0.645,
+      "final_validation": 1,
+      "baseline_test": 0.69,
+      "final_test": 1,
+      "test_delta": 0.31,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "frontend-design",
+      "profile": "plan",
+      "baseline_validation": 0.405,
+      "final_validation": 1,
+      "baseline_test": 0.45,
+      "final_test": 1,
+      "test_delta": 0.55,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "grill-me",
+      "profile": "decision",
+      "baseline_validation": 0.7,
+      "final_validation": 1,
+      "baseline_test": 0.7,
+      "final_test": 1,
+      "test_delta": 0.3,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "grill-with-docs",
+      "profile": "decision",
+      "baseline_validation": 0.655,
+      "final_validation": 1,
+      "baseline_test": 0.7,
+      "final_test": 1,
+      "test_delta": 0.3,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "humanizer",
+      "profile": "artifact",
+      "baseline_validation": 0.8,
+      "final_validation": 1,
+      "baseline_test": 0.8,
+      "final_test": 1,
+      "test_delta": 0.2,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "improve-codebase-architecture",
+      "profile": "review",
+      "baseline_validation": 0.595,
+      "final_validation": 1,
+      "baseline_test": 0.64,
+      "final_test": 1,
+      "test_delta": 0.36,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "microsoft-foundry",
+      "profile": "execution",
+      "baseline_validation": 0.295,
+      "final_validation": 1,
+      "baseline_test": 0.34,
+      "final_test": 1,
+      "test_delta": 0.66,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "output-templates",
+      "profile": "direct",
+      "baseline_validation": 0.595,
+      "final_validation": 1,
+      "baseline_test": 0.64,
+      "final_test": 1,
+      "test_delta": 0.36,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "pre-launch-security-gate",
+      "profile": "review",
+      "baseline_validation": 0.85,
+      "final_validation": 1,
+      "baseline_test": 0.85,
+      "final_test": 1,
+      "test_delta": 0.15,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "prompt-preflight",
+      "profile": "artifact",
+      "baseline_validation": 0.595,
+      "final_validation": 1,
+      "baseline_test": 0.64,
+      "final_test": 1,
+      "test_delta": 0.36,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "quick-recap",
+      "profile": "status",
+      "baseline_validation": 0.95,
+      "final_validation": 1,
+      "baseline_test": 0.95,
+      "final_test": 1,
+      "test_delta": 0.05,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "rest-api-best-practices",
+      "profile": "review",
+      "baseline_validation": 0.745,
+      "final_validation": 1,
+      "baseline_test": 0.79,
+      "final_test": 1,
+      "test_delta": 0.21,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "rigorous-response",
+      "profile": "direct",
+      "baseline_validation": 0.95,
+      "final_validation": 1,
+      "baseline_test": 0.95,
+      "final_test": 1,
+      "test_delta": 0.05,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "shepherd",
+      "profile": "execution",
+      "baseline_validation": 0.6,
+      "final_validation": 1,
+      "baseline_test": 0.6,
+      "final_test": 1,
+      "test_delta": 0.4,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "skill-optimizer",
+      "profile": "optimization",
+      "baseline_validation": 0.29,
+      "final_validation": 1,
+      "baseline_test": 0.29,
+      "final_test": 1,
+      "test_delta": 0.71,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "tdd",
+      "profile": "execution",
+      "baseline_validation": 0.3,
+      "final_validation": 1,
+      "baseline_test": 0.3,
+      "final_test": 1,
+      "test_delta": 0.7,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "ux-logic-loop",
+      "profile": "execution",
+      "baseline_validation": 0.5,
+      "final_validation": 1,
+      "baseline_test": 0.5,
+      "final_test": 1,
+      "test_delta": 0.5,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "ux-pattern-review",
+      "profile": "review",
+      "baseline_validation": 0.85,
+      "final_validation": 1,
+      "baseline_test": 0.85,
+      "final_test": 1,
+      "test_delta": 0.15,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "vercel-react-best-practices",
+      "profile": "review",
+      "baseline_validation": 0.14,
+      "final_validation": 1,
+      "baseline_test": 0.14,
+      "final_test": 1,
+      "test_delta": 0.86,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "visual-flow-storyboard",
+      "profile": "plan",
+      "baseline_validation": 0.35,
+      "final_validation": 1,
+      "baseline_test": 0.35,
+      "final_test": 1,
+      "test_delta": 0.65,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "visual-pr-review",
+      "profile": "review",
+      "baseline_validation": 0.95,
+      "final_validation": 1,
+      "baseline_test": 0.95,
+      "final_test": 1,
+      "test_delta": 0.05,
+      "decision": "accept_new_best"
+    },
+    {
+      "skill": "web-design-guidelines",
+      "profile": "review",
+      "baseline_validation": 0.495,
+      "final_validation": 1,
+      "baseline_test": 0.54,
+      "final_test": 1,
+      "test_delta": 0.46,
+      "decision": "accept_new_best"
+    }
+  ],
+  "limitations": [
+    "Scores measure instruction-level output contracts with deterministic synthetic projections, not production telemetry.",
+    "No isolated callable target-model runner was available, so the run does not estimate stochastic model variance.",
+    "The accepted edit intentionally preserves domain workflows and optimizes their output composition rather than rewriting their substantive checklists."
+  ]
+}

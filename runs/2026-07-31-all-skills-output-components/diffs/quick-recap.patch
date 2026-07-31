@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/quick-recap/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/quick-recap/candidate-v1.md
+index f1362df..5119dd4 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/quick-recap/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/quick-recap/candidate-v1.md	
+@@ -293,3 +293,9 @@ Before sending a response, verify:
+ - Is the Quick Recap the final line?
+ 
+ If any answer creates doubt, do not use green.
++
++## Shared output profile
++
++Compose the `status` profile from [output-templates](../output-templates/references/components.md).
++State completed work, remaining work, and the exact required action in one final status line.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

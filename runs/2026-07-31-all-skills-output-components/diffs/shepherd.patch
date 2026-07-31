@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/shepherd/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/shepherd/candidate-v1.md
+index 7dc563a..ad4d4c6 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/shepherd/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/shepherd/candidate-v1.md	
+@@ -212,3 +212,9 @@ Avoid narrative drift. Keep the record tied to concrete state changes.
+ * Do not continue the same failed hypothesis indefinitely.
+ * Do not bury irreversible operations inside routine edits.
+ * Do not expand scope while trying to recover from a failure.
++
++## Shared output profile
++
++Compose the `execution` profile from [output-templates](../output-templates/references/components.md).
++Report state, checkpoint, changes, verification, recovery availability, and the next safe action.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

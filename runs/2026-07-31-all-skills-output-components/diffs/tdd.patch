@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/tdd/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/tdd/candidate-v1.md
+index e6dbb77..92dc903 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/tdd/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/tdd/candidate-v1.md	
+@@ -34,3 +34,9 @@ Use one vertical slice at a time:
+ Do not pause for seam approval when the repository and request make the public boundary clear. Ask only when different seams would materially change scope or compatibility.
+ 
+ Adapted for MythOs Aegis from `mattpocock/skills` `tdd`.
++
++## Shared output profile
++
++Compose the `execution` profile from [output-templates](../output-templates/references/components.md).
++Report the red failure, green change, exact test result, and any verification limit.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

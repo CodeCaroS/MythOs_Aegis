@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/find-skills/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/find-skills/candidate-v1.md
+index d9afb13..8a326d5 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/find-skills/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/find-skills/candidate-v1.md	
+@@ -27,3 +27,9 @@ Reuse before adding anything.
+ Do not recommend a skill from popularity alone. Treat a new dependency, opaque installer, or broad tool permission as a cost. If no skill is clearly better than the existing harness or general capability, say so and proceed without adding one.
+ 
+ Adapted for MythOs Aegis from `vercel-labs/skills` `find-skills`.
++
++## Shared output profile
++
++Compose the `decision` profile from [output-templates](../output-templates/references/components.md).
++State the reuse, recommend, or reject decision after checking installed overlap and dependency cost.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

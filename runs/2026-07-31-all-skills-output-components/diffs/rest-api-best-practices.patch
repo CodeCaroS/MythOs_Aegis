@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/rest-api-best-practices/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/rest-api-best-practices/candidate-v1.md
+index 68fecb4..cbddb11 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/rest-api-best-practices/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/rest-api-best-practices/candidate-v1.md	
+@@ -43,3 +43,9 @@ Build the smallest predictable HTTP contract that fits the product. Preserve sou
+ ## Review Output
+ 
+ Lead with confirmed contract defects, ordered by user or security impact. For each defect, give the endpoint, violated semantic or invariant, consequence, and smallest compatible fix. Separate optional style preferences from correctness issues. End with checks run and unresolved compatibility decisions.
++
++## Shared output profile
++
++Compose the `review` profile from [output-templates](../output-templates/references/components.md).
++Keep the contract, semantic defect, compatibility impact, fix, and verification together.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

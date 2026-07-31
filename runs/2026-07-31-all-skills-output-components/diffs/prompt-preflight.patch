@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/prompt-preflight/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/prompt-preflight/candidate-v1.md
+index 10fdea9..063a744 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/prompt-preflight/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/prompt-preflight/candidate-v1.md	
+@@ -71,3 +71,9 @@ unstructured, or missing important execution constraints.
+ 3. Build the smallest better instruction that preserves intent.
+ 4. Execute it.
+ 5. Verify against the original request, not just the rewrite.
++
++## Shared output profile
++
++Compose the `artifact` profile from [output-templates](../output-templates/references/components.md).
++Keep refinement silent; return the preserved request or the single material clarification needed.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

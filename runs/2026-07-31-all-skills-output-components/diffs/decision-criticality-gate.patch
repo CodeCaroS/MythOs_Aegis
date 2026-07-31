@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/decision-criticality-gate/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/decision-criticality-gate/candidate-v1.md
+index b91523f..69fc64b 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/decision-criticality-gate/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/decision-criticality-gate/candidate-v1.md	
+@@ -224,3 +224,9 @@ Do not spend equal effort on every decision.
+ Move quickly on low-risk, reversible choices.
+ 
+ Slow down when the decision is irreversible, system-wide, trust-sensitive, severe, likely, or hard to detect.
++
++## Shared output profile
++
++Compose the `decision` profile from [output-templates](../output-templates/references/components.md).
++Keep the level, score rationale, hard escalation, required process, and next gate explicit.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

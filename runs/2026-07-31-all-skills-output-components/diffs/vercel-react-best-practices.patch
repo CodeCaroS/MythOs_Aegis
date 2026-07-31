@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/vercel-react-best-practices/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/vercel-react-best-practices/candidate-v1.md
+index 0bc7d4e..14b9b73 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/vercel-react-best-practices/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/vercel-react-best-practices/candidate-v1.md	
+@@ -38,3 +38,9 @@ Diagnose before optimizing. Fetch current React or Next.js documentation when ve
+ Report the observed bottleneck, the narrow fix, and the evidence. Do not label stylistic preferences as performance defects.
+ 
+ Adapted for MythOs Aegis from Vercel's `react-best-practices`.
++
++## Shared output profile
++
++Compose the `review` profile from [output-templates](../output-templates/references/components.md).
++Report each finding with evidence, measurement or unknown impact, smallest fix, and verification method.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

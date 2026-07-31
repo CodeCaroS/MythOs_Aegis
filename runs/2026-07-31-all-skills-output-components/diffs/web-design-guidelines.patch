@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/web-design-guidelines/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/web-design-guidelines/candidate-v1.md
+index 1dec00a..09d99d5 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/web-design-guidelines/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/web-design-guidelines/candidate-v1.md	
+@@ -22,3 +22,9 @@ tags:
+ Do not replace the design system during an audit. Do not report route coverage as complete functional UI coverage. Preserve icon-control accessibility and make the user's next action explicit.
+ 
+ Adapted for MythOs Aegis from Vercel's `web-design-guidelines`.
++
++## Shared output profile
++
++Compose the `review` profile from [output-templates](../output-templates/references/components.md).
++Report evidence-backed findings first, then missing runtime coverage and exact steps to verify behavior.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.

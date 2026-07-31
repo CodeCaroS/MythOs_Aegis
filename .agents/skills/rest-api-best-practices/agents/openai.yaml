@@ -1,0 +1,4 @@
+interface:
+  display_name: "REST API Best Practices"
+  short_description: "Design and review predictable, secure REST APIs"
+  default_prompt: "Use $rest-api-best-practices to design or review this REST API contract."

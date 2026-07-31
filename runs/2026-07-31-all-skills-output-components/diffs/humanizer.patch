@@ -1,0 +1,14 @@
+diff --git a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/humanizer/initial-skill.md b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/humanizer/candidate-v1.md
+index ac7e90f..e5b913a 100644
+--- a/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/baseline/humanizer/initial-skill.md	
++++ b/Z:/Programming Projects/ai_workspace/runs/2026-07-31-all-skills-output-components/candidates/humanizer/candidate-v1.md	
+@@ -94,3 +94,9 @@ Confirm that:
+ - the result remains in the source language unless translation was requested;
+ - the voice fits the author and audience;
+ - the rewrite removed actual patterns rather than merely swapping synonyms.
++
++## Shared output profile
++
++Compose the `artifact` profile from [output-templates](../output-templates/references/components.md).
++Return the rewrite as the deliverable while preserving facts, protected structure, and voice.
++Preserve stricter domain rules above, omit empty components, and never fill a component with invented evidence.
