@@ -1,8 +1,14 @@
 # Changelog
 
+## 1.0.1
+
+- Expanded the library to 29 skills, including personalized engineering, writing, API, accessibility, and UX review workflows.
+- Added shared output components and optimized skill output composition.
+- Added Apache License 2.0 release notices, retained third-party license terms, and EU AI Act discovery guidance.
+- `skill-guard` now validates Apache-2.0 metadata in addition to inventory drift, frontmatter, and name alignment.
+
 ## 1.0.0
 
-- Added Apache License 2.0 release notices and retained third-party license terms.
 - Canonical skill inventory is synchronized across `.agents/skills/`, `agents.json`, and `README.md`.
 - `skill-guard` now checks inventory drift in addition to frontmatter and name alignment.
 - Added the missing `decision-criticality-gate` and `output-templates` entries to the canonical inventory.
