@@ -109,9 +109,9 @@ exceptions. Check the official sources for later changes:
 ## License and third-party material
 
 MythOs Aegis is distributed under the [Apache License 2.0](./LICENSE).
+Copyright and attribution information is recorded in [NOTICE](./NOTICE).
 Adapted material, pinned upstream sources, modification notices, and retained
-license terms are documented in
-[THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md).
+license terms are documented in [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md).
 
 ## Use and maintain the library
 
@@ -149,6 +149,7 @@ Optional metadata such as `triggers`, `capabilities`, `outputs`, `modes`,
 |-- scripts/skill-guard.mjs
 |-- AGENTS.md         # workspace-level instructions
 |-- LICENSE
+|-- NOTICE
 |-- THIRD_PARTY_NOTICES.md
 |-- agents.json       # canonical skill inventory
 `-- README.md         # human-readable task and skill map

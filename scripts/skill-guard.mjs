@@ -34,8 +34,8 @@ function keysFromFrontMatter(frontMatter) {
   return keys;
 }
 
-function findNameValue(frontMatter) {
-  const match = frontMatter.match(/^\s*name:\s*(.+?)\s*$/m);
+function findValue(frontMatter, key) {
+  const match = frontMatter.match(new RegExp(`^\\s*${key}:\\s*(.+?)\\s*$`, 'm'));
   return match ? match[1].trim() : null;
 }
 
@@ -130,9 +130,14 @@ for (const file of skillFiles) {
   }
 
   const expectedName = skillNameFromPath(file);
-  const nameValue = findNameValue(frontMatter);
+  const nameValue = findValue(frontMatter, 'name');
   if (nameValue && nameValue !== expectedName) {
     failures.push(`${file}: name should match folder name '${expectedName}'`);
+  }
+
+  const licenseValue = findValue(frontMatter, 'license');
+  if (licenseValue && licenseValue !== 'Apache-2.0') {
+    failures.push(`${file}: license should be 'Apache-2.0'`);
   }
 }
 
