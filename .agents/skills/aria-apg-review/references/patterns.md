@@ -2,6 +2,11 @@
 
 Source inventory: [W3C WAI-ARIA APG Patterns](https://www.w3.org/WAI/ARIA/apg/patterns/), verified 2026-07-30 against the 30 published pattern pages and W3C source commit `7e4034b262bc0d25332e330d8a582aaf`.
 
+This modified routing matrix condenses, reorganizes, and supplements W3C
+material. Copyright © 2026 World Wide Web Consortium. See
+[THIRD_PARTY_NOTICES.md](../../../../THIRD_PARTY_NOTICES.md) for the source,
+change notice, and W3C Software and Document License.
+
 Use this file to find every applicable pattern. Before making a finding, open the linked current page and evaluate all required keyboard interactions, roles, states, properties, notes, and warnings. The summaries below route the review; they do not replace the source.
 
 | Pattern | Apply to | Review emphasis |

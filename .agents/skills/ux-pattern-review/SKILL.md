@@ -1,7 +1,7 @@
 ---
 name: ux-pattern-review
-description: Review product flows and UI implementations against current uxpatterns.dev guidance across its pattern catalog and decision guides. Use when auditing whether a UX pattern fits the user job, comparing alternatives, or checking anatomy, states, recovery, responsive behavior, accessibility, performance, localization, analytics, SEO, and test coverage.
-version: 1.0.0
+description: Review product flows and UI implementations for evidence-backed pattern fit, complete states, recovery, responsive behavior, accessibility, performance, localization, analytics, SEO, and test coverage. Use when auditing whether a UX pattern fits the user job or comparing credible alternatives.
+version: 1.1.0
 author: Caro
 license: Apache-2.0
 tags:
@@ -17,14 +17,11 @@ Audit only unless the user explicitly asks for fixes.
 
 ## Source discipline
 
-1. Read [references/catalog.md](references/catalog.md) before reviewing.
-2. Start with the user job, task flow, context, and constraints. Do not justify an existing component merely because it resembles a catalog entry.
-3. Map each surface or flow to its implemented pattern and credible alternatives.
-4. Open the current uxpatterns.dev page for every implemented and seriously considered pattern. Read its use and avoid cases, benefits, drawbacks, anatomy, variations, best practices, states, errors, performance, accessibility, testing, edge cases, and related patterns.
-5. When the choice matches a catalog decision guide, read that guide before judging the selection.
-6. Treat the current page as authoritative when the bundled catalog differs.
-
-uxpatterns.dev is practical guidance, not a normative standard or proof of user value. Prefer direct user evidence, product constraints, the existing design system, and measured behavior when they conflict with generic guidance. Use `aria-apg-review` for applicable widget semantics and keyboard behavior; do not claim WCAG or APG conformance from this review alone.
+1. Start with the user job, task flow, context, and constraints. Do not justify an existing component merely because it resembles a familiar pattern.
+2. Map each surface or flow to its implemented pattern and credible alternatives.
+3. Prefer direct user evidence, product constraints, the existing design system, native platform behavior, and measured runtime behavior over generic guidance.
+4. Use current primary standards and official documentation when they govern the pattern. Cite every external source actually used and respect its license and access terms; do not bundle third-party catalogs into this skill.
+5. Use `aria-apg-review` for applicable widget semantics and keyboard behavior. Do not claim WCAG or APG conformance from this review alone.
 
 ## Review workflow
 
@@ -40,7 +37,7 @@ uxpatterns.dev is practical guidance, not a normative standard or proof of user 
 For each surface or flow:
 
 - State the implemented pattern and the job it is meant to solve.
-- Compare only credible alternatives from the catalog or a decision guide.
+- Compare only credible alternatives supported by the user job, product constraints, platform conventions, or cited current guidance.
 - Check whether the pattern is too heavy, too hidden, too interruptive, too dense, or too weak for the job.
 - Account for the total interaction cost, including states, recovery, mobile behavior, accessibility, performance, and maintenance.
 - Prefer an existing native element or design-system primitive when it already solves the job.
@@ -49,7 +46,7 @@ Do not recommend a redesign because another pattern is fashionable. A different 
 
 ### 3. Review implementation completeness
 
-Check every applicable source section, especially:
+Check every applicable concern, especially:
 
 - Required and optional anatomy, hierarchy, labels, actions, and information scent.
 - Default, loading, empty, partial, success, error, disabled, destructive, and permission-denied states.
@@ -113,7 +110,7 @@ Lead with confirmed findings:
 
 ## Sources
 
-- Current uxpatterns.dev pattern and decision-guide pages used.
+- Current primary standards or official guidance actually used.
 ```
 
 If there are no confirmed findings, say so and still show decision, state, and unverified coverage. Do not report absent optional guidance as a defect.
