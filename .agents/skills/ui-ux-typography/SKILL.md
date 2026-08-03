@@ -1,7 +1,7 @@
 ---
 name: ui-ux-typography
 description: Generate, implement, or review resilient interface typography, including restrained type tokens, relative and fluid sizing, line height, readable text measure, hierarchy, wrapping, zoom, localization, and user text spacing. Use whenever UI work creates or changes typography systems, body copy, headings, text containers, or responsive type behavior.
-version: 0.1.0
+version: 0.2.0
 author: Caro
 license: Apache-2.0
 tags:
@@ -27,9 +27,11 @@ Build a small resilient type system instead of choosing every text size independ
 ### 2. Keep the type scale restrained
 
 - Reuse existing typography tokens before adding new ones.
-- Define only the sizes needed for the product's actual hierarchy.
+- Define only the sizes needed for the product's actual hierarchy and bind every token to a named role.
+- Specify size, weight, and line height together for each role instead of mixing independent values at call sites.
 - Use a modular ratio around `1.2–1.333` only as a starting point. Let optical hierarchy, available space, typeface characteristics, content, and responsive behavior override mathematical purity.
 - Avoid near-duplicate tokens whose visual or semantic roles cannot be distinguished.
+- Limit available weights to those with a real role and actual font file. Values such as `400`, `500`, `600`, `700`, and `800` are a possible set, not a requirement to load or use every weight.
 
 ### 3. Use fluid type deliberately
 
@@ -42,6 +44,7 @@ Build a small resilient type system instead of choosing every text size independ
 
 - Start reading-heavy body copy around `1.45–1.65` unitless line height.
 - Start headings around `1.1–1.3`, then test wrapped headings, capitals, descenders, and diacritics.
+- Keep UI labels compact only after verifying legibility and clipping; use roughly `1.0–1.2` as a starting range, not a fixed token across controls.
 - Do not force one line-height token across body copy, controls, headings, and code.
 
 ### 5. Control reading measure selectively

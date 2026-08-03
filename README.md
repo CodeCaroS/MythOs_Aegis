@@ -48,6 +48,7 @@ verification.
 - `.agents/skills/frontend-design/` for [Frontend Design](./.agents/skills/frontend-design/SKILL.md): distinctive accessible interfaces that preserve architecture and tokens
 - `.agents/skills/ui-ux-component-quality/` for [UI UX Component Quality](./.agents/skills/ui-ux-component-quality/SKILL.md): component geometry, labels, selection, targets, readability, and decision metadata
 - `.agents/skills/ui-ux-color-contrast/` for [UI UX Color Contrast](./.agents/skills/ui-ux-color-contrast/SKILL.md): measured contrast, semantic color roles, and redundant status cues
+- `.agents/skills/ui-ux-design-systems/` for [UI UX Design Systems](./.agents/skills/ui-ux-design-systems/SKILL.md): foundations, tokens, spacing, grids, iconography, motion, component contracts, documentation, and governance
 - `.agents/skills/ui-ux-dropdowns/` for [UI UX Dropdowns](./.agents/skills/ui-ux-dropdowns/SKILL.md): obvious, accessible, viewport-safe, and scalable dropdown controls
 - `.agents/skills/ui-ux-form-validation/` for [UI UX Form Validation](./.agents/skills/ui-ux-form-validation/SKILL.md): humane validation timing, recovery, errors, and positive field feedback
 - `.agents/skills/ui-ux-generation/` for [UI UX Generation](./.agents/skills/ui-ux-generation/SKILL.md): routing screen and flow generation through focused specialist skills

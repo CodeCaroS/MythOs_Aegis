@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI UX Design Systems"
+  short_description: "Audit tokens components patterns governance"
+  default_prompt: "Use $ui-ux-design-systems to design or audit this system's foundations, components, patterns, and governance."

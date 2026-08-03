@@ -1,4 +1,4 @@
 interface:
   display_name: "UI UX Loading States"
-  short_description: "Choose stable accessible loading feedback"
-  default_prompt: "Use $ui-ux-loading-states to select and implement the right loading feedback for this interaction."
+  short_description: "Design loading transitions and recovery states"
+  default_prompt: "Use $ui-ux-loading-states to select loading feedback and define every resulting success, empty, failure, and recovery state."

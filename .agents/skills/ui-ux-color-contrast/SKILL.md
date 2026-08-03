@@ -1,7 +1,7 @@
 ---
 name: ui-ux-color-contrast
 description: Generate, implement, or review accessible color, contrast, status, state, chart, badge, alert, validation, focus, and brand-surface treatments. Use whenever UI work needs measured WCAG 2.2 AA foreground/background evidence, semantic color tokens, redundant non-color cues, or dark-mode and forced-colors verification.
-version: 0.1.0
+version: 0.2.0
 author: Caro
 license: Apache-2.0
 tags:
@@ -54,7 +54,10 @@ For review-only requests, report findings without editing. For creation or fix r
 
 ## Tokens and components
 
-- Define semantic roles such as `text-primary`, `text-secondary`, `surface`, `border`, `focus`, `error`, `warning`, and `success`; do not encode meaning only in names such as `gray-500` or `green-600`.
+- Separate brand and neutral palettes from semantic background, surface, text, border, focus, success, warning, error, and information roles.
+- Define semantic roles such as `text-primary`, `text-secondary`, `surface`, `border`, `focus`, `error`, `warning`, `success`, and `info`; do not encode meaning only in names such as `gray-500` or `green-600`.
+- Let components consume semantic roles and derive light and dark themes by remapping those roles rather than embedding theme-specific colors in each component.
+- Keep palette steps such as `brand-100` through `brand-900` only when the product needs them. Treat supplied indigo or other example scales as references, never universal defaults.
 - Document approved foreground/background pairings separately for normal text, large text, icons, boundaries, and states.
 - Prevent unsupported token pairings in component APIs where practical. Passing on one surface never implies passing on another.
 - Store accessible status treatments as complete components with icon, label, semantics, contrast, and screen-reader behavior rather than as color tokens alone.
