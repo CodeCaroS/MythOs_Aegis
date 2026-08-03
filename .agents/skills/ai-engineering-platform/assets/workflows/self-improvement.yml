@@ -1,0 +1,120 @@
+name: AI platform self-improvement
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 4 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: ai-platform-self-improvement
+  cancel-in-progress: false
+
+jobs:
+  propose-and-evaluate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install platform dependencies
+        run: npm ci --omit=dev --prefix .agents/skills/ai-engineering-platform/scripts/platform
+
+      - name: Collect current regression evidence
+        continue-on-error: true
+        env:
+          BASELINE_API_KEY: ${{ secrets.BASELINE_API_KEY }}
+          CANDIDATE_API_KEY: ${{ secrets.CANDIDATE_API_KEY }}
+          JUDGE_API_KEY: ${{ secrets.JUDGE_API_KEY }}
+          BASELINE_URL: ${{ vars.BASELINE_API_URL }}
+          CANDIDATE_URL: ${{ vars.CANDIDATE_API_URL }}
+          JUDGE_URL: ${{ vars.JUDGE_API_URL }}
+          JUDGE_MODEL_NAME: ${{ vars.JUDGE_MODEL }}
+        run: |
+          node .agents/skills/ai-engineering-platform/scripts/platform/src/cli.mjs regress \
+            --dataset .agents/skills/ai-engineering-platform/scripts/platform/fixtures/golden.json \
+            --baseline-url "$BASELINE_URL" \
+            --candidate-url "$CANDIDATE_URL" \
+            --judge-url "$JUDGE_URL" \
+            --judge-model "$JUDGE_MODEL_NAME" \
+            --report model-regression-report.md
+
+      - name: Generate and evaluate allowlisted candidate
+        env:
+          PLATFORM_API_KEY: ${{ secrets.PLATFORM_API_KEY }}
+          SELF_IMPROVEMENT_EVIDENCE_API_KEY: ${{ secrets.SELF_IMPROVEMENT_EVIDENCE_API_KEY }}
+          SELF_IMPROVEMENT_EVIDENCE_URL: ${{ vars.SELF_IMPROVEMENT_EVIDENCE_URL }}
+          SELF_IMPROVEMENT_TENANT_ID: ${{ vars.SELF_IMPROVEMENT_TENANT_ID }}
+          SELF_IMPROVEMENT_PROPOSER_URL: ${{ vars.SELF_IMPROVEMENT_PROPOSER_URL }}
+          SELF_IMPROVEMENT_PROPOSER_MODEL: ${{ vars.SELF_IMPROVEMENT_PROPOSER_MODEL }}
+          SELF_IMPROVEMENT_PROPOSER_API_KEY: ${{ secrets.SELF_IMPROVEMENT_PROPOSER_API_KEY }}
+          SELF_IMPROVEMENT_TARGET_URL: ${{ vars.SELF_IMPROVEMENT_TARGET_URL }}
+          SELF_IMPROVEMENT_TARGET_MODEL: ${{ vars.SELF_IMPROVEMENT_TARGET_MODEL }}
+          SELF_IMPROVEMENT_TARGET_API_KEY: ${{ secrets.SELF_IMPROVEMENT_TARGET_API_KEY }}
+          SELF_IMPROVEMENT_JUDGE_URL: ${{ vars.SELF_IMPROVEMENT_JUDGE_URL }}
+          SELF_IMPROVEMENT_JUDGE_MODEL: ${{ vars.SELF_IMPROVEMENT_JUDGE_MODEL }}
+          SELF_IMPROVEMENT_JUDGE_API_KEY: ${{ secrets.SELF_IMPROVEMENT_JUDGE_API_KEY }}
+          SELF_IMPROVEMENT_INPUT_PER_MILLION: ${{ vars.SELF_IMPROVEMENT_INPUT_PER_MILLION }}
+          SELF_IMPROVEMENT_OUTPUT_PER_MILLION: ${{ vars.SELF_IMPROVEMENT_OUTPUT_PER_MILLION }}
+          TIER_CHEAP_MODEL: ${{ vars.TIER_CHEAP_MODEL }}
+          TIER_CHEAP_QUALITY: ${{ vars.TIER_CHEAP_QUALITY }}
+          TIER_CHEAP_LATENCY_MS: ${{ vars.TIER_CHEAP_LATENCY_MS }}
+          TIER_CHEAP_INPUT_PER_MILLION: ${{ vars.TIER_CHEAP_INPUT_PER_MILLION }}
+          TIER_CHEAP_OUTPUT_PER_MILLION: ${{ vars.TIER_CHEAP_OUTPUT_PER_MILLION }}
+          TIER_MEDIUM_MODEL: ${{ vars.TIER_MEDIUM_MODEL }}
+          TIER_MEDIUM_QUALITY: ${{ vars.TIER_MEDIUM_QUALITY }}
+          TIER_MEDIUM_LATENCY_MS: ${{ vars.TIER_MEDIUM_LATENCY_MS }}
+          TIER_MEDIUM_INPUT_PER_MILLION: ${{ vars.TIER_MEDIUM_INPUT_PER_MILLION }}
+          TIER_MEDIUM_OUTPUT_PER_MILLION: ${{ vars.TIER_MEDIUM_OUTPUT_PER_MILLION }}
+          TIER_POWERFUL_MODEL: ${{ vars.TIER_POWERFUL_MODEL }}
+          TIER_POWERFUL_QUALITY: ${{ vars.TIER_POWERFUL_QUALITY }}
+          TIER_POWERFUL_LATENCY_MS: ${{ vars.TIER_POWERFUL_LATENCY_MS }}
+          TIER_POWERFUL_INPUT_PER_MILLION: ${{ vars.TIER_POWERFUL_INPUT_PER_MILLION }}
+          TIER_POWERFUL_OUTPUT_PER_MILLION: ${{ vars.TIER_POWERFUL_OUTPUT_PER_MILLION }}
+          EMBEDDING_MODEL: ${{ vars.EMBEDDING_MODEL }}
+        run: |
+          node .agents/skills/ai-engineering-platform/scripts/platform/src/cli.mjs improve \
+            --training .agents/skills/ai-engineering-platform/scripts/platform/fixtures/self-improvement-training.json \
+            --heldout .agents/skills/ai-engineering-platform/scripts/platform/fixtures/self-improvement-heldout.json \
+            --policy .agents/skills/ai-engineering-platform/scripts/platform/policy.json \
+            --output .agents/skills/ai-engineering-platform/scripts/platform/policy.json \
+            --regression-report model-regression-report.md \
+            --report self-improvement-report.md
+          cat self-improvement-report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - id: changes
+        name: Check for an accepted policy change
+        shell: bash
+        run: |
+          if git diff --quiet -- .agents/skills/ai-engineering-platform/scripts/platform/policy.json; then
+            echo "accepted=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "accepted=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create or refresh draft pull request
+        if: steps.changes.outputs.accepted == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          branch="automation/ai-platform-self-improvement"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -C "$branch"
+          git add -- .agents/skills/ai-engineering-platform/scripts/platform/policy.json
+          git commit -m "chore: propose AI platform policy improvement"
+          git fetch origin "$branch:refs/remotes/origin/$branch" || true
+          git push --force-with-lease origin "HEAD:$branch"
+          url="$(gh pr list --head "$branch" --state open --json url --jq '.[0].url')"
+          if [ -z "$url" ]; then
+            gh pr create --draft --head "$branch" --title "chore: bounded AI platform improvement" --body-file self-improvement-report.md
+          else
+            if [ "$(gh pr view "$url" --json isDraft --jq '.isDraft')" != "true" ]; then
+              gh pr ready "$url" --undo
+            fi
+            gh pr edit "$url" --body-file self-improvement-report.md
+          fi

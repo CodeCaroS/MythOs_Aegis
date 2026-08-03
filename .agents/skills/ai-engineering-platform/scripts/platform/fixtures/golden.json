@@ -1,0 +1,12 @@
+[
+  {
+    "id": "concise-capital-answer",
+    "input": {
+      "messages": [
+        { "role": "user", "content": "What is the capital of Germany? Answer with only the city." }
+      ]
+    },
+    "criteria": "The answer is exactly Berlin.",
+    "minimumScore": 0.95
+  }
+]

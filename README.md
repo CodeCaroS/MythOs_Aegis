@@ -11,8 +11,11 @@ inventory.
 | --- | --- | --- |
 | Research a topic or review literature | [Academix](./.agents/skills/academix/SKILL.md) | Source-backed research with citations |
 | Verify claims, dates, numbers, or quotes | [Fact Checker](./.agents/skills/fact-checker/SKILL.md) | Supported, corrected, or explicitly unresolved claims |
+| Make replies action-first and easy to scan | [Focus-Friendly Output](./.agents/skills/focus-friendly-output/SKILL.md) | Low-cognitive-load responses with visible progress and bounded next steps |
 | Use a website or test a rendered UI | [Agent Browser](./.agents/skills/agent-browser/SKILL.md) | Browser work routed through an available automation tool |
 | Design or reshape an interface | [Frontend Design](./.agents/skills/frontend-design/SKILL.md) | Accessible UI that preserves the product architecture and brand |
+| Build or operate LLM routing, caching, evaluation, tracing, or doc repair | [AI Engineering Platform](./.agents/skills/ai-engineering-platform/SKILL.md) | One executable platform with configuration-gated Harness startup and held-out, draft-PR-only improvement |
+| Generate a screen or address a focused UI concern | [UI UX Generation](./.agents/skills/ui-ux-generation/SKILL.md) for routing, or use the matching UI UX specialist listed below directly | Coherent UI generation with testable specialist behavior |
 | Audit accessibility or interaction quality | [ARIA APG Review](./.agents/skills/aria-apg-review/SKILL.md) for widget behavior; [Web Design Guidelines](./.agents/skills/web-design-guidelines/SKILL.md) for the broader interface | Actionable accessibility and usability findings |
 | Reconstruct or test a complete user journey | [Visual Flow Storyboard](./.agents/skills/visual-flow-storyboard/SKILL.md) for mapping; [UX & Logic Loop](./.agents/skills/ux-logic-loop/SKILL.md) for persistent test-and-fix work | An evidence-based journey map or verified story matrix |
 | Review a pull request before implementation | [Visual PR Review](./.agents/skills/visual-pr-review/SKILL.md) | Reconstructed architecture, findings, and an implementation plan |
@@ -43,6 +46,14 @@ verification.
 - `.agents/skills/aria-apg-review/` for [ARIA APG Review](./.agents/skills/aria-apg-review/SKILL.md): reviewing widgets against applicable WAI-ARIA APG patterns
 - `.agents/skills/crawler-readiness-audit/` for [Crawler Readiness Audit](./.agents/skills/crawler-readiness-audit/SKILL.md): crawler readability, SSR, metadata, and indexability
 - `.agents/skills/frontend-design/` for [Frontend Design](./.agents/skills/frontend-design/SKILL.md): distinctive accessible interfaces that preserve architecture and tokens
+- `.agents/skills/ui-ux-component-quality/` for [UI UX Component Quality](./.agents/skills/ui-ux-component-quality/SKILL.md): component geometry, labels, selection, targets, readability, and decision metadata
+- `.agents/skills/ui-ux-color-contrast/` for [UI UX Color Contrast](./.agents/skills/ui-ux-color-contrast/SKILL.md): measured contrast, semantic color roles, and redundant status cues
+- `.agents/skills/ui-ux-dropdowns/` for [UI UX Dropdowns](./.agents/skills/ui-ux-dropdowns/SKILL.md): obvious, accessible, viewport-safe, and scalable dropdown controls
+- `.agents/skills/ui-ux-form-validation/` for [UI UX Form Validation](./.agents/skills/ui-ux-form-validation/SKILL.md): humane validation timing, recovery, errors, and positive field feedback
+- `.agents/skills/ui-ux-generation/` for [UI UX Generation](./.agents/skills/ui-ux-generation/SKILL.md): routing screen and flow generation through focused specialist skills
+- `.agents/skills/ui-ux-loading-states/` for [UI UX Loading States](./.agents/skills/ui-ux-loading-states/SKILL.md): stable skeleton, spinner, progress, timeout, and retry behavior
+- `.agents/skills/ui-ux-mobile-css/` for [UI UX Mobile CSS](./.agents/skills/ui-ux-mobile-css/SKILL.md): stable mobile scrolling, focus, tap, viewport, and form-control behavior
+- `.agents/skills/ui-ux-typography/` for [UI UX Typography](./.agents/skills/ui-ux-typography/SKILL.md): readable type scales, line height, text measure, wrapping, and resizing
 - `.agents/skills/ux-logic-loop/` for [UX & Logic Loop](./.agents/skills/ux-logic-loop/SKILL.md): persistent feature inventory, story matrices, and test loops
 - `.agents/skills/ux-pattern-review/` for [UX Pattern Review](./.agents/skills/ux-pattern-review/SKILL.md): evidence-backed review of product flows, pattern fit, alternatives, states, and recovery
 - `.agents/skills/vercel-react-best-practices/` for [Vercel React Best Practices](./.agents/skills/vercel-react-best-practices/SKILL.md): measured React and Next.js performance work
@@ -52,6 +63,7 @@ verification.
 
 ### Engineering, APIs, security, and platforms
 
+- `.agents/skills/ai-engineering-platform/` for [AI Engineering Platform](./.agents/skills/ai-engineering-platform/SKILL.md): OpenAI-compatible routing, pgvector caching, model regression, failure traces, self-healing Markdown docs, and bounded policy improvement
 - `.agents/skills/improve-codebase-architecture/` for [Improve Codebase Architecture](./.agents/skills/improve-codebase-architecture/SKILL.md): evidence-backed architecture reviews and refactor candidates
 - `.agents/skills/microsoft-foundry/` for [Microsoft Foundry](./.agents/skills/microsoft-foundry/SKILL.md): Microsoft Foundry agents, projects, deployments, and evaluations
 - `.agents/skills/pre-launch-security-gate/` for [Pre-Launch Security Gate](./.agents/skills/pre-launch-security-gate/SKILL.md): security review before release
@@ -69,6 +81,7 @@ verification.
 ### Writing and harness operations
 
 - `.agents/skills/find-skills/` for [Find Skills](./.agents/skills/find-skills/SKILL.md): discovering reusable skills without duplicating harness capability
+- `.agents/skills/focus-friendly-output/` for [Focus-Friendly Output](./.agents/skills/focus-friendly-output/SKILL.md): action-first, low-cognitive-load replies with visible progress and bounded next steps
 - `.agents/skills/humanizer/` for [Humanizer](./.agents/skills/humanizer/SKILL.md): natural German and English prose that preserves facts and author voice
 - `.agents/skills/output-templates/` for [Output Templates](./.agents/skills/output-templates/SKILL.md): shared response structures for recurring agent tasks
 - `.agents/skills/prompt-preflight/` for [Prompt Preflight](./.agents/skills/prompt-preflight/SKILL.md): silently refining ambiguous requests before execution
@@ -81,9 +94,10 @@ verification.
 > **Voluntary project designation:** AI-assisted development tooling — human
 > oversight required.
 
-This repository contains instructions, prompts, and validation metadata for
-coding agents; it does not itself run a model or deploy an AI system. EU AI Act
-obligations depend on the integrating system, the provider or deployer role,
+This repository primarily contains instructions, prompts, and validation
+metadata for coding agents. It also includes an optional, inactive-by-default
+AI engineering runtime that calls configured model providers. EU AI Act
+obligations depend on the activated integrating system, the provider or deployer role,
 the generated output, and the concrete use case. Article 50 establishes
 transparency duties for providers and deployers of certain AI systems, rather
 than a universal compliance badge for AI-related repositories.
@@ -145,6 +159,8 @@ Optional metadata such as `triggers`, `capabilities`, `outputs`, `modes`,
 ```text
 .
 |-- .agents/skills/   # one directory per skill
+|   `-- ai-engineering-platform/ # optional executable AI engineering MVPs
+|-- .codex/hooks.json # trusted SessionStart hook for configuration-gated platform reuse
 |-- .github/workflows/ci.yml
 |-- scripts/skill-guard.mjs
 |-- AGENTS.md         # workspace-level instructions

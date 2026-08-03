@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI UX Dropdowns"
+  short_description: "Build clear accessible resilient dropdowns"
+  default_prompt: "Use $ui-ux-dropdowns to design or fix this dropdown and verify its interaction states."

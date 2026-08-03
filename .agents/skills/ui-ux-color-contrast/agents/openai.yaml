@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI UX Color Contrast"
+  short_description: "Verify color contrast and non-color status cues"
+  default_prompt: "Use $ui-ux-color-contrast to design or review accessible color, contrast, and status treatments."

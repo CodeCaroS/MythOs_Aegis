@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI UX Typography"
+  short_description: "Build readable resilient typography systems"
+  default_prompt: "Use $ui-ux-typography to create or review the typography system and text measure for this interface."

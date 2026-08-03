@@ -1,0 +1,24 @@
+name: Model regression
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.agents/skills/ai-engineering-platform/assets/actions/model-regression
+        with:
+          dataset: .agents/skills/ai-engineering-platform/scripts/platform/fixtures/golden.json
+          baseline-url: ${{ vars.BASELINE_API_URL }}
+          candidate-url: ${{ vars.CANDIDATE_API_URL }}
+          baseline-model: ${{ vars.BASELINE_MODEL || 'auto' }}
+          candidate-model: ${{ vars.CANDIDATE_MODEL || 'auto' }}
+          judge-url: ${{ vars.JUDGE_API_URL }}
+          judge-model: ${{ vars.JUDGE_MODEL }}
+          baseline-api-key: ${{ secrets.BASELINE_API_KEY }}
+          candidate-api-key: ${{ secrets.CANDIDATE_API_KEY }}
+          judge-api-key: ${{ secrets.JUDGE_API_KEY }}

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "routing": {
+    "simpleMaxScore": 1,
+    "mediumMaxScore": 5
+  },
+  "cache": {
+    "threshold": 0.92
+  },
+  "prompts": {
+    "system": ""
+  }
+}

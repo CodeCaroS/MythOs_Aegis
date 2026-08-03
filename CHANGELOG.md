@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Added a Harness-native AI Engineering Platform with cost routing, pgvector semantic caching, model-regression CI, failure-forensics tracing, self-healing documentation actions, configuration-gated SessionStart reuse, and held-out, draft-PR-only policy improvement.
+- Added Focus-Friendly Output for action-first, low-cognitive-load responses.
+
 ## 1.0.1
 
 - Expanded the library to 29 skills, including personalized engineering, writing, API, accessibility, and UX review workflows.

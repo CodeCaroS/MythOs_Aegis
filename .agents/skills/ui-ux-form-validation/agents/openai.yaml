@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI UX Form Validation"
+  short_description: "Design humane accessible form validation"
+  default_prompt: "Use $ui-ux-form-validation to design or fix this form validation flow and verify its feedback states."

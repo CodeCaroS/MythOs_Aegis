@@ -1,0 +1,56 @@
+services:
+  database:
+    image: pgvector/pgvector:pg16
+    ports:
+      - "127.0.0.1:55432:5432"
+    environment:
+      POSTGRES_DB: ai_engineering
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d ai_engineering"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+    volumes:
+      - ai-engineering-postgres:/var/lib/postgresql/data
+
+  platform:
+    build: .
+    depends_on:
+      database:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:${PORT:-8797}:${PORT:-8797}"
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@database:5432/ai_engineering
+      HOST: 0.0.0.0
+      PORT: ${PORT:-8797}
+      PLATFORM_API_KEY: '${PLATFORM_API_KEY:-}'
+      PLATFORM_TENANT_KEYS: '${PLATFORM_TENANT_KEYS:-}'
+      LLM_BASE_URL: ${LLM_BASE_URL:-https://api.openai.com/v1}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      TIER_CHEAP_MODEL: ${TIER_CHEAP_MODEL:-}
+      TIER_CHEAP_QUALITY: ${TIER_CHEAP_QUALITY:-0.45}
+      TIER_CHEAP_LATENCY_MS: ${TIER_CHEAP_LATENCY_MS:-250}
+      TIER_CHEAP_INPUT_PER_MILLION: ${TIER_CHEAP_INPUT_PER_MILLION:-0}
+      TIER_CHEAP_OUTPUT_PER_MILLION: ${TIER_CHEAP_OUTPUT_PER_MILLION:-0}
+      TIER_MEDIUM_MODEL: ${TIER_MEDIUM_MODEL:-}
+      TIER_MEDIUM_QUALITY: ${TIER_MEDIUM_QUALITY:-0.72}
+      TIER_MEDIUM_LATENCY_MS: ${TIER_MEDIUM_LATENCY_MS:-600}
+      TIER_MEDIUM_INPUT_PER_MILLION: ${TIER_MEDIUM_INPUT_PER_MILLION:-0}
+      TIER_MEDIUM_OUTPUT_PER_MILLION: ${TIER_MEDIUM_OUTPUT_PER_MILLION:-0}
+      TIER_POWERFUL_MODEL: ${TIER_POWERFUL_MODEL:-}
+      TIER_POWERFUL_QUALITY: ${TIER_POWERFUL_QUALITY:-0.95}
+      TIER_POWERFUL_LATENCY_MS: ${TIER_POWERFUL_LATENCY_MS:-1200}
+      TIER_POWERFUL_INPUT_PER_MILLION: ${TIER_POWERFUL_INPUT_PER_MILLION:-0}
+      TIER_POWERFUL_OUTPUT_PER_MILLION: ${TIER_POWERFUL_OUTPUT_PER_MILLION:-0}
+      EMBEDDING_BASE_URL: ${EMBEDDING_BASE_URL:-https://api.openai.com/v1}
+      EMBEDDING_API_KEY: ${EMBEDDING_API_KEY:-}
+      EMBEDDING_MODEL: ${EMBEDDING_MODEL:-}
+      EMBEDDING_DIMENSIONS: ${EMBEDDING_DIMENSIONS:-1536}
+      CACHE_THRESHOLD: '${CACHE_THRESHOLD:-}'
+      CACHE_TTL_SECONDS: ${CACHE_TTL_SECONDS:-86400}
+
+volumes:
+  ai-engineering-postgres:

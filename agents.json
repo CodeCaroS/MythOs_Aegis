@@ -30,6 +30,11 @@
     "Best for": "Independent claim verification and correction"
   },
   {
+    "Skill": "Focus-Friendly Output",
+    "Path": ".agents/skills/focus-friendly-output/SKILL.md",
+    "Best for": "Action-first, low-cognitive-load replies with visible progress and bounded next steps"
+  },
+  {
     "Skill": "Output Templates",
     "Path": ".agents/skills/output-templates/SKILL.md",
     "Best for": "Shared response templates for recurring agent tasks"
@@ -90,6 +95,11 @@
     "Best for": "Routing browser automation and functional UI verification through available tools"
   },
   {
+    "Skill": "AI Engineering Platform",
+    "Path": ".agents/skills/ai-engineering-platform/SKILL.md",
+    "Best for": "Routing, caching, evaluating, tracing, and repairing AI application workflows"
+  },
+  {
     "Skill": "Find Skills",
     "Path": ".agents/skills/find-skills/SKILL.md",
     "Best for": "Discovering reusable skills without duplicating harness capability"
@@ -98,6 +108,46 @@
     "Skill": "Frontend Design",
     "Path": ".agents/skills/frontend-design/SKILL.md",
     "Best for": "Distinctive accessible interfaces that preserve product architecture and tokens"
+  },
+  {
+    "Skill": "UI UX Component Quality",
+    "Path": ".agents/skills/ui-ux-component-quality/SKILL.md",
+    "Best for": "Improving component radii, labels, selection, targets, readability, and metadata"
+  },
+  {
+    "Skill": "UI UX Color Contrast",
+    "Path": ".agents/skills/ui-ux-color-contrast/SKILL.md",
+    "Best for": "Measuring contrast and preserving status meaning without color alone"
+  },
+  {
+    "Skill": "UI UX Generation",
+    "Path": ".agents/skills/ui-ux-generation/SKILL.md",
+    "Best for": "Routing screen and flow generation through focused UI UX specialist skills"
+  },
+  {
+    "Skill": "UI UX Dropdowns",
+    "Path": ".agents/skills/ui-ux-dropdowns/SKILL.md",
+    "Best for": "Generating obvious, accessible, viewport-safe, and scalable dropdown controls"
+  },
+  {
+    "Skill": "UI UX Form Validation",
+    "Path": ".agents/skills/ui-ux-form-validation/SKILL.md",
+    "Best for": "Designing humane validation timing, recovery, errors, and positive field feedback"
+  },
+  {
+    "Skill": "UI UX Loading States",
+    "Path": ".agents/skills/ui-ux-loading-states/SKILL.md",
+    "Best for": "Choosing stable skeleton, spinner, progress, timeout, and retry behavior"
+  },
+  {
+    "Skill": "UI UX Mobile CSS",
+    "Path": ".agents/skills/ui-ux-mobile-css/SKILL.md",
+    "Best for": "Building stable mobile scrolling, focus, tap, viewport, and form-control behavior"
+  },
+  {
+    "Skill": "UI UX Typography",
+    "Path": ".agents/skills/ui-ux-typography/SKILL.md",
+    "Best for": "Building readable type scales, line height, text measure, wrapping, and resizing"
   },
   {
     "Skill": "Grill Me",
