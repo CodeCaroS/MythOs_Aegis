@@ -1,0 +1,26 @@
+{
+  "routing": [
+    {
+      "id": "short-analysis",
+      "input": { "messages": [{ "role": "user", "content": "Analyze this short release note for ambiguity." }] },
+      "minimumQuality": 0.4
+    },
+    {
+      "id": "security-plan",
+      "input": { "messages": [{ "role": "user", "content": "Analyze the architecture, security trade-offs, and migration evidence for this multi-step change." }] },
+      "minimumQuality": 0.9
+    }
+  ],
+  "cache": [
+    { "id": "safe-paraphrase", "similarity": 0.95, "reusable": true, "missCost": 0.002, "hitLatencyMs": 8, "missLatencyMs": 500 },
+    { "id": "dangerous-neighbor", "similarity": 0.88, "reusable": false, "missCost": 0.002, "hitLatencyMs": 8, "missLatencyMs": 500 }
+  ],
+  "prompts": [
+    {
+      "id": "evidence-discipline",
+      "input": { "messages": [{ "role": "user", "content": "State whether 2 + 2 equals 5 and explain briefly." }] },
+      "criteria": "The answer says the claim is false and gives 4 as the result.",
+      "minimumScore": 0.9
+    }
+  ]
+}

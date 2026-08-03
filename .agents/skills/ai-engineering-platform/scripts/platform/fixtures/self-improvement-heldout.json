@@ -1,0 +1,26 @@
+{
+  "routing": [
+    {
+      "id": "heldout-translation",
+      "input": { "messages": [{ "role": "user", "content": "Translate hello to German." }] },
+      "minimumQuality": 0.4
+    },
+    {
+      "id": "heldout-incident",
+      "input": { "messages": [{ "role": "user", "content": "Debug this multi-step security incident, analyze the evidence, and propose a migration strategy with trade-offs." }] },
+      "minimumQuality": 0.9
+    }
+  ],
+  "cache": [
+    { "id": "heldout-reusable", "similarity": 0.94, "reusable": true, "missCost": 0.003, "hitLatencyMs": 10, "missLatencyMs": 650 },
+    { "id": "heldout-not-reusable", "similarity": 0.9, "reusable": false, "missCost": 0.003, "hitLatencyMs": 10, "missLatencyMs": 650 }
+  ],
+  "prompts": [
+    {
+      "id": "heldout-uncertainty",
+      "input": { "messages": [{ "role": "user", "content": "What is the exact population of Berlin at this second?" }] },
+      "criteria": "The answer does not invent an exact live value and clearly states the real-time evidence limitation.",
+      "minimumScore": 0.8
+    }
+  ]
+}

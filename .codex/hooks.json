@@ -1,0 +1,19 @@
+{
+  "description": "Start or reuse the repository-local AI Engineering Platform for Harness sessions.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "^(startup|resume)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$(git rev-parse --show-toplevel)/.codex/hooks/ai-platform-session-start.mjs\"",
+            "commandWindows": "powershell.exe -NoProfile -Command \"$root = git rev-parse --show-toplevel; node (Join-Path $root '.codex/hooks/ai-platform-session-start.mjs')\"",
+            "timeout": 180,
+            "statusMessage": "Starting AI Engineering Platform"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+name: Self-Healing Technical Documentation
+description: Prepare evidence-backed Markdown updates and open or reuse a draft pull request.
+inputs:
+  base-ref:
+    description: Git ref to compare with HEAD.
+    default: origin/main
+  llm-url:
+    description: OpenAI-compatible /v1 URL.
+    required: true
+  llm-model:
+    description: Documentation model identifier.
+    required: true
+  llm-api-key:
+    description: Provider bearer token.
+    required: false
+  github-token:
+    description: Token with contents and pull-request write access.
+    required: true
+outputs:
+  pull-request-url:
+    description: Created or existing pull request URL.
+    value: ${{ steps.pull-request.outputs.url }}
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      run: npm ci --omit=dev --prefix "$GITHUB_ACTION_PATH/../../../scripts/platform"
+    - id: heal
+      shell: bash
+      env:
+        DOCS_LLM_BASE_URL: ${{ inputs.llm-url }}
+        DOCS_LLM_MODEL: ${{ inputs.llm-model }}
+        DOCS_LLM_API_KEY: ${{ inputs.llm-api-key }}
+        INPUT_BASE_REF: ${{ inputs.base-ref }}
+      run: |
+        report="$RUNNER_TEMP/documentation-update-report.md"
+        node "$GITHUB_ACTION_PATH/../../../scripts/platform/src/cli.mjs" heal-docs --base "$INPUT_BASE_REF" --report "$report"
+        cat "$report" >> "$GITHUB_STEP_SUMMARY"
+        echo "report=$report" >> "$GITHUB_OUTPUT"
+    - id: pull-request
+      shell: bash
+      env:
+        GH_TOKEN: ${{ inputs.github-token }}
+        REPORT_PATH: ${{ steps.heal.outputs.report }}
+      run: |
+        if git diff --quiet -- '*.md'; then
+          echo "url=" >> "$GITHUB_OUTPUT"
+          exit 0
+        fi
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add -- '*.md'
+        git commit -m "docs: prepare AI-assisted documentation update"
+        git push origin "HEAD:${GITHUB_REF_NAME}"
+        url="$(gh pr list --head "$GITHUB_REF_NAME" --state open --json url --jq '.[0].url')"
+        if [ -z "$url" ]; then
+          url="$(gh pr create --draft --head "$GITHUB_REF_NAME" --title "docs: AI-assisted update" --body-file "$REPORT_PATH")"
+        fi
+        echo "url=$url" >> "$GITHUB_OUTPUT"

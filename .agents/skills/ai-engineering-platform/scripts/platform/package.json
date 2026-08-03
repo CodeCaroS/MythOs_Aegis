@@ -1,0 +1,23 @@
+{
+  "name": "mythos-ai-engineering-platform",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./sdk": "./src/sdk.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/cli.mjs serve",
+    "test": "node --test",
+    "regress": "node src/cli.mjs regress",
+    "heal-docs": "node src/cli.mjs heal-docs",
+    "improve": "node src/cli.mjs improve"
+  },
+  "dependencies": {
+    "pg": "^8.16.3",
+    "pgvector": "^0.2.1"
+  }
+}

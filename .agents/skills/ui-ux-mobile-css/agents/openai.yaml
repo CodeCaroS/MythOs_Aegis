@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI UX Mobile CSS"
+  short_description: "Build stable accessible mobile CSS foundations"
+  default_prompt: "Use $ui-ux-mobile-css to implement or review the mobile CSS behavior for this interface."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI UX Generation"
+  short_description: "Generate coherent accessible product interfaces"
+  default_prompt: "Use $ui-ux-generation to design and implement this interface with the applicable component skills."

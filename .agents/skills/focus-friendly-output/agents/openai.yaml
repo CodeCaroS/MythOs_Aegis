@@ -1,0 +1,7 @@
+interface:
+  display_name: "Focus-Friendly Output"
+  short_description: "Action-first replies with less cognitive load"
+  default_prompt: "Use $focus-friendly-output to make this response direct, easy to scan, and easy to act on."
+
+policy:
+  allow_implicit_invocation: true

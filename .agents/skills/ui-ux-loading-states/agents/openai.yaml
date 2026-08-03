@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI UX Loading States"
+  short_description: "Choose stable accessible loading feedback"
+  default_prompt: "Use $ui-ux-loading-states to select and implement the right loading feedback for this interaction."

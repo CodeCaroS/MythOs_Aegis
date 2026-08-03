@@ -1,0 +1,24 @@
+name: Self-healing docs
+on:
+  push:
+    branches-ignore: [main]
+    paths-ignore: ["**/*.md"]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: ./.agents/skills/ai-engineering-platform/assets/actions/self-healing-docs
+        with:
+          base-ref: origin/main
+          llm-url: ${{ vars.DOCS_LLM_BASE_URL }}
+          llm-model: ${{ vars.DOCS_LLM_MODEL }}
+          llm-api-key: ${{ secrets.DOCS_LLM_API_KEY }}
+          github-token: ${{ github.token }}

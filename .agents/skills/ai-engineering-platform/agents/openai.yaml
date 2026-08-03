@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Engineering Platform"
+  short_description: "Route, cache, evaluate, trace, and repair AI systems"
+  default_prompt: "Use $ai-engineering-platform to run or extend the AI engineering MVPs in this repository."

@@ -1,0 +1,77 @@
+name: Model Regression Detection
+description: Compare baseline and candidate OpenAI-compatible endpoints and write a Markdown CI report.
+inputs:
+  dataset:
+    description: JSON golden dataset path.
+    required: true
+  baseline-url:
+    description: Baseline OpenAI-compatible /v1 URL.
+    required: true
+  candidate-url:
+    description: Candidate OpenAI-compatible /v1 URL.
+    required: true
+  baseline-model:
+    description: Baseline model identifier or auto for this platform.
+    default: auto
+  candidate-model:
+    description: Candidate model identifier or auto for this platform.
+    default: auto
+  judge-url:
+    description: Judge OpenAI-compatible /v1 URL.
+    required: true
+  judge-model:
+    description: Judge model identifier.
+    required: true
+  baseline-api-key:
+    description: Baseline bearer token.
+    required: false
+  candidate-api-key:
+    description: Candidate bearer token.
+    required: false
+  judge-api-key:
+    description: Judge bearer token.
+    required: false
+  allowed-drop:
+    description: Maximum accepted judge-score drop.
+    default: "0.05"
+outputs:
+  report:
+    description: Markdown report path.
+    value: ${{ steps.regression.outputs.report }}
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      run: npm ci --omit=dev --prefix "$GITHUB_ACTION_PATH/../../../scripts/platform"
+    - id: regression
+      shell: bash
+      env:
+        BASELINE_API_KEY: ${{ inputs.baseline-api-key }}
+        CANDIDATE_API_KEY: ${{ inputs.candidate-api-key }}
+        JUDGE_API_KEY: ${{ inputs.judge-api-key }}
+        INPUT_DATASET: ${{ inputs.dataset }}
+        INPUT_BASELINE_URL: ${{ inputs.baseline-url }}
+        INPUT_CANDIDATE_URL: ${{ inputs.candidate-url }}
+        INPUT_BASELINE_MODEL: ${{ inputs.baseline-model }}
+        INPUT_CANDIDATE_MODEL: ${{ inputs.candidate-model }}
+        INPUT_JUDGE_URL: ${{ inputs.judge-url }}
+        INPUT_JUDGE_MODEL: ${{ inputs.judge-model }}
+        INPUT_ALLOWED_DROP: ${{ inputs.allowed-drop }}
+      run: |
+        report="$RUNNER_TEMP/model-regression-report.md"
+        set +e
+        node "$GITHUB_ACTION_PATH/../../../scripts/platform/src/cli.mjs" regress \
+          --dataset "$INPUT_DATASET" \
+          --baseline-url "$INPUT_BASELINE_URL" \
+          --candidate-url "$INPUT_CANDIDATE_URL" \
+          --baseline-model "$INPUT_BASELINE_MODEL" \
+          --candidate-model "$INPUT_CANDIDATE_MODEL" \
+          --judge-url "$INPUT_JUDGE_URL" \
+          --judge-model "$INPUT_JUDGE_MODEL" \
+          --allowed-drop "$INPUT_ALLOWED_DROP" \
+          --report "$report"
+        status=$?
+        set -e
+        cat "$report" >> "$GITHUB_STEP_SUMMARY"
+        echo "report=$report" >> "$GITHUB_OUTPUT"
+        exit "$status"

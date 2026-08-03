@@ -1,0 +1,6 @@
+**/node_modules/
+.env
+model-regression-report.md
+documentation-update-report.md
+self-improvement-report.md
+policy.candidate.json
