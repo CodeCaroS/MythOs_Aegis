@@ -1,7 +1,7 @@
 ---
 name: ui-ux-generation
 description: Generate or reshape coherent, production-ready UI/UX by routing interface components and cross-cutting concerns to focused specialist rules. Use for building screens, flows, design systems, or multi-component frontend work; use the matching ui-ux specialist skill directly when the request has one focused concern.
-version: 0.7.0
+version: 0.8.0
 author: Caro
 license: Apache-2.0
 tags:
@@ -22,12 +22,13 @@ Route component and cross-cutting behavior before generating code or visual dire
 3. Read every matching specialist skill in the map below before designing or editing that concern.
 4. Reuse native elements, existing product primitives, and installed dependencies before writing a custom control.
 5. Generate the smallest coherent implementation that satisfies the brief and every selected specialist skill.
-6. Verify keyboard, pointer, touch, viewport, responsive, reduced-motion, loading, empty, error, disabled, and recovery behavior that applies to the changed UI.
+6. Verify keyboard, pointer, touch, viewport, responsive, reduced-motion, initial, loading, empty, partial-data, success, error, offline, disabled, read-only, permission-denied, unsaved-changes, destructive-confirmation, and recovery behavior that applies to the changed UI.
 
 ## Specialist skill map
 
 | Concern | Read |
 | --- | --- |
+| Design-system architecture, tokens, spacing, grid, layout, iconography, motion, component contracts, documentation, or governance | [UI/UX Design Systems](../ui-ux-design-systems/SKILL.md) |
 | Component radii, action labels, selection visibility, touch targets, readability, or decision metadata | [UI/UX Component Quality](../ui-ux-component-quality/SKILL.md) |
 | Color contrast, semantic color roles, status cues, charts, dark mode, or forced-colors behavior | [UI/UX Color Contrast](../ui-ux-color-contrast/SKILL.md) |
 | Dropdown, select, combobox, popup option list, or action menu | [UI/UX Dropdowns](../ui-ux-dropdowns/SKILL.md) |

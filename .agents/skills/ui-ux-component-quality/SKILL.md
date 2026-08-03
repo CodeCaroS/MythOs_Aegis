@@ -1,7 +1,7 @@
 ---
 name: ui-ux-component-quality
-description: Generate, improve, or review UI components for concentric corner geometry, consequence-based action labels, persistent selection, usable touch targets, readable typography, and decision-relevant information. Use whenever component-level UI work or review needs concrete usability rules and verifiable acceptance criteria.
-version: 0.1.0
+description: Generate, improve, or review UI components for concentric corner geometry, consequence-based action labels, persistent selection, usable touch targets, readable typography, decision-relevant information, and distinct disabled, read-only, loading, destructive, and recovery states. Use whenever component-level UI work or review needs concrete usability rules and verifiable acceptance criteria.
+version: 0.2.0
 author: Caro
 license: Apache-2.0
 tags:
@@ -19,10 +19,10 @@ Improve evidence-based usability and geometry. Keep personal aesthetic preferenc
 ## Workflow
 
 1. Inspect the rendered component, existing tokens, related components, callers, actual content, and responsive variants.
-2. Cover default, hover, focus, pressed, selected, disabled, loading, error, and success states that apply.
+2. Cover default, hover, focus, pressed, selected, disabled, read-only, loading, error, and success states that apply.
 3. Apply every relevant rule below at the component's actual rendered size.
 4. Verify touch, keyboard, assistive-technology, zoom, wrapping, localization, contrast, and compact variants.
-5. Before finalizing a review, account for all six rule categories as a finding, pass, or not applicable; never skip a supplied geometry, state, or metadata condition silently.
+5. Before finalizing a review, account for all seven rule categories as a finding, pass, or not applicable; never skip a supplied geometry, state, or metadata condition silently.
 6. For review-only requests, report findings without editing. For creation or fix requests, implement the smallest coherent change.
 
 ## Required rules
@@ -86,6 +86,16 @@ Keep secondary and disabled labels legible and never hide important information 
 - Do not add metadata merely to fill space, and do not remove it merely to appear minimal.
 
 Verify that required information appears before commitment and remains available to touch and keyboard users.
+
+### 7. Keep operational states distinct
+
+- Keep focus continuously visible and separate from hover, pressed, and selected styling.
+- Use disabled only when interaction is unavailable, loading when an operation is pending, and read-only when content remains available without mutation.
+- Preserve accessible semantics and cursor, copy, selection, navigation, and announcement behavior appropriate to each state.
+- Give destructive actions a recognizable variant and precise scope without relying on color alone.
+- Document and test state transitions so loading, success, error, and recovery never leave stale controls or ambiguous outcomes.
+
+Verify state meaning without color, keyboard behavior, assistive-technology exposure, and recovery after interruption or failure.
 
 ## Findings contract
 

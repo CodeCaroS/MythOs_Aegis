@@ -1,4 +1,4 @@
 interface:
   display_name: "UI UX Component Quality"
-  short_description: "Improve component clarity geometry and usability"
+  short_description: "Improve component clarity states and usability"
   default_prompt: "Use $ui-ux-component-quality to create or review this component against the complete quality checklist."

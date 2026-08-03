@@ -120,6 +120,11 @@
     "Best for": "Measuring contrast and preserving status meaning without color alone"
   },
   {
+    "Skill": "UI UX Design Systems",
+    "Path": ".agents/skills/ui-ux-design-systems/SKILL.md",
+    "Best for": "Auditing tokens, foundations, component contracts, documentation, and governance"
+  },
+  {
     "Skill": "UI UX Generation",
     "Path": ".agents/skills/ui-ux-generation/SKILL.md",
     "Best for": "Routing screen and flow generation through focused UI UX specialist skills"

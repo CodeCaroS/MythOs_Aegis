@@ -1,7 +1,7 @@
 ---
 name: ui-ux-loading-states
-description: Generate, implement, or review loading feedback chosen by expected wait time, known content structure, and measurable progress. Use whenever UI work adds or changes skeletons, spinners, progress bars, pending actions, slow-operation messaging, timeouts, retries, or loading accessibility.
-version: 0.1.0
+description: Generate, implement, or review loading feedback and its transition into empty, partial-data, success, error, offline, permission, cancellation, and recovery states. Use whenever UI work adds or changes skeletons, spinners, progress bars, pending actions, slow-operation messaging, timeouts, retries, or loading accessibility.
+version: 0.2.0
 author: Caro
 license: Apache-2.0
 tags:
@@ -61,6 +61,14 @@ Do not use a skeleton for long, unknown, or structurally unpredictable work. It 
 - Transition from a skeleton to more informative feedback only when the application can detect the delay reliably and already supports the extra state complexity.
 - Keep focus stable during transitions. Use restrained live-region announcements for meaningful state changes, not animation frames.
 
+## Complete adjacent system states
+
+- Define the transition from initial and loading into empty, partial-data, success, error, offline, and recovery states for every affected view.
+- Do not use a loader as a substitute for an empty result, permission denial, read-only state, or unsaved-changes warning.
+- Keep usable partial data visible, identify what is missing, and expose safe retry or continuation.
+- Distinguish disabled, read-only, permission-denied, destructive-confirmation, and pending states through behavior, semantics, copy, and persistent non-color cues.
+- Preserve entered data and completed work through offline, permission, timeout, cancellation, and retry paths whenever technically possible.
+
 ## Verification
 
 Leave one runnable loading-state check using controlled latency and failure responses. Verify:
@@ -69,9 +77,10 @@ Leave one runnable loading-state check using controlled latency and failure resp
 2. A fast known-layout response uses an accurate skeleton and swaps with no load-induced layout shift.
 3. A short action with unknown structure uses a labelled spinner.
 4. Measurable or long work exposes honest progress, current work, and supported cancel or retry behavior.
-5. Slow, offline, timeout, and server-failure paths never strand the user in an indefinite loading state.
-6. Reduced-motion mode removes shimmer while retaining understandable status.
-7. Assistive technology receives one useful busy or status update and can safely continue after success, cancellation, or failure.
+5. Empty, partial-data, success, error, offline, and recovery states replace loading with an accurate next state.
+6. Slow, timeout, permission, cancellation, and server-failure paths never strand the user in an indefinite or ambiguous state.
+7. Reduced-motion mode removes shimmer while retaining understandable status.
+8. Assistive technology receives one useful busy or status update and can safely continue after success, cancellation, or failure.
 
 Exercise durations around the product's real boundaries, including just below and above 3 seconds when skeleton selection depends on that threshold. If telemetry, runtime, layout-shift, or assistive-technology verification is unavailable, state that limitation explicitly.
 
