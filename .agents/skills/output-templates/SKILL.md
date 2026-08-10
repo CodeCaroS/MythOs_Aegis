@@ -1,7 +1,7 @@
 ---
 name: output-templates
 description: Shared response templates covering recurring agent use cases.
-version: 0.1.0
+version: 0.2.0
 author: Caro
 license: Apache-2.0
 tags:
@@ -83,6 +83,10 @@ To proceed, I need:
 1. First step
 2. Second step
 3. Check
+
+## Acceptance Criteria
+
+- Checkable condition that defines done
 ```
 
 ## Test Result

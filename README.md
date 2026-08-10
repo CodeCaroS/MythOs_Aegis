@@ -76,7 +76,7 @@ verification.
 - `.agents/skills/apocalypse/` for [Apocalypse](./.agents/skills/apocalypse/SKILL.md): pre-mortems, failure chains, and recovery planning
 - `.agents/skills/decision-criticality-gate/` for [Decision Criticality Gate](./.agents/skills/decision-criticality-gate/SKILL.md): classifying decisions by reversibility, blast radius, trust impact, and urgency
 - `.agents/skills/grill-me/` for [Grill Me](./.agents/skills/grill-me/SKILL.md): focused decision interviews without unnecessary ceremony
-- `.agents/skills/grill-with-docs/` for [Grill With Docs](./.agents/skills/grill-with-docs/SKILL.md): decision interviews with proportional ADR and glossary updates
+- `.agents/skills/grill-with-docs/` for [Grill With Docs](./.agents/skills/grill-with-docs/SKILL.md): decision interviews with proportional ADR, specification, acceptance-criteria, and glossary updates
 - `.agents/skills/shepherd/` for [Shepherd](./.agents/skills/shepherd/SKILL.md): reversible execution, checkpoints, recovery, and supervisor guardrails
 
 ### Writing and harness operations

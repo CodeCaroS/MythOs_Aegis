@@ -162,7 +162,7 @@
   {
     "Skill": "Grill With Docs",
     "Path": ".agents/skills/grill-with-docs/SKILL.md",
-    "Best for": "Decision interviews with proportional ADR and glossary updates"
+    "Best for": "Decision interviews with proportional ADR, specification, acceptance-criteria, and glossary updates"
   },
   {
     "Skill": "Improve Codebase Architecture",
