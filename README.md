@@ -22,6 +22,7 @@ inventory.
 | Improve codebase architecture | [Improve Codebase Architecture](./.agents/skills/improve-codebase-architecture/SKILL.md) | Prioritized refactor candidates grounded in repository evidence |
 | Design or review a REST API | [REST API Best Practices](./.agents/skills/rest-api-best-practices/SKILL.md) | Predictable HTTP contracts and focused verification |
 | Check release security | [Pre-Launch Security Gate](./.agents/skills/pre-launch-security-gate/SKILL.md) | A release-focused security verdict and required fixes |
+| Run a broad repo security audit (OWASP Top 10, headers, GDPR) | [Security Checklist](./.agents/skills/security-checklist/SKILL.md) | A per-item PASS/FAIL/UNVERIFIED checklist with evidence and severity |
 | Implement a feature or bug fix test-first | [TDD](./.agents/skills/tdd/SKILL.md) | A small red-green slice with a runnable regression guard |
 | Challenge a plan or decision | [Grill Me](./.agents/skills/grill-me/SKILL.md) for an interview; [Apocalypse](./.agents/skills/apocalypse/SKILL.md) for a pre-mortem; [Decision Criticality Gate](./.agents/skills/decision-criticality-gate/SKILL.md) for proportional rigor | Exposed assumptions, risks, and a clearer decision |
 | Execute a risky or long-running change safely | [Shepherd](./.agents/skills/shepherd/SKILL.md) | Reversible steps, checkpoints, and recovery rules |
@@ -72,6 +73,7 @@ verification.
 - `.agents/skills/improve-codebase-architecture/` for [Improve Codebase Architecture](./.agents/skills/improve-codebase-architecture/SKILL.md): evidence-backed architecture reviews and refactor candidates
 - `.agents/skills/microsoft-foundry/` for [Microsoft Foundry](./.agents/skills/microsoft-foundry/SKILL.md): Microsoft Foundry agents, projects, deployments, and evaluations
 - `.agents/skills/pre-launch-security-gate/` for [Pre-Launch Security Gate](./.agents/skills/pre-launch-security-gate/SKILL.md): security review before release
+- `.agents/skills/security-checklist/` for [Security Checklist](./.agents/skills/security-checklist/SKILL.md): repo-wide security testing checklist across OWASP Top 10, auth/session/cookie hardening, API security, headers, infra hygiene, and GDPR
 - `.agents/skills/rest-api-best-practices/` for [REST API Best Practices](./.agents/skills/rest-api-best-practices/SKILL.md): predictable, secure REST and HTTP contracts
 - `.agents/skills/tdd/` for [TDD](./.agents/skills/tdd/SKILL.md): behavior-first implementation slices and regression guards
 
@@ -80,7 +82,7 @@ verification.
 - `.agents/skills/apocalypse/` for [Apocalypse](./.agents/skills/apocalypse/SKILL.md): pre-mortems, failure chains, and recovery planning
 - `.agents/skills/decision-criticality-gate/` for [Decision Criticality Gate](./.agents/skills/decision-criticality-gate/SKILL.md): classifying decisions by reversibility, blast radius, trust impact, and urgency
 - `.agents/skills/grill-me/` for [Grill Me](./.agents/skills/grill-me/SKILL.md): focused decision interviews without unnecessary ceremony
-- `.agents/skills/grill-with-docs/` for [Grill With Docs](./.agents/skills/grill-with-docs/SKILL.md): decision interviews with proportional ADR and glossary updates
+- `.agents/skills/grill-with-docs/` for [Grill With Docs](./.agents/skills/grill-with-docs/SKILL.md): decision interviews with proportional ADR, specification, acceptance-criteria, and glossary updates
 - `.agents/skills/shepherd/` for [Shepherd](./.agents/skills/shepherd/SKILL.md): reversible execution, checkpoints, recovery, and supervisor guardrails
 
 ### Writing and harness operations

@@ -1,7 +1,7 @@
 ---
 name: output-templates
 description: Infrastructure skill providing shared output-format components (direct, review, plan, execution, decision, status, research, optimization, artifact profiles) that other skills compose in their final-output section. Not typically invoked directly by a user request.
-version: 0.1.0
+version: 0.2.0
 author: Caro
 license: Apache-2.0
 tags:
@@ -83,6 +83,10 @@ To proceed, I need:
 1. First step
 2. Second step
 3. Check
+
+## Acceptance Criteria
+
+- Checkable condition that defines done
 ```
 
 ## Test Result
