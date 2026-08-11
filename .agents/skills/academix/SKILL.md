@@ -8,6 +8,7 @@ description: >
 version: 1.0.0
 author: Caro
 license: Apache-2.0
+overlaps_with: [fact-checker, rigorous-response]
 
 tags:
   - academic-research
@@ -245,6 +246,8 @@ Example:
 
 ## 7. Critical Evaluation
 
+For non-academic or general claim verification, defer to `fact-checker`; this section covers academic source/methodology evaluation specifically.
+
 Do not accept a paper's conclusions without examining:
 
 - research design,
@@ -272,6 +275,8 @@ When criticizing a paper, support the criticism through:
 Do not copy criticism from another source without evaluating whether it is justified.
 
 ## 8. Uncertainty and Evidence Status
+
+Align these labels with the shared evidence-status vocabulary in [output-templates](../output-templates/references/components.md) (Confirmed/Strong inference/Assumption/Unverified/Contradicted); "Interpretation" is an academix-specific addition for reasoned readings that don't fit the other five.
 
 Classify claims where useful as:
 

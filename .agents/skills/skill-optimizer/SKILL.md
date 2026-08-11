@@ -7,6 +7,7 @@ description: >
 version: 1.0.0
 author: Caro
 license: Apache-2.0
+overlaps_with: [find-skills]
 
 tags:
   - skill-optimization
@@ -18,7 +19,7 @@ tags:
 # Skill Optimizer
 
 Use this skill to improve an existing Markdown skill through an evidence-backed
-optimization loop.
+optimization loop. If the goal is finding a different skill rather than tuning this one, use `find-skills` instead.
 
 ## Required Reference
 

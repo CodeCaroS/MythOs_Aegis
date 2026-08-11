@@ -4,6 +4,7 @@ description: Find, assess, and add agent skills when the user asks for a reusabl
 version: 1.0.0
 author: Caro
 license: Apache-2.0
+overlaps_with: [skill-optimizer]
 tags:
   - skill-discovery
   - harness
@@ -12,7 +13,7 @@ tags:
 
 # Find Skills
 
-Reuse before adding anything.
+Reuse before adding anything. For improving an already-installed skill's wording or triggering rather than finding a different one, use `skill-optimizer` instead.
 
 ## Workflow
 

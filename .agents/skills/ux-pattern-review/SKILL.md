@@ -4,6 +4,7 @@ description: Review product flows and UI implementations for evidence-backed pat
 version: 1.1.0
 author: Caro
 license: Apache-2.0
+overlaps_with: [web-design-guidelines, aria-apg-review, frontend-design, ui-ux-generation]
 tags:
   - ux-review
   - interaction-patterns
@@ -79,7 +80,7 @@ Code inspection cannot prove usability, focus behavior, responsive layout, recov
 - **Partial:** Evidence is insufficient or runtime behavior is unverified.
 - **Not applicable:** The pattern does not occur in scope.
 
-Use Critical for blocked completion, data loss, or an unrecoverable destructive path; High for a broken core task or serious trust/accessibility failure; Medium for material friction or confusion; and Low for optional refinement.
+Uses the shared severity ladder from [output-templates](../output-templates/references/components.md): Critical for blocked completion, data loss, or an unrecoverable destructive path; High for a broken core task or serious trust/accessibility failure; Medium for material friction or confusion; Low for optional refinement.
 
 ## Output
 

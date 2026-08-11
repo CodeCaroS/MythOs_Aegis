@@ -7,6 +7,7 @@ description: >
 version: 1.0.0
 author: Caro
 license: Apache-2.0
+overlaps_with: [context-budget]
 
 tags:
   - checkpointing
@@ -70,6 +71,8 @@ constraints:
 **Role:** Reversible execution, checkpoint recovery, and supervisor guardrails
 **System:** MythOs
 **Primary Output:** Markdown recovery plans, checkpoint logs, and supervisor notes
+
+For token/context-window management during a long session (as opposed to execution safety), also see `context-budget`.
 
 ## Purpose
 

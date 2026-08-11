@@ -4,6 +4,7 @@ description: Reconstruct complete user journeys from actual code and turn them i
 version: 1.0.0
 author: Caro
 license: Apache-2.0
+overlaps_with: [ux-logic-loop, visual-pr-review]
 tags:
   - flow-analysis
   - journey-mapping
@@ -14,7 +15,7 @@ tags:
 
 # Visual Flow Storyboard
 
-Use this skill to map what the product actually does, not what the docs say it should do.
+Use this skill to map what the product actually does, not what the docs say it should do. This owns the journey/storyboard artifact. For a persistent testable story matrix plus a fix loop, use `ux-logic-loop` (it should reuse this skill's output rather than re-deriving flows). For a pre-implementation plan inside a PR review, `visual-pr-review` should also reuse this output rather than re-mapping flows.
 
 ## What to analyze
 

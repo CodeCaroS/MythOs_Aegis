@@ -1,6 +1,6 @@
 ---
 name: output-templates
-description: Shared response templates covering recurring agent use cases.
+description: Infrastructure skill providing shared output-format components (direct, review, plan, execution, decision, status, research, optimization, artifact profiles) that other skills compose in their final-output section. Not typically invoked directly by a user request.
 version: 0.1.0
 author: Caro
 license: Apache-2.0

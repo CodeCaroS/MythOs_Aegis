@@ -8,6 +8,7 @@ description: >
 version: 1.0.0
 author: Caro
 license: Apache-2.0
+overlaps_with: [apocalypse, grill-me, rigorous-response, tdd]
 tags:
   - risk-assessment
   - decision-gating
@@ -35,6 +36,11 @@ outputs:
   - review-requirements
 requires:
   - repository-access
+routing_note: >
+  This skill scores risk only; it does not produce critique content, interview
+  questions, or failure scenarios. For the interview itself, use `grill-me`. For
+  pre-mortem/failure-mode analysis, use `apocalypse`. For general critical review
+  of an answer, use `rigorous-response`.
 constraints:
   read_only_by_default: true
   require_evidence_for_findings: true

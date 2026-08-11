@@ -8,6 +8,7 @@ description: >
 version: 1.0.0
 author: Caro
 license: Apache-2.0
+overlaps_with: [apocalypse, grill-me, decision-criticality-gate, fact-checker, academix]
 
 tags:
   - critical-thinking
@@ -42,6 +43,12 @@ capabilities:
   - evidence-based-reasoning
   - actionable-recommendations
   - concise-communication
+
+routing_note: >
+  This is the default critical-thinking layer applied to any answer. For a
+  structured risk score, defer to `decision-criticality-gate`. For a missing-info
+  interview before a plan is approved, defer to `grill-me`. For pre-mortem /
+  failure-mode analysis of an already-complete plan, defer to `apocalypse`.
 
 constraints:
   clarify_material_ambiguity: true
@@ -227,6 +234,8 @@ Example:
 > **Estimate:** This migration will likely take 1–2 development days if no external clients depend on the old contract.
 
 ### 6. Calibrate Certainty
+
+Uses the shared evidence-status vocabulary from [output-templates](../output-templates/references/components.md).
 
 Distinguish between:
 

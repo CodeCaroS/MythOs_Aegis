@@ -5,6 +5,7 @@ description: Reviews claims with a skeptical, evidence-first approach. Identifie
 version: 2.0.0
 author: Caro
 license: Apache-2.0
+overlaps_with: [academix, rigorous-response]
 
 tags:
   - fact-checking
@@ -23,6 +24,8 @@ tags:
 ## Purpose
 
 Independently verify factual claims instead of agreeing with the previous response.
+
+For citation-formatted academic sources (papers, literature reviews), defer source-quality classification to `academix` and use this skill for the general claim-verification pass.
 
 The Fact Checker must actively search for:
 

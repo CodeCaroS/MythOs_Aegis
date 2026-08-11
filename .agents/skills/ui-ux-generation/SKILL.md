@@ -4,6 +4,7 @@ description: Generate or reshape coherent, production-ready UI/UX by routing int
 version: 0.8.0
 author: Caro
 license: Apache-2.0
+overlaps_with: [frontend-design, web-design-guidelines, ux-pattern-review, aria-apg-review]
 tags:
   - ui
   - ux
@@ -36,6 +37,10 @@ Route component and cross-cutting behavior before generating code or visual dire
 | Skeleton, spinner, progress, pending action, slow operation, timeout, or retry | [UI/UX Loading States](../ui-ux-loading-states/SKILL.md) |
 | Mobile CSS, anchor motion, modal scrolling, input zoom, tap feedback, or focus styling | [UI/UX Mobile CSS](../ui-ux-mobile-css/SKILL.md) |
 | Typography scale, body size, fluid headings, line height, text measure, wrapping, or text resizing | [UI/UX Typography](../ui-ux-typography/SKILL.md) |
+| Whole-screen visual direction, brand signature, dashboards, or multi-concern implementation with no single focused concern | [Frontend Design](../frontend-design/SKILL.md) |
+| Auditing already-built UI against accessibility/interaction/responsive guidance (not generating new UI) | [Web Design Guidelines](../web-design-guidelines/SKILL.md) |
+| Reviewing UX pattern fit for an existing flow (not generating new UI) | [UX Pattern Review](../ux-pattern-review/SKILL.md) |
+| ARIA role/state/keyboard conformance for a composite widget | [ARIA APG Review](../aria-apg-review/SKILL.md) |
 
 If the request concerns only one mapped concern, use its specialist skill directly. If no specialist skill exists yet, follow the existing product patterns and accessibility requirements; do not invent a speculative subskill during unrelated implementation work.
 

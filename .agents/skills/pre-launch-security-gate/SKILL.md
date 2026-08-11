@@ -9,6 +9,7 @@ description: >
 version: 1.0.0
 author: Caro
 license: Apache-2.0
+overlaps_with: [visual-pr-review, data-protection-gate]
 tags:
   - security
   - authentication
@@ -424,7 +425,7 @@ requested sort field
 
 # Required Security Tests
 
-The agent must add or identify tests for both allowed and denied behavior.
+Consistent with `read_only_by_default: true`, when this skill runs as a review (including as part of `visual-pr-review`'s security section) the agent identifies which of these tests exist, which are missing, and reports the gap — it does not write code. The agent only adds tests when the user has explicitly requested implementation rather than a review, or when invoked directly for pre-release hardening rather than PR review.
 
 ## Authentication Tests
 
@@ -561,7 +562,7 @@ Never claim a test ran when it did not.
 
 # Findings Format
 
-Classify finding:
+Classify finding (BLOCKER here corresponds to Critical in the shared severity ladder in [output-templates](../output-templates/references/components.md)):
 
 - `BLOCKER`: Direct data exposure, privilege escalation, authentication bypass, injection, secret exposure, cross-tenant access
 - `HIGH`: Realistic abuse path affecting sensitive operations availability
