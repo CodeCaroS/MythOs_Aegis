@@ -10,6 +10,7 @@ to fill a template.
 - **Evidence**: observed facts, file locations, sources, and explicit assumptions.
 - **Findings**: ordered defects or risks with location, criterion, and impact.
 - **Decision**: selected option, rationale, confidence, and conditions.
+- **Acceptance criteria**: the concrete, checkable conditions that define done; testable, not aspirational.
 - **Changes**: mutations actually completed; do not mix planned work with done work.
 - **Next action**: the smallest useful recommendation, implementation slice, or unblocker.
 - **Verification**: exact checks run and results; distinguish passed, failed, skipped, and not run.
@@ -26,7 +27,7 @@ to fill a template.
 | `direct` | outcome, evidence when useful, next action when one exists |
 | `execution` | outcome, changes, verification, limits or next action |
 | `optimization` | baseline, candidate, validation, isolated test, accepted and rejected edits, limits, artifacts |
-| `plan` | goal, constraints, ordered steps, verification, risks or open decisions |
+| `plan` | goal, constraints, ordered steps, acceptance criteria, verification, risks or open decisions |
 | `research` | answer, evidence, sources, limits |
 | `review` | verdict, findings, impact, recommendation, verification, limits |
 | `status` | state, completed work, remaining work, exact unblocker |

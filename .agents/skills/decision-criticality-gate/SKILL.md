@@ -5,7 +5,7 @@ description: >
   reversibility, blast radius, trust impact, likelihood, severity, and detectability.
   Use before implementation, before autonomous tool execution, and whenever a decision
   could affect users, money, privacy, permissions, production systems, or shared foundations.
-version: 1.0.0
+version: 1.1.0
 author: Caro
 license: Apache-2.0
 tags:
@@ -16,6 +16,8 @@ tags:
   - product
   - data
   - autonomy
+  - specification
+  - acceptance-criteria
 triggers:
   - decision criticality gate
   - criticality gate
@@ -152,6 +154,8 @@ Score `7-9`.
 Default controls:
 
 - ADR or equivalent decision note,
+- specification covering scope, out-of-scope, and interfaces or contracts,
+- acceptance criteria the implementation must satisfy,
 - alternatives analysis,
 - rollout and rollback plan,
 - testing evidence,
