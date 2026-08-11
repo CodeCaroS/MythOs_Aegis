@@ -60,6 +60,11 @@
     "Best for": "Clear assumptions, premise checks, concise critical reasoning"
   },
   {
+    "Skill": "Security Checklist",
+    "Path": ".agents/skills/security-checklist/SKILL.md",
+    "Best for": "Repo-wide security testing checklist covering OWASP Top 10, auth/session/cookie hardening, API security, headers, infra hygiene, and GDPR obligations"
+  },
+  {
     "Skill": "Shepherd",
     "Path": ".agents/skills/shepherd/SKILL.md",
     "Best for": "Reversible execution, checkpoints, recovery, and supervisor guardrails"
