@@ -4,6 +4,7 @@ description: Stress-test a plan, design, or decision through a focused interview
 version: 1.0.0
 author: Caro
 license: Apache-2.0
+overlaps_with: [apocalypse, decision-criticality-gate, rigorous-response]
 tags:
   - decision-making
   - planning
@@ -11,6 +12,8 @@ tags:
 ---
 
 # Grill Me
+
+Use this when key information is missing before a plan can be approved. If the plan is otherwise complete and the goal is finding failure modes rather than filling gaps, use `apocalypse` instead.
 
 Ask only questions whose answers can change the decision.
 

@@ -61,6 +61,8 @@ Use one of these formats:
 
 The Quick Recap must be the final line of the response.
 
+If another active skill mandates its own terminal status block (for example `apocalypse`'s Apocalypse Verdict, `system-design-scale`'s Failure Table summary, `data-protection-gate`'s Decision block, `rag-retrieval-quality` or `sql-query-correctness`'s required output fence), do not append a separate Quick Recap line after it. Instead fold the Quick Recap's completion/blocker/next-action content into that block's final line, so exactly one terminal status line closes the response.
+
 ## Status Rules
 
 ### 🟢 Green — Complete

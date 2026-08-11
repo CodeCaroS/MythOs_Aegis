@@ -203,5 +203,30 @@
     "Skill": "REST API Best Practices",
     "Path": ".agents/skills/rest-api-best-practices/SKILL.md",
     "Best for": "Designing and reviewing predictable, secure REST/HTTP API contracts"
+  },
+  {
+    "Skill": "Context Budget",
+    "Path": ".agents/skills/context-budget/SKILL.md",
+    "Best for": "Context allocation, token economy, project memory, and handover before overflow"
+  },
+  {
+    "Skill": "RAG Retrieval Quality",
+    "Path": ".agents/skills/rag-retrieval-quality/SKILL.md",
+    "Best for": "Measured retrieval tuning: chunking, embeddings, hybrid search, reranking, and grounding"
+  },
+  {
+    "Skill": "System Design Scale",
+    "Path": ".agents/skills/system-design-scale/SKILL.md",
+    "Best for": "Load estimation, bottlenecks, back-pressure, failure modes, and degradation"
+  },
+  {
+    "Skill": "SQL Query Correctness",
+    "Path": ".agents/skills/sql-query-correctness/SKILL.md",
+    "Best for": "Silent NULL, join, aggregation, timezone, and pagination bugs in SQL and ORM queries"
+  },
+  {
+    "Skill": "Data Protection Gate",
+    "Path": ".agents/skills/data-protection-gate/SKILL.md",
+    "Best for": "Privacy by design: inventory, minimization, retention, transfers, and subject rights"
   }
 ]

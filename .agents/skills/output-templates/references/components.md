@@ -32,6 +32,40 @@ to fill a template.
 | `review` | verdict, findings, impact, recommendation, verification, limits |
 | `status` | state, completed work, remaining work, exact unblocker |
 
+## Shared vocabularies
+
+Skills that classify evidence strength or severity must reuse these exact terms instead of inventing near-synonyms, so two skills never silently disagree on what a label means.
+
+### Evidence status
+
+- **Confirmed**: directly observed in code, logs, test output, or a primary source.
+- **Strong inference**: not directly observed, but forced by adjacent confirmed evidence.
+- **Assumption**: unverified premise the response depends on; must be stated explicitly.
+- **Unverified**: plausible but not checked; requires the reader or a follow-up step to confirm.
+- **Contradicted**: conflicts with observed evidence.
+
+Used by: `academix`, `fact-checker`, `rigorous-response`, `visual-pr-review`, `apocalypse`.
+
+### Severity ladder
+
+- **Critical**: breaks core function, exposes data across a trust boundary, or blocks release.
+- **High**: significant defect or risk with a clear trigger path; fix before merge.
+- **Medium**: real defect with limited blast radius or a workaround; fix soon.
+- **Low**: cosmetic, edge-case, or polish; fix opportunistically.
+
+Used by: `aria-apg-review`, `ux-pattern-review`, `pre-launch-security-gate`, `data-protection-gate`, `visual-pr-review`, `ui-ux-design-systems`.
+
+### Failure table
+
+For per-component or per-risk failure documentation, use one shared column set instead of a skill-specific variant:
+
+| Component/Risk | Failure mode | Evidence | Blast radius | Detection | Existing control / Response | Gap |
+| --- | --- | --- | --- | --- | --- | --- |
+
+Omit columns that do not apply to the domain (e.g. a pre-mortem may drop "Component" in favor of "Risk"); keep the remaining column names and order unchanged so outputs from different skills stay comparable.
+
+Used by: `apocalypse`, `system-design-scale`.
+
 ## Composition rules
 
 1. Lead with the result or requested artifact, not process narration.

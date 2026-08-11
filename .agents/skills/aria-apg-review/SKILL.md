@@ -4,6 +4,7 @@ description: Review web interfaces against every applicable W3C WAI-ARIA Authori
 version: 1.0.0
 author: Caro
 license: Apache-2.0
+overlaps_with: [ux-pattern-review, web-design-guidelines, ui-ux-generation]
 tags:
   - accessibility
   - aria
@@ -65,7 +66,7 @@ Static code cannot prove focus order or keyboard behavior. Automated accessibili
 - **Partial:** Static evidence exists, but required runtime behavior was not verified.
 - **Not applicable:** The pattern does not occur in scope.
 
-Use Critical for blocked access or an inescapable focus trap, High for missing core keyboard/focus/role/state behavior, Medium for a material but non-blocking mismatch, and Low for optional enhancements or maintainability risks.
+Uses the shared severity ladder from [output-templates](../output-templates/references/components.md): Critical for blocked access or an inescapable focus trap, High for missing core keyboard/focus/role/state behavior, Medium for a material but non-blocking mismatch, Low for optional enhancements or maintainability risks.
 
 ## Output
 

@@ -4,6 +4,7 @@ description: Audit web UI code and rendered behavior for accessibility, interact
 version: 1.0.0
 author: Caro
 license: Apache-2.0
+overlaps_with: [ux-pattern-review, aria-apg-review, frontend-design, ui-ux-generation]
 tags:
   - ui-review
   - accessibility
@@ -11,6 +12,8 @@ tags:
 ---
 
 # Web Design Guidelines
+
+This covers general accessibility/interaction/responsive/state guidance against the Vercel checklist. For UX pattern fit (does this pattern serve the user's job, alternatives), use `ux-pattern-review`. For deep ARIA role/state/keyboard conformance on a composite widget, use `aria-apg-review`. Do not claim ARIA or pattern-fit conformance from this audit alone.
 
 1. Fetch the current upstream guidelines from `https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md`.
 2. Read repository instructions, the target files, semantic tokens, and existing component patterns.

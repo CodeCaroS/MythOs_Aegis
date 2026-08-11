@@ -8,6 +8,7 @@ description: >
 version: 1.0.0
 author: Caro
 license: Apache-2.0
+overlaps_with: [pre-launch-security-gate, rest-api-best-practices, visual-flow-storyboard]
 
 tags:
   - pull-request
@@ -375,6 +376,8 @@ Flag:
 
 ## 6. Review API Contracts
 
+For a standalone or deep REST-contract review (methods, status codes, pagination, versioning, idempotency), run `rest-api-best-practices` and embed its findings here.
+
 For every added or modified endpoint, document:
 
 * HTTP method,
@@ -527,6 +530,8 @@ Do not describe UI impact only through filenames.
 * Does the copy match the actual behavior?
 
 ## 9. Review Security
+
+For releases or changes touching authentication, authorization, or tenant isolation, run `pre-launch-security-gate` and embed its verdict here instead of re-deriving findings from scratch.
 
 Inspect security at every trust boundary.
 
@@ -862,6 +867,8 @@ Describe the smallest effective correction.
 Human | Coding Agent | Either
 
 ## Severity Rules
+
+Blocking/High/Medium/Low here correspond to Critical/High/Medium/Low in the shared severity ladder in [output-templates](../output-templates/references/components.md); Suggestion is an addition below Low for non-required polish.
 
 ### Blocking
 

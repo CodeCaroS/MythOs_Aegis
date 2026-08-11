@@ -65,6 +65,10 @@ verification.
 
 ### Engineering, APIs, security, and platforms
 
+- `.agents/skills/data-protection-gate/` for [Data Protection Gate](./.agents/skills/data-protection-gate/SKILL.md): privacy by design, data inventory, retention, transfers, and subject rights
+- `.agents/skills/rag-retrieval-quality/` for [RAG Retrieval Quality](./.agents/skills/rag-retrieval-quality/SKILL.md): measured chunking, embedding, hybrid search, reranking, and grounding work
+- `.agents/skills/sql-query-correctness/` for [SQL Query Correctness](./.agents/skills/sql-query-correctness/SKILL.md): silent NULL, join, aggregation, timezone, and pagination bugs
+- `.agents/skills/system-design-scale/` for [System Design Scale](./.agents/skills/system-design-scale/SKILL.md): load estimation, bottlenecks, back-pressure, failure modes, and degradation
 - `.agents/skills/ai-engineering-platform/` for [AI Engineering Platform](./.agents/skills/ai-engineering-platform/SKILL.md): OpenAI-compatible routing, pgvector caching, model regression, failure traces, self-healing Markdown docs, and bounded policy improvement
 - `.agents/skills/improve-codebase-architecture/` for [Improve Codebase Architecture](./.agents/skills/improve-codebase-architecture/SKILL.md): evidence-backed architecture reviews and refactor candidates
 - `.agents/skills/microsoft-foundry/` for [Microsoft Foundry](./.agents/skills/microsoft-foundry/SKILL.md): Microsoft Foundry agents, projects, deployments, and evaluations
@@ -83,6 +87,7 @@ verification.
 
 ### Writing and harness operations
 
+- `.agents/skills/context-budget/` for [Context Budget](./.agents/skills/context-budget/SKILL.md): context allocation, token economy, durable project memory, and handover before overflow
 - `.agents/skills/find-skills/` for [Find Skills](./.agents/skills/find-skills/SKILL.md): discovering reusable skills without duplicating harness capability
 - `.agents/skills/focus-friendly-output/` for [Focus-Friendly Output](./.agents/skills/focus-friendly-output/SKILL.md): action-first, low-cognitive-load replies with visible progress and bounded next steps
 - `.agents/skills/humanizer/` for [Humanizer](./.agents/skills/humanizer/SKILL.md): natural German and English prose that preserves facts and author voice

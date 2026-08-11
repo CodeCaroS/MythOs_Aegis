@@ -4,6 +4,7 @@ description: Design or reshape distinctive, production-ready interfaces while pr
 version: 1.0.0
 author: Caro
 license: Apache-2.0
+overlaps_with: [ui-ux-generation, web-design-guidelines, ux-pattern-review]
 tags:
   - frontend
   - ui
@@ -14,6 +15,8 @@ tags:
 # Frontend Design
 
 Start from the product, not a fashionable template.
+
+Use this for holistic screen/visual-direction work. If the request is a single focused concern (dropdowns, form validation, loading states, typography, color contrast, mobile CSS), use `ui-ux-generation`'s specialist map instead — it routes to the matching `ui-ux-*` skill directly. For an audit of already-built UI rather than new design, use `web-design-guidelines` or `ux-pattern-review`.
 
 ## Workflow
 

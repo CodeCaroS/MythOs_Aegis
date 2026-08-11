@@ -4,6 +4,7 @@ description: Implement features and bug fixes in small red-green slices using be
 version: 1.1.0
 author: Caro
 license: Apache-2.0
+overlaps_with: [decision-criticality-gate]
 tags:
   - testing
   - tdd
@@ -34,6 +35,8 @@ Use one vertical slice at a time:
 - Keep the test that proves the reported failure fixed.
 
 Do not pause for seam approval when the repository and request make the public boundary clear. Ask only when different seams would materially change scope or compatibility.
+
+Before step 4, check whether the seam touches authentication, authorization, tenant isolation, or secrets. If so, follow `decision-criticality-gate`'s Hard Escalation Rules and get approval before implementing, rather than proceeding straight to the green step.
 
 Adapted for MythOs Aegis from `mattpocock/skills` `tdd`.
 

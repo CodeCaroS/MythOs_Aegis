@@ -8,6 +8,7 @@ description: >
 version: 1.0.0
 author: Caro
 license: Apache-2.0
+overlaps_with: [grill-me, decision-criticality-gate, rigorous-response, system-design-scale]
 
 tags:
   - risk-analysis
@@ -36,6 +37,8 @@ Apocalypse does not judge plans by whether they appear plausible at first glance
 > What happened?
 
 The goal is not pessimism. The goal is resilient design.
+
+Use this on an otherwise-complete plan to find failure modes. If key information is still missing before the plan can be approved, use `grill-me` instead. For per-component risk scoring rather than failure-mode narrative, use `decision-criticality-gate`.
 
 ## Use Cases
 
@@ -532,6 +535,8 @@ Trigger
 ```
 
 ### Critical Risks
+
+Column set aligned with the shared failure table in [output-templates](../output-templates/references/components.md) (Priority maps to that table's blast-radius-driven ranking; Impact maps to Blast radius).
 
 | Priority | Risk | Evidence | Impact | Existing Control | Gap |
 |---|---|---|---|---|---|

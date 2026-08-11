@@ -4,6 +4,7 @@ description: Systematically inventory features from code, derive testable user s
 version: 1.0.0
 author: Caro
 license: Apache-2.0
+overlaps_with: [visual-flow-storyboard]
 tags:
   - ux
   - testing
@@ -14,7 +15,7 @@ tags:
 
 # UX & Logic Loop
 
-Use this skill to turn a codebase into a persistent, testable user-story loop.
+Use this skill to turn a codebase into a persistent, testable user-story loop. This owns the persistent story matrix and the test-fix-retest loop. If `visual-flow-storyboard` has already mapped the flows, reuse its output as the inventory source instead of re-deriving flows from code.
 
 ## Core workflow
 

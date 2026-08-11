@@ -4,6 +4,7 @@ description: Design, implement, document, or review framework-neutral REST/HTTP 
 version: 1.0.0
 author: Caro
 license: Apache-2.0
+overlaps_with: [visual-pr-review]
 tags:
   - rest
   - http
